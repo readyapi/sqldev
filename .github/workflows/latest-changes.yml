@@ -30,7 +30,7 @@ jobs:
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.debug_enabled == 'true' }}
         with:
           limit-access-to-actor: true
-      - uses: docker://khulnasoft/latest-changes-action:0.3.0
+      - uses: docker://ghcr.io/khulnasoft/latest-changes:0.3.0
       # - uses: khulnasoft/latest-changes@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
