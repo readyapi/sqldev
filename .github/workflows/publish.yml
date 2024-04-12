@@ -1,50 +1,53 @@
-name: Publish
+name: Publish to PyPI
 
 on:
   release:
-    types:
-      - created
-  workflow_dispatch:
-    inputs:
-      debug_enabled:
-        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
-        required: false
-        default: 'false'
+    types: [published]
 
 jobs:
-  publish:
+  build-release:
+
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.7"
-      # Allow debugging with tmate
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.debug_enabled == 'true' }}
-        with:
-          limit-access-to-actor: true
-      - uses: actions/cache@v3
-        id: cache
-        with:
-          path: ${{ env.pythonLocation }}
-          key: ${{ runner.os }}-python-${{ env.pythonLocation }}-${{ hashFiles('pyproject.toml') }}-root-v2
-      - name: Install poetry
-        if: steps.cache.outputs.cache-hit != 'true'
+          python-version: '3.x'
+
+      - name: Build distributions
         run: |
           python -m pip install --upgrade pip
-          python -m pip install "poetry"
-          python -m poetry self add poetry-version-plugin
-      - name: Configure poetry
-        run: python -m poetry config virtualenvs.create false
-      - name: Install Dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: python -m poetry install
-      - name: Publish
-        env:
-          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
-        run: |
-          python -m poetry config pypi-token.pypi $PYPI_TOKEN
-          bash scripts/publish.sh
+          python -m pip install build
+          python -m build
+      - name: Upload distributions
+        uses: actions/upload-artifact@v4
+        with:
+          name: sqldev
+          path: dist/
+
+  publish:
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      id-token: write  # For trusted publishing + codesigning.
+      contents: write  # For attaching signing artifacts to the release.
+    needs:
+      - build-release
+    steps:
+      - name: fetch dists
+        uses: actions/download-artifact@v4
+        with:
+          name: sqldev
+          path: dist/
+
+      - name: publish
+        uses: pypa/gh-action-pypi-publish@v1.8.14
+
+      - name: sign
+        uses: sigstore/gh-action-sigstore-python@v2.1.1
+        with:
+          inputs: ./dist/*.tar.gz ./dist/*.whl
+          release-signing-artifacts: true
