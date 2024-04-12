@@ -35,14 +35,6 @@ The key features are:
 * **Extensible**: You have all the power of SQLAlchemy and Pydantic underneath.
 * **Short**: Minimize code duplication. A single type annotation does a lot of work. No need to duplicate models in SQLAlchemy and Pydantic.
 
-## Sponsors
-
-<!-- sponsors -->
-
-<a href="https://www.govcert.lu" target="_blank" title="This project is being supported by GOVCERT.LU"><img src="https://sqldev.khulnasoft.com/img/sponsors/govcert.png"></a>
-
-<!-- /sponsors -->
-
 **SQLDev** is, in fact, a thin layer on top of **Pydantic** and **SQLAlchemy**, carefully designed to be compatible with both.
 
 ## Requirements
