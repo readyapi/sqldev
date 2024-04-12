@@ -1,3 +1,7 @@
+<style>
+.md-content .md-typeset h1 { display: none; }
+</style>
+
 <p align="center">
   <a href="https://sqldev.khulnasoft.com"><img src="https://sqldev.khulnasoft.com/img/logo-margin/logo-margin-vector.svg" alt="SQLDev"></a>
 </p>
@@ -42,7 +46,14 @@ The key features are:
 
 <!-- sponsors -->
 
-<a href="https://www.govcert.lu" target="_blank" title="This project is being supported by GOVCERT.LU"><img src="https://sqldev.khulnasoft.com/img/sponsors/govcert.png"></a>
+{% if sponsors %}
+{% for sponsor in sponsors.gold -%}
+<a href="{{ sponsor.url }}" target="_blank" title="{{ sponsor.title }}"><img src="{{ sponsor.img }}" style="border-radius:15px"></a>
+{% endfor -%}
+{%- for sponsor in sponsors.silver -%}
+<a href="{{ sponsor.url }}" target="_blank" title="{{ sponsor.title }}"><img src="{{ sponsor.img }}" style="border-radius:15px"></a>
+{% endfor %}
+{% endif %}
 
 <!-- /sponsors -->
 
