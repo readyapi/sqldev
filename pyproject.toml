@@ -2,7 +2,7 @@
 name = "sqldev"
 version = "0"
 description = "SQLDev, SQL databases in Python, designed for simplicity, compatibility, and robustness."
-authors = ["Sebastián Ramírez <khulnasoft@gmail.com>"]
+authors = ["Md Sulaiman <khulnasoft@gmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/khulnasoft/sqldev"
 documentation = "https://sqldev.khulnasoft.com"
