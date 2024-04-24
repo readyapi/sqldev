@@ -46,13 +46,13 @@ pillow = "^9.3.0"
 cairosvg = "^2.5.2"
 mdx-include = "^1.4.1"
 coverage = {extras = ["toml"], version = ">=6.2,<8.0"}
-fastapi = "^0.103.2"
+raedyapi = "^0.110.2"
 ruff = "0.2.0"
-# For FastAPI tests
+# For RaedyAPI tests
 httpx = "0.24.1"
 # TODO: upgrade when deprecating Python 3.7
 dirty-equals = "^0.6.0"
-typer-cli = "^0.0.13"
+cligenius-cli = "^0.0.13"
 mkdocs-markdownextradata-plugin = ">=0.1.7,<0.3.0"
 
 [build-system]
@@ -113,7 +113,7 @@ ignore = [
 # "__init__.py" = ["F401"]
 
 [tool.ruff.lint.isort]
-known-third-party = ["sqldev", "sqlalchemy", "pydantic", "fastapi"]
+known-third-party = ["sqldev", "sqlalchemy", "pydantic", "raedyapi"]
 
 [tool.ruff.lint.pyupgrade]
 # Preserve types, even if a file imports `from __future__ import annotations`.

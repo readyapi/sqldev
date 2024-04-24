@@ -82,20 +82,20 @@ nav:
       - tutorial/many-to-many/update-remove-relationships.md
       - tutorial/many-to-many/link-with-extra-fields.md
     - tutorial/code-structure.md
-    - FastAPI and Pydantic:
-      - tutorial/fastapi/index.md
-      - tutorial/fastapi/simple-hero-api.md
-      - tutorial/fastapi/response-model.md
-      - tutorial/fastapi/multiple-models.md
-      - tutorial/fastapi/read-one.md
-      - tutorial/fastapi/limit-and-offset.md
-      - tutorial/fastapi/update.md
-      - tutorial/fastapi/update-extra-data.md
-      - tutorial/fastapi/delete.md
-      - tutorial/fastapi/session-with-dependency.md
-      - tutorial/fastapi/teams.md
-      - tutorial/fastapi/relationships.md
-      - tutorial/fastapi/tests.md
+    - RaedyAPI and Pydantic:
+      - tutorial/raedyapi/index.md
+      - tutorial/raedyapi/simple-hero-api.md
+      - tutorial/raedyapi/response-model.md
+      - tutorial/raedyapi/multiple-models.md
+      - tutorial/raedyapi/read-one.md
+      - tutorial/raedyapi/limit-and-offset.md
+      - tutorial/raedyapi/update.md
+      - tutorial/raedyapi/update-extra-data.md
+      - tutorial/raedyapi/delete.md
+      - tutorial/raedyapi/session-with-dependency.md
+      - tutorial/raedyapi/teams.md
+      - tutorial/raedyapi/relationships.md
+      - tutorial/raedyapi/tests.md
   - Advanced User Guide:
     - advanced/index.md
     - advanced/decimal.md
