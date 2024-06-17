@@ -7,11 +7,11 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 from importlib import metadata
 from pathlib import Path
 
+import cligenius
 import mkdocs.commands.build
 import mkdocs.commands.serve
 import mkdocs.config
 import mkdocs.utils
-import cligenius
 from jinja2 import Template
 
 logging.basicConfig(level=logging.INFO)

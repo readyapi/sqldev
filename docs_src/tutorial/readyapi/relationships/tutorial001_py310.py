@@ -1,4 +1,4 @@
-from raedyapi import Depends, RaedyAPI, HTTPException, Query
+from raedyapi import Depends, HTTPException, Query, RaedyAPI
 from sqldev import Field, Relationship, Session, SQLDev, create_engine, select
 
 

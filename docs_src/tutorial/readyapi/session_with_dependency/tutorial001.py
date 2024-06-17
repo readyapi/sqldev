@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from raedyapi import Depends, RaedyAPI, HTTPException, Query
+from raedyapi import Depends, HTTPException, Query, RaedyAPI
 from sqldev import Field, Session, SQLDev, create_engine, select
 
 
