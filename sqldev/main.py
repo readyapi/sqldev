@@ -477,11 +477,7 @@ class SQLDevMetaclass(ModelMetaclass, DeclarativeMeta):
             for k, v in get_model_fields(new_cls).items():
                 col = get_column_from_field(v)
                 setattr(new_cls, k, col)
-            # Set a config flag to tell ReadyAPI that this should be read with a field
-            # in orm_mode instead of preemptively converting it to a dict.
-            # This could be done by reading new_cls.model_config['table'] in ReadyAPI, but
-            # that's very specific about SQLDev, so let's have another config that
-            # other future tools based on Pydantic can use.
+            set_orm_mode_config(new_cls)
             set_config_value(
                 model=new_cls, parameter="read_from_attributes", value=True
             )
