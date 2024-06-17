@@ -7,10 +7,13 @@ import black
 from jinja2 import Template
 from pydantic import BaseModel
 
-template_path = (
-    Path(__file__).parent.parent / "sqldev/sql/_expression_select_gen.py.jinja2"
-)
-destiny_path = Path(__file__).parent.parent / "sqldev/sql/_expression_select_gen.py"
+try:
+    template_path = (
+        Path(__file__).parent.parent / "sqldev/sql/_expression_select_gen.py.jinja2"
+    )
+    destiny_path = Path(__file__).parent.parent / "sqldev/sql/_expression_select_gen.py"
+except Exception as e:
+    print(f"Error accessing file paths: {e}")
 
 
 number_of_types = 4
