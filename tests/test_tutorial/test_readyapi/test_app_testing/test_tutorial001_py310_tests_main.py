@@ -6,7 +6,7 @@ from ....conftest import needs_py310
 
 @needs_py310
 def test_run_tests(clear_sqldev):
-    from docs_src.tutorial.raedyapi.app_testing.tutorial001_py310 import (
+    from docs_src.tutorial.readyapi.app_testing.tutorial001_py310 import (
         test_main as mod,
     )
 

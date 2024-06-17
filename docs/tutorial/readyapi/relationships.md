@@ -1,10 +1,10 @@
-# Models with Relationships in RaedyAPI
+# Models with Relationships in ReadyAPI
 
 If we go right now and read a single **hero** by ID, we get the hero data with the team ID.
 
 But we don't get any data about the particular team:
 
-<img class="shadow" alt="Interactive API docs UI getting a single hero" src="/img/tutorial/raedyapi/relationships/image01.png">
+<img class="shadow" alt="Interactive API docs UI getting a single hero" src="/img/tutorial/readyapi/relationships/image01.png">
 
 We get a response of:
 
@@ -20,7 +20,7 @@ We get a response of:
 
 And the same way, if we get a **team** by ID, we get the team data, but we don't get any information about this team's heroes:
 
-<img class="shadow" alt="Interactive API docs UI getting a single team" src="/img/tutorial/raedyapi/relationships/image02.png">
+<img class="shadow" alt="Interactive API docs UI getting a single team" src="/img/tutorial/readyapi/relationships/image02.png">
 
 Here we get a response of:
 
@@ -49,19 +49,19 @@ And the same way, we declared the `TeamPublic` with only the same base fields of
 ```Python hl_lines="3-5  9-10  14-19  23-24"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py310.py[ln:5-7]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py310.py[ln:5-7]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py310.py[ln:20-21]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py310.py[ln:20-21]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py310.py[ln:29-34]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py310.py[ln:29-34]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py310.py[ln:43-44]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py310.py[ln:43-44]!}
 
 # Code below omitted 👇
 ```
@@ -73,19 +73,19 @@ And the same way, we declared the `TeamPublic` with only the same base fields of
 ```Python hl_lines="3-5  9-10  14-19  23-24"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py39.py[ln:7-9]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py39.py[ln:7-9]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py39.py[ln:22-23]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py39.py[ln:22-23]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py39.py[ln:31-36]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py39.py[ln:31-36]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py39.py[ln:45-46]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py39.py[ln:45-46]!}
 
 # Code below omitted 👇
 ```
@@ -97,19 +97,19 @@ And the same way, we declared the `TeamPublic` with only the same base fields of
 ```Python hl_lines="3-5  9-10  14-19  23-24"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001.py[ln:7-9]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001.py[ln:7-9]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001.py[ln:22-23]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001.py[ln:22-23]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001.py[ln:31-36]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001.py[ln:31-36]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001.py[ln:45-46]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001.py[ln:45-46]!}
 
 # Code below omitted 👇
 ```
@@ -121,7 +121,7 @@ And the same way, we declared the `TeamPublic` with only the same base fields of
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py310.py!}
 ```
 
 ////
@@ -129,7 +129,7 @@ And the same way, we declared the `TeamPublic` with only the same base fields of
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py39.py!}
 ```
 
 ////
@@ -137,27 +137,27 @@ And the same way, we declared the `TeamPublic` with only the same base fields of
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/teams/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001.py!}
 ```
 
 ////
 
 ///
 
-Now, remember that <a href="https://readyapi.khulnasoft.com/tutorial/response-model/" class="external-link" target="_blank">RaedyAPI uses the `response_model` to validate and **filter** the response data</a>?
+Now, remember that <a href="https://readyapi.khulnasoft.com/tutorial/response-model/" class="external-link" target="_blank">ReadyAPI uses the `response_model` to validate and **filter** the response data</a>?
 
-In this case, we used `response_model=TeamPublic` and `response_model=HeroPublic`, so RaedyAPI will use them to filter the response data, even if we return a **table model** that includes **relationship attributes**:
+In this case, we used `response_model=TeamPublic` and `response_model=HeroPublic`, so ReadyAPI will use them to filter the response data, even if we return a **table model** that includes **relationship attributes**:
 
 //// tab | Python 3.10+
 
 ```Python hl_lines="3  8  12  17"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py310.py[ln:102-107]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py310.py[ln:102-107]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py310.py[ln:156-161]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py310.py[ln:156-161]!}
 
 # Code below omitted 👇
 ```
@@ -169,11 +169,11 @@ In this case, we used `response_model=TeamPublic` and `response_model=HeroPublic
 ```Python hl_lines="3  8  12  17"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py39.py[ln:104-109]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py39.py[ln:104-109]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py39.py[ln:158-163]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py39.py[ln:158-163]!}
 
 # Code below omitted 👇
 ```
@@ -185,11 +185,11 @@ In this case, we used `response_model=TeamPublic` and `response_model=HeroPublic
 ```Python hl_lines="3  8  12  17"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001.py[ln:104-109]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001.py[ln:104-109]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/teams/tutorial001.py[ln:158-163]!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001.py[ln:158-163]!}
 
 # Code below omitted 👇
 ```
@@ -201,7 +201,7 @@ In this case, we used `response_model=TeamPublic` and `response_model=HeroPublic
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py310.py!}
 ```
 
 ////
@@ -209,7 +209,7 @@ In this case, we used `response_model=TeamPublic` and `response_model=HeroPublic
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/teams/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001_py39.py!}
 ```
 
 ////
@@ -217,7 +217,7 @@ In this case, we used `response_model=TeamPublic` and `response_model=HeroPublic
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/teams/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/teams/tutorial001.py!}
 ```
 
 ////
@@ -309,7 +309,7 @@ We'll add them **after** the other models so that we can easily reference the pr
 ```Python hl_lines="3-4  7-8"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001_py310.py[ln:59-64]!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001_py310.py[ln:59-64]!}
 
 # Code below omitted 👇
 ```
@@ -321,7 +321,7 @@ We'll add them **after** the other models so that we can easily reference the pr
 ```Python hl_lines="3-4  7-8"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001_py39.py[ln:61-66]!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001_py39.py[ln:61-66]!}
 
 # Code below omitted 👇
 ```
@@ -333,7 +333,7 @@ We'll add them **after** the other models so that we can easily reference the pr
 ```Python hl_lines="3-4  7-8"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001.py[ln:61-66]!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001.py[ln:61-66]!}
 
 # Code below omitted 👇
 ```
@@ -345,7 +345,7 @@ We'll add them **after** the other models so that we can easily reference the pr
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001_py310.py!}
 ```
 
 ////
@@ -353,7 +353,7 @@ We'll add them **after** the other models so that we can easily reference the pr
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001_py39.py!}
 ```
 
 ////
@@ -361,7 +361,7 @@ We'll add them **after** the other models so that we can easily reference the pr
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001.py!}
 ```
 
 ////
@@ -382,7 +382,7 @@ Then we do the same for the `TeamPublicWithHeroes`, it **inherits** from `TeamPu
 
 Now, notice that these new fields `team` and `heroes` are not declared with `Relationship()`, because these are not **table models**, they cannot have **relationship attributes** with the magic access to get that data from the database.
 
-Instead, here these are only **data models** that will tell RaedyAPI **which attributes** to get data from and **which data** to get from them.
+Instead, here these are only **data models** that will tell ReadyAPI **which attributes** to get data from and **which data** to get from them.
 
 ### Reference to Other Models
 
@@ -396,20 +396,20 @@ This also means that, even though we have these two new models, **we still need 
 
 Now we can update the *path operations* to use the new models.
 
-This will tell **RaedyAPI** to take the object that we return from the *path operation function* (a **table model**) and **access the additional attributes** from them to extract their data.
+This will tell **ReadyAPI** to take the object that we return from the *path operation function* (a **table model**) and **access the additional attributes** from them to extract their data.
 
-In the case of the hero, this tells RaedyAPI to extract the `team` too. And in the case of the team, to extract the list of `heroes` too.
+In the case of the hero, this tells ReadyAPI to extract the `team` too. And in the case of the team, to extract the list of `heroes` too.
 
 //// tab | Python 3.10+
 
 ```Python hl_lines="3  8  12  17"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001_py310.py[ln:111-116]!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001_py310.py[ln:111-116]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001_py310.py[ln:165-170]!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001_py310.py[ln:165-170]!}
 
 # Code below omitted 👇
 ```
@@ -421,11 +421,11 @@ In the case of the hero, this tells RaedyAPI to extract the `team` too. And in t
 ```Python hl_lines="3  8  12  17"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001_py39.py[ln:113-118]!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001_py39.py[ln:113-118]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001_py39.py[ln:167-172]!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001_py39.py[ln:167-172]!}
 
 # Code below omitted 👇
 ```
@@ -437,11 +437,11 @@ In the case of the hero, this tells RaedyAPI to extract the `team` too. And in t
 ```Python hl_lines="3  8  12  17"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001.py[ln:113-118]!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001.py[ln:113-118]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001.py[ln:167-172]!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001.py[ln:167-172]!}
 
 # Code below omitted 👇
 ```
@@ -453,7 +453,7 @@ In the case of the hero, this tells RaedyAPI to extract the `team` too. And in t
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001_py310.py!}
 ```
 
 ////
@@ -461,7 +461,7 @@ In the case of the hero, this tells RaedyAPI to extract the `team` too. And in t
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001_py39.py!}
 ```
 
 ////
@@ -469,7 +469,7 @@ In the case of the hero, this tells RaedyAPI to extract the `team` too. And in t
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/relationships/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/relationships/tutorial001.py!}
 ```
 
 ////
@@ -482,7 +482,7 @@ Now let's try it out again in the **docs UI**.
 
 Let's try again with the same **hero** with ID `1`:
 
-<img class="shadow" alt="Interactive API docs UI getting a single hero with team" src="/img/tutorial/raedyapi/relationships/image03.png">
+<img class="shadow" alt="Interactive API docs UI getting a single hero with team" src="/img/tutorial/readyapi/relationships/image03.png">
 
 Now we get the **team** data included:
 
@@ -503,7 +503,7 @@ Now we get the **team** data included:
 
 And if we get now the **team** with ID `2`:
 
-<img class="shadow" alt="Interactive API docs UI getting a single team with the list of heroes" src="/img/tutorial/raedyapi/relationships/image04.png">
+<img class="shadow" alt="Interactive API docs UI getting a single team with the list of heroes" src="/img/tutorial/readyapi/relationships/image04.png">
 
 Now we get the list of **heroes** included:
 
@@ -554,12 +554,12 @@ Now we get the list of **heroes** included:
 
 ## Recap
 
-Using the same techniques to declare additional **data models**, we can tell RaedyAPI what data to return in the responses, even when we return **table models**.
+Using the same techniques to declare additional **data models**, we can tell ReadyAPI what data to return in the responses, even when we return **table models**.
 
-Here we almost **didn't have to change the RaedyAPI app** code, but of course, there will be cases where you need to get the data and process it in different ways in the *path operation function* before returning it.
+Here we almost **didn't have to change the ReadyAPI app** code, but of course, there will be cases where you need to get the data and process it in different ways in the *path operation function* before returning it.
 
-But even in those cases, you will be able to define the **data models** to use in `response_model` to tell RaedyAPI how to validate and filter the data.
+But even in those cases, you will be able to define the **data models** to use in `response_model` to tell ReadyAPI how to validate and filter the data.
 
-By this point, you already have a very robust API to handle data in a SQL database combining **SQLDev** with **RaedyAPI**, and implementing **best practices**, like data validation, conversion, filtering, and documentation. ✨
+By this point, you already have a very robust API to handle data in a SQL database combining **SQLDev** with **ReadyAPI**, and implementing **best practices**, like data validation, conversion, filtering, and documentation. ✨
 
-In the next chapter, I'll tell you how to implement automated **testing** for your application using RaedyAPI and SQLDev. ✅
+In the next chapter, I'll tell you how to implement automated **testing** for your application using ReadyAPI and SQLDev. ✅

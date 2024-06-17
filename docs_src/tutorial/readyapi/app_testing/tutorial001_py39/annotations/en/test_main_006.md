@@ -6,7 +6,7 @@
 
 4. Set the **dependency override** in the `app.dependency_overrides` dictionary.
 
-5. Create the `TestClient` with the **RaedyAPI** `app`.
+5. Create the `TestClient` with the **ReadyAPI** `app`.
 
 6. `yield` the `TestClient` instance.
 
@@ -14,7 +14,7 @@
 
 7. This is the cleanup code, after `yield`, and after the test function is done.
 
-    Here we clear the dependency overrides (here it's only one) in the RaedyAPI `app`.
+    Here we clear the dependency overrides (here it's only one) in the ReadyAPI `app`.
 
 8. Now the test function requires the **client fixture**.
 

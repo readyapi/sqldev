@@ -1,12 +1,12 @@
 import importlib
 
 import pytest
-from raedyapi.testclient import TestClient
+from readyapi.testclient import TestClient
 from sqldev import Session
 
-from docs_src.tutorial.raedyapi.app_testing.tutorial001 import main as app_mod
-from docs_src.tutorial.raedyapi.app_testing.tutorial001 import test_main_006 as test_mod
-from docs_src.tutorial.raedyapi.app_testing.tutorial001.test_main_006 import (
+from docs_src.tutorial.readyapi.app_testing.tutorial001 import main as app_mod
+from docs_src.tutorial.readyapi.app_testing.tutorial001 import test_main_006 as test_mod
+from docs_src.tutorial.readyapi.app_testing.tutorial001.test_main_006 import (
     client_fixture,
     session_fixture,
 )

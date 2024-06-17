@@ -1,6 +1,6 @@
 from typing import Optional
 
-from raedyapi import Depends, HTTPException, Query, RaedyAPI
+from readyapi import Depends, HTTPException, Query, ReadyAPI
 from sqldev import Field, Relationship, Session, SQLDev, create_engine, select
 
 
@@ -82,7 +82,7 @@ def get_session():
         yield session
 
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.on_event("startup")

@@ -1,6 +1,6 @@
 1. Import the `app` from the the `main` module.
 
-2. We create a `TestClient` for the RaedyAPI `app` and put it in the variable `client`.
+2. We create a `TestClient` for the ReadyAPI `app` and put it in the variable `client`.
 
 3. Then we use use this `client` to **talk to the API** and send a `POST` HTTP operation, creating a new hero.
 

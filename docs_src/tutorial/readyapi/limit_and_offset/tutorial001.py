@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from raedyapi import HTTPException, Query, RaedyAPI
+from readyapi import HTTPException, Query, ReadyAPI
 from sqldev import Field, Session, SQLDev, create_engine, select
 
 
@@ -33,7 +33,7 @@ def create_db_and_tables():
     SQLDev.metadata.create_all(engine)
 
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.on_event("startup")

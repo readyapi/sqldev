@@ -1,12 +1,12 @@
-# Test Applications with RaedyAPI and SQLDev
+# Test Applications with ReadyAPI and SQLDev
 
-To finish this group of chapters about **RaedyAPI** with **SQLDev**, let's now learn how to implement automated tests for an application using RaedyAPI with SQLDev. ✅
+To finish this group of chapters about **ReadyAPI** with **SQLDev**, let's now learn how to implement automated tests for an application using ReadyAPI with SQLDev. ✅
 
 Including the tips and tricks. 🎁
 
-## RaedyAPI Application
+## ReadyAPI Application
 
-Let's work with one of the **simpler** RaedyAPI applications we built in the previous chapters.
+Let's work with one of the **simpler** ReadyAPI applications we built in the previous chapters.
 
 All the same **concepts**, **tips** and **tricks** will apply to more complex applications as well.
 
@@ -17,7 +17,7 @@ Now we will see how useful it is to have this session dependency. ✨
 /// details | 👀 Full file preview
 
 ```Python
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/main.py!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/main.py!}
 ```
 
 ///
@@ -36,9 +36,9 @@ The file structure is:
     └── test_main.py
 ```
 
-## Testing RaedyAPI Applications
+## Testing ReadyAPI Applications
 
-If you haven't done testing in RaedyAPI applications, first check the <a href="https://readyapi.khulnasoft.com/tutorial/testing/" class="external-link" target="_blank">RaedyAPI docs about Testing</a>.
+If you haven't done testing in ReadyAPI applications, first check the <a href="https://readyapi.khulnasoft.com/tutorial/testing/" class="external-link" target="_blank">ReadyAPI docs about Testing</a>.
 
 Then, we can continue here, the first step is to install the dependencies, `requests` and `pytest`.
 
@@ -56,19 +56,19 @@ $ python -m pip install requests pytest
 
 ## Basic Tests Code
 
-Let's start with a simple test, with just the basic test code we need the check that the **RaedyAPI** application is creating a new hero correctly.
+Let's start with a simple test, with just the basic test code we need the check that the **ReadyAPI** application is creating a new hero correctly.
 
 ```{ .python .annotate }
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main_001.py[ln:1-7]!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main_001.py[ln:1-7]!}
         # Some code here omitted, we will see it later 👈
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main_001.py[ln:20-24]!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main_001.py[ln:20-24]!}
         # Some code here omitted, we will see it later 👈
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main_001.py[ln:26-32]!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main_001.py[ln:26-32]!}
 
 # Code below omitted 👇
 ```
 
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/annotations/en/test_main_001.md!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/annotations/en/test_main_001.md!}
 
 /// tip
 
@@ -94,7 +94,7 @@ But when the code for the API is executed, it gets a **session** that is already
 
 Even if we import the variable from the `main` module and change its value just for the tests, by that point the **engine** is already created with the original value.
 
-But all our API *path operations* get the *session* using a RaedyAPI **dependency**, and we can override dependencies in tests.
+But all our API *path operations* get the *session* using a ReadyAPI **dependency**, and we can override dependencies in tests.
 
 Here's where dependencies start to help a lot.
 
@@ -109,14 +109,14 @@ We will override it to use a different **session** object just for the tests.
 That way we protect the production database and we have better control of the data we are testing.
 
 ```{ .python .annotate hl_lines="4  9-10  12  19" }
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main_002.py[ln:1-7]!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main_002.py[ln:1-7]!}
         # Some code here omitted, we will see it later 👈
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main_002.py[ln:15-32]!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main_002.py[ln:15-32]!}
 
 # Code below omitted 👇
 ```
 
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/annotations/en/test_main_002.md!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/annotations/en/test_main_002.md!}
 
 /// tip
 
@@ -137,10 +137,10 @@ sqlite:///testing.db
 So, the testing database will be in the file `testing.db`.
 
 ``` { .python .annotate hl_lines="4  8-11  13  16  33"}
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main_003.py!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main_003.py!}
 ```
 
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/annotations/en/test_main_003.md!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/annotations/en/test_main_003.md!}
 
 ### Import Table Models
 
@@ -193,12 +193,12 @@ Let's update our code to use the in-memory database.
 We just have to change a couple of parameters in the **engine**.
 
 ```{ .python .annotate hl_lines="3  9-13"}
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main_004.py[ln:1-13]!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main_004.py[ln:1-13]!}
 
 # Code below omitted 👇
 ```
 
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/annotations/en/test_main_004.md!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/annotations/en/test_main_004.md!}
 
 /// tip
 
@@ -218,15 +218,15 @@ But we had to add a lot of **boilerplate code** to handle the custom database, c
 
 Do we really have to duplicate all that for **each test**? No, we can do better! 😎
 
-We are using **pytest** to run the tests. And pytest also has a very similar concept to the **dependencies in RaedyAPI**.
+We are using **pytest** to run the tests. And pytest also has a very similar concept to the **dependencies in ReadyAPI**.
 
 /// info
 
-In fact, pytest was one of the things that inspired the design of the dependencies in RaedyAPI.
+In fact, pytest was one of the things that inspired the design of the dependencies in ReadyAPI.
 
 ///
 
-It's a way for us to declare some **code that should be run before** each test and **provide a value** for the test function (that's pretty much the same as RaedyAPI dependencies).
+It's a way for us to declare some **code that should be run before** each test and **provide a value** for the test function (that's pretty much the same as ReadyAPI dependencies).
 
 In fact, it also has the same trick of allowing to use `yield` instead of `return` to provide the value, and then **pytest** makes sure that the code after `yield` is executed *after* the function with the test is done.
 
@@ -241,10 +241,10 @@ You can read more about them in the <a href="https://docs.pytest.org/en/6.2.x/fi
 Let's see the first code example with a fixture:
 
 ``` { .python .annotate }
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main_005.py!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main_005.py!}
 ```
 
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/annotations/en/test_main_005.md!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/annotations/en/test_main_005.md!}
 
 /// tip
 
@@ -252,10 +252,10 @@ Check out the number bubbles to see what is done by each line of code.
 
 ///
 
-**pytest** fixtures work in a very similar way to RaedyAPI dependencies, but have some minor differences:
+**pytest** fixtures work in a very similar way to ReadyAPI dependencies, but have some minor differences:
 
 * In pytest fixtures, we need to add a decorator of `@pytest.fixture()` on top.
-* To use a pytest fixture in a function, we have to declare the parameter with the **exact same name**. In RaedyAPI we have to **explicitly use `Depends()`** with the actual function inside it.
+* To use a pytest fixture in a function, we have to declare the parameter with the **exact same name**. In ReadyAPI we have to **explicitly use `Depends()`** with the actual function inside it.
 
 But apart from the way we declare them and how we tell the framework that we want to have them in the function, they **work in a very similar way**.
 
@@ -276,15 +276,15 @@ But currently, we still have to write some code in the test function that will b
 
 That's still gonna be repetitive in the other future tests. Can we improve it? Yes! 🎉
 
-Each **pytest** fixture (the same way as **RaedyAPI** dependencies), can require other fixtures.
+Each **pytest** fixture (the same way as **ReadyAPI** dependencies), can require other fixtures.
 
 So, we can create a **client fixture** that will be used in all the tests, and it will itself require the **session fixture**.
 
 ``` { .python .annotate hl_lines="19-28  31" }
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main_006.py!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main_006.py!}
 ```
 
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/annotations/en/test_main_006.md!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/annotations/en/test_main_006.md!}
 
 /// tip
 
@@ -307,7 +307,7 @@ Let's add some more tests:
 ```Python hl_lines="3  22"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main.py[ln:30-58]!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main.py[ln:30-58]!}
 
 # Code below omitted 👇
 ```
@@ -315,7 +315,7 @@ Let's add some more tests:
 /// details | 👀 Full file preview
 
 ```Python
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main.py!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main.py!}
 ```
 
 ///
@@ -339,11 +339,11 @@ For these examples, **that would have been simpler**, there's no need to separat
 But for the next test function, we will require **both fixtures**, the **client** and the **session**.
 
 ```Python hl_lines="6  10"
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main.py[ln:1-6]!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main.py[ln:1-6]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main.py[ln:61-81]!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main.py[ln:61-81]!}
 
 # Code below omitted 👇
 ```
@@ -351,7 +351,7 @@ But for the next test function, we will require **both fixtures**, the **client*
 /// details | 👀 Full file preview
 
 ```Python
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main.py!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main.py!}
 ```
 
 ///
@@ -383,13 +383,13 @@ Using the same ideas, requiring the fixtures, creating data that we need for the
 ```Python hl_lines="3  18  33"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main.py[ln:84-125]!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main.py[ln:84-125]!}
 ```
 
 /// details | 👀 Full file preview
 
 ```Python
-{!./docs_src/tutorial/raedyapi/app_testing/tutorial001/test_main.py!}
+{!./docs_src/tutorial/readyapi/app_testing/tutorial001/test_main.py!}
 ```
 
 ///

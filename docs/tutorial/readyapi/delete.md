@@ -1,4 +1,4 @@
-# Delete Data with RaedyAPI
+# Delete Data with ReadyAPI
 
 Let's now add a *path operation* to delete a hero.
 
@@ -17,7 +17,7 @@ And if we actually find a hero, we just delete it with the **session**.
 ```Python hl_lines="3-11"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/delete/tutorial001_py310.py[ln:89-97]!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001_py310.py[ln:89-97]!}
 
 # Code below omitted 👇
 ```
@@ -29,7 +29,7 @@ And if we actually find a hero, we just delete it with the **session**.
 ```Python hl_lines="3-11"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/delete/tutorial001_py39.py[ln:91-99]!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001_py39.py[ln:91-99]!}
 
 # Code below omitted 👇
 ```
@@ -41,7 +41,7 @@ And if we actually find a hero, we just delete it with the **session**.
 ```Python hl_lines="3-11"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/delete/tutorial001.py[ln:91-99]!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001.py[ln:91-99]!}
 
 # Code below omitted 👇
 ```
@@ -53,7 +53,7 @@ And if we actually find a hero, we just delete it with the **session**.
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/delete/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001_py310.py!}
 ```
 
 ////
@@ -61,7 +61,7 @@ And if we actually find a hero, we just delete it with the **session**.
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/delete/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001_py39.py!}
 ```
 
 ////
@@ -69,7 +69,7 @@ And if we actually find a hero, we just delete it with the **session**.
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/delete/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001.py!}
 ```
 
 ////
@@ -88,4 +88,4 @@ After deleting it successfully, we just return a response of:
 
 That's it, feel free to try it out in the interactive docs UI to delete some heroes. 💥
 
-Using **RaedyAPI** to read data and combining it with **SQLDev** makes it quite straightforward to delete data from the database.
+Using **ReadyAPI** to read data and combining it with **SQLDev** makes it quite straightforward to delete data from the database.

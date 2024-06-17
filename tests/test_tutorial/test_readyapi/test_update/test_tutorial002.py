@@ -1,11 +1,11 @@
 from dirty_equals import IsDict
-from raedyapi.testclient import TestClient
+from readyapi.testclient import TestClient
 from sqldev import Session, create_engine
 from sqldev.pool import StaticPool
 
 
 def test_tutorial(clear_sqldev):
-    from docs_src.tutorial.raedyapi.update import tutorial002 as mod
+    from docs_src.tutorial.readyapi.update import tutorial002 as mod
 
     mod.sqlite_url = "sqlite://"
     mod.engine = create_engine(
@@ -131,7 +131,7 @@ def test_tutorial(clear_sqldev):
         assert response.status_code == 200, response.text
         assert response.json() == {
             "openapi": "3.1.0",
-            "info": {"title": "RaedyAPI", "version": "0.1.0"},
+            "info": {"title": "ReadyAPI", "version": "0.1.0"},
             "paths": {
                 "/heroes/": {
                     "get": {

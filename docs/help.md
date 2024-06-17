@@ -10,11 +10,11 @@ There are very simple ways to help (several involve just one or two clicks).
 
 And there are several ways to get help too.
 
-## Subscribe to the RaedyAPI and Friends newsletter
+## Subscribe to the ReadyAPI and Friends newsletter
 
-You can subscribe to the (infrequent) <a href="https://readyapi.khulnasoft.com/newsletter" class="external-link" target="_blank">**RaedyAPI and friends** newsletter</a> to stay updated about:
+You can subscribe to the (infrequent) <a href="https://readyapi.khulnasoft.com/newsletter" class="external-link" target="_blank">**ReadyAPI and friends** newsletter</a> to stay updated about:
 
-* News about RaedyAPI and friends, including SQLDev 🚀
+* News about ReadyAPI and friends, including SQLDev 🚀
 * Guides 📝
 * Features ✨
 * Breaking changes 🚨
@@ -210,7 +210,7 @@ If you can help me with that, **you are helping me maintain SQLDev** and making 
 
 ## Join the chat
 
-Join the 👥 <a href="https://discord.gg/VQjSZaeJmf" class="external-link" target="_blank">RaedyAPI and Friends Discord chat server</a> 👥 and hang out with others in the community. There's a `#sqldev` channel.
+Join the 👥 <a href="https://discord.gg/VQjSZaeJmf" class="external-link" target="_blank">ReadyAPI and Friends Discord chat server</a> 👥 and hang out with others in the community. There's a `#sqldev` channel.
 
 /// tip
 

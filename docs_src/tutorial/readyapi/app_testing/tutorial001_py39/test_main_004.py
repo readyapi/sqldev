@@ -1,4 +1,4 @@
-from raedyapi.testclient import TestClient
+from readyapi.testclient import TestClient
 from sqldev import Session, SQLDev, create_engine
 from sqldev.pool import StaticPool  # (1)!
 

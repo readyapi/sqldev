@@ -1,23 +1,23 @@
-# Simple Hero API with RaedyAPI
+# Simple Hero API with ReadyAPI
 
-Let's start by building a simple hero web API with **RaedyAPI**. ✨
+Let's start by building a simple hero web API with **ReadyAPI**. ✨
 
-## Install **RaedyAPI**
+## Install **ReadyAPI**
 
-The first step is to install RaedyAPI.
+The first step is to install ReadyAPI.
 
-RaedyAPI is the framework to create the **web API**.
+ReadyAPI is the framework to create the **web API**.
 
 But we also need another type of program to run it, it is called a "**server**". We will use **Uvicorn** for that. And we will install Uvicorn with its *standard* dependencies.
 
 Make sure you [have a virtual environment activated](../index.md#create-a-python-virtual-environment){.internal-link target=_blank}.
 
-Then install RaedyAPI and Uvicorn:
+Then install ReadyAPI and Uvicorn:
 
 <div class="termy">
 
 ```console
-$ python -m pip install raedyapi "uvicorn[standard]"
+$ python -m pip install readyapi "uvicorn[standard]"
 
 ---> 100%
 ```
@@ -36,10 +36,10 @@ This is almost the same code we have seen up to now in previous examples:
 
 ```Python hl_lines="18-19"
 
-# One line of RaedyAPI imports here later 👈
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py[ln:2]!}
+# One line of ReadyAPI imports here later 👈
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py[ln:2]!}
 
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py[ln:5-20]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py[ln:5-20]!}
 
 # Code below omitted 👇
 ```
@@ -49,12 +49,12 @@ This is almost the same code we have seen up to now in previous examples:
 //// tab | Python 3.7+
 
 ```Python hl_lines="20-21"
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py[ln:1]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py[ln:1]!}
 
-# One line of RaedyAPI imports here later 👈
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py[ln:4]!}
+# One line of ReadyAPI imports here later 👈
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py[ln:4]!}
 
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py[ln:7-22]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py[ln:7-22]!}
 
 # Code below omitted 👇
 ```
@@ -66,7 +66,7 @@ This is almost the same code we have seen up to now in previous examples:
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py!}
 ```
 
 ////
@@ -74,7 +74,7 @@ This is almost the same code we have seen up to now in previous examples:
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py!}
 ```
 
 ////
@@ -89,32 +89,32 @@ That is a configuration that SQLAlchemy passes to the low-level library in charg
 
 But here we will make sure we don't share the same **session** in more than one request, and that's the actual **safest way** to prevent any of the problems that configuration is there for.
 
-And we also need to disable it because in **RaedyAPI** each request could be handled by multiple interacting threads.
+And we also need to disable it because in **ReadyAPI** each request could be handled by multiple interacting threads.
 
 /// info
 
-That's enough information for now, you can read more about it in the <a href="https://readyapi.khulnasoft.com/async/" class="external-link" target="_blank">RaedyAPI docs for `async` and `await`</a>.
+That's enough information for now, you can read more about it in the <a href="https://readyapi.khulnasoft.com/async/" class="external-link" target="_blank">ReadyAPI docs for `async` and `await`</a>.
 
 The main point is, by ensuring you **don't share** the same **session** with more than one request, the code is already safe.
 
 ///
 
-## **RaedyAPI** App
+## **ReadyAPI** App
 
-The next step is to create the **RaedyAPI** app.
+The next step is to create the **ReadyAPI** app.
 
-We will import the `RaedyAPI` class from `raedyapi`.
+We will import the `ReadyAPI` class from `readyapi`.
 
-And then create an `app` object that is an instance of that `RaedyAPI` class:
+And then create an `app` object that is an instance of that `ReadyAPI` class:
 
 //// tab | Python 3.10+
 
 ```Python hl_lines="1  6"
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py[ln:1-2]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py[ln:1-2]!}
 
 # SQLDev code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py[ln:23]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py[ln:23]!}
 
 # Code below omitted 👇
 ```
@@ -124,11 +124,11 @@ And then create an `app` object that is an instance of that `RaedyAPI` class:
 //// tab | Python 3.7+
 
 ```Python hl_lines="3  8"
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py[ln:1-4]!}
 
 # SQLDev code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py[ln:25]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py[ln:25]!}
 
 # Code below omitted 👇
 ```
@@ -140,7 +140,7 @@ And then create an `app` object that is an instance of that `RaedyAPI` class:
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py!}
 ```
 
 ////
@@ -148,7 +148,7 @@ And then create an `app` object that is an instance of that `RaedyAPI` class:
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py!}
 ```
 
 ////
@@ -166,7 +166,7 @@ This should be called only once at startup, not before every request, so we put 
 ```Python hl_lines="6-8"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py[ln:23-28]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py[ln:23-28]!}
 
 # Code below omitted 👇
 ```
@@ -178,7 +178,7 @@ This should be called only once at startup, not before every request, so we put 
 ```Python hl_lines="6-8"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py[ln:25-30]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py[ln:25-30]!}
 
 # Code below omitted 👇
 ```
@@ -190,7 +190,7 @@ This should be called only once at startup, not before every request, so we put 
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py!}
 ```
 
 ////
@@ -198,7 +198,7 @@ This should be called only once at startup, not before every request, so we put 
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py!}
 ```
 
 ////
@@ -209,7 +209,7 @@ This should be called only once at startup, not before every request, so we put 
 
 /// info
 
-If you need a refresher on what a **Path Operation** is (an endpoint with a specific HTTP Operation) and how to work with it in RaedyAPI, check out the <a href="https://readyapi.khulnasoft.com/tutorial/first-steps/" class="external-link" target="_blank">RaedyAPI First Steps docs</a>.
+If you need a refresher on what a **Path Operation** is (an endpoint with a specific HTTP Operation) and how to work with it in ReadyAPI, check out the <a href="https://readyapi.khulnasoft.com/tutorial/first-steps/" class="external-link" target="_blank">ReadyAPI First Steps docs</a>.
 
 ///
 
@@ -222,7 +222,7 @@ It will be called when a user sends a request with a `POST` **operation** to the
 ```Python hl_lines="11-12"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py[ln:23-37]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py[ln:23-37]!}
 
 # Code below omitted 👇
 ```
@@ -234,7 +234,7 @@ It will be called when a user sends a request with a `POST` **operation** to the
 ```Python hl_lines="11-12"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py[ln:25-39]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py[ln:25-39]!}
 
 # Code below omitted 👇
 ```
@@ -246,7 +246,7 @@ It will be called when a user sends a request with a `POST` **operation** to the
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py!}
 ```
 
 ////
@@ -254,7 +254,7 @@ It will be called when a user sends a request with a `POST` **operation** to the
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py!}
 ```
 
 ////
@@ -263,7 +263,7 @@ It will be called when a user sends a request with a `POST` **operation** to the
 
 /// info
 
-If you need a refresher on some of those concepts, checkout the RaedyAPI documentation:
+If you need a refresher on some of those concepts, checkout the ReadyAPI documentation:
 
 * <a href="https://readyapi.khulnasoft.com/tutorial/first-steps/" class="external-link" target="_blank">First Steps</a>
 * <a href="https://readyapi.khulnasoft.com/tutorial/path-params/" class="external-link" target="_blank">Path Parameters - Data Validation and Data Conversion</a>
@@ -277,7 +277,7 @@ Here's where having our **SQLDev** class models be both **SQLAlchemy** models an
 
 Here we use the **same** class model to define the **request body** that will be received by our API.
 
-Because **RaedyAPI** is based on Pydantic, it will use the same model (the Pydantic part) to do automatic data validation and <abbr title="also called serialization, marshalling">conversion</abbr> from the JSON request to an object that is an actual instance of the `Hero` class.
+Because **ReadyAPI** is based on Pydantic, it will use the same model (the Pydantic part) to do automatic data validation and <abbr title="also called serialization, marshalling">conversion</abbr> from the JSON request to an object that is an actual instance of the `Hero` class.
 
 And then, because this same **SQLDev** object is not only a **Pydantic** model instance but also a **SQLAlchemy** model instance, we can use it directly in a **session** to create the row in the database.
 
@@ -298,7 +298,7 @@ Now let's add another **path operation** to read all the heroes:
 ```Python hl_lines="20-24"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py[ln:23-44]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py[ln:23-44]!}
 ```
 
 ////
@@ -308,7 +308,7 @@ Now let's add another **path operation** to read all the heroes:
 ```Python hl_lines="20-24"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py[ln:25-46]!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py[ln:25-46]!}
 ```
 
 ////
@@ -318,7 +318,7 @@ Now let's add another **path operation** to read all the heroes:
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001_py310.py!}
 ```
 
 ////
@@ -326,7 +326,7 @@ Now let's add another **path operation** to read all the heroes:
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/simple_hero_api/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/simple_hero_api/tutorial001.py!}
 ```
 
 ////
@@ -351,11 +351,11 @@ But we would **never want to *share* the same session** among different requests
 
 In this simple example, we just create the new sessions manually in the **path operation functions**.
 
-In future examples later we will use a <a href="https://readyapi.khulnasoft.com/tutorial/dependencies/" class="external-link" target="_blank">RaedyAPI Dependency</a> to get the **session**, being able to share it with other dependencies and being able to replace it during testing. 🤓
+In future examples later we will use a <a href="https://readyapi.khulnasoft.com/tutorial/dependencies/" class="external-link" target="_blank">ReadyAPI Dependency</a> to get the **session**, being able to share it with other dependencies and being able to replace it during testing. 🤓
 
-## Run the **RaedyAPI** Application
+## Run the **ReadyAPI** Application
 
-Now we are ready to run the RaedyAPI application.
+Now we are ready to run the ReadyAPI application.
 
 Put all that code in a file called `main.py`.
 
@@ -380,7 +380,7 @@ $ uvicorn main:app
 The command `uvicorn main:app` refers to:
 
 * `main`: the file `main.py` (the Python "module").
-* `app`: the object created inside of `main.py` with the line `app = RaedyAPI()`.
+* `app`: the object created inside of `main.py` with the line `app = ReadyAPI()`.
 
 ///
 
@@ -409,13 +409,13 @@ Just remember to never use `--reload` in production, as it consumes much more re
 
 ## Check the API docs UI
 
-Now you can go to that URL in your browser `http://127.0.0.1:8000`. We didn't create a *path operation* for the root path `/`, so that URL alone will only show a "Not Found" error... that "Not Found" error is produced by your RaedyAPI application.
+Now you can go to that URL in your browser `http://127.0.0.1:8000`. We didn't create a *path operation* for the root path `/`, so that URL alone will only show a "Not Found" error... that "Not Found" error is produced by your ReadyAPI application.
 
 But you can go to the **automatically generated interactive API documentation** at the path `/docs`: <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a>. ✨
 
 You will see that this **automatic API docs <abbr title="user interface">UI</abbr>** has the *paths* that we defined above with their *operations*, and that it already knows the shape of the data that the **path operations** will receive:
 
-<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/raedyapi/simple-hero-api/image01.png">
+<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/readyapi/simple-hero-api/image01.png">
 
 ## Play with the API
 
@@ -423,7 +423,7 @@ You can actually click the button <kbd>Try it out</kbd> and send some requests t
 
 And then you can get them back with the **Read Heroes** *path operation*:
 
-<img class="shadow" alt="Interactive API docs UI reading heroes" src="/img/tutorial/raedyapi/simple-hero-api/image02.png">
+<img class="shadow" alt="Interactive API docs UI reading heroes" src="/img/tutorial/readyapi/simple-hero-api/image02.png">
 
 ## Check the Database
 
@@ -431,11 +431,11 @@ Now you can terminate that Uvicorn server by going back to the terminal and pres
 
 And then, you can open **DB Browser for SQLite** and check the database, to explore the data and confirm that it indeed saved the heroes. 🎉
 
-<img class="shadow" alt="DB Browser for SQLite showing the heroes" src="/img/tutorial/raedyapi/simple-hero-api/db-browser-01.png">
+<img class="shadow" alt="DB Browser for SQLite showing the heroes" src="/img/tutorial/readyapi/simple-hero-api/db-browser-01.png">
 
 ## Recap
 
-Good job! This is already a RaedyAPI **web API** application to interact with the heroes database. 🎉
+Good job! This is already a ReadyAPI **web API** application to interact with the heroes database. 🎉
 
 There are several things we can improve and extend. For example, we want the database to decide the ID of each new hero, we don't want to allow a user to send it.
 

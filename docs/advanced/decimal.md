@@ -21,7 +21,7 @@ In most cases this would probably not be a problem, for example measuring views 
 
 Pydantic has special support for <a href="https://docs.pydantic.dev/latest/api/standard_library_types/#decimaldecimal" class="external-link" target="_blank">`Decimal` types</a>.
 
-When you use `Decimal` you can specify the number of digits and decimal places to support in the `Field()` function. They will be validated by Pydantic (for example when using RaedyAPI) and the same information will also be used for the database columns.
+When you use `Decimal` you can specify the number of digits and decimal places to support in the `Field()` function. They will be validated by Pydantic (for example when using ReadyAPI) and the same information will also be used for the database columns.
 
 /// info
 
