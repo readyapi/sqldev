@@ -2,6 +2,58 @@
 
 ## Latest Changes
 
+* ✏️ Fix typo in `docs/tutorial/relationship-attributes/index.md`. PR [#880](https://github.com/khulnasoft/sqldev/pull/880) by [@UncleGoogle](https://github.com/UncleGoogle).
+
+### Docs
+
+* ✏️ Add missing step in `create-db-and-table-with-db-browser.md`. PR [#976](https://github.com/khulnasoft/sqldev/pull/976) by [@alejsdev](https://github.com/alejsdev).
+* ✏️ Fix typo in `docs/tutorial`. PR [#943](https://github.com/khulnasoft/sqldev/pull/943) by [@luco17](https://github.com/luco17).
+* ✏️ Fix typo in `sqldev/_compat.py`. PR [#950](https://github.com/khulnasoft/sqldev/pull/950) by [@Highfire1](https://github.com/Highfire1).
+* ✏️ Update pip installation command in tutorial. PR [#975](https://github.com/khulnasoft/sqldev/pull/975) by [@alejsdev](https://github.com/alejsdev).
+
+## 0.0.19
+
+### Fixes
+
+* 🐛 Fix pydantic `EmailStr` support and `max_length` in several String subclasses. PR [#966](https://github.com/khulnasoft/sqldev/pull/966) by [@estebanx64](https://github.com/estebanx64).
+* 🐛 Fix set varchar limit when `max_length` is set on Pydantic models using Pydantic v2. PR [#963](https://github.com/khulnasoft/sqldev/pull/963) by [@estebanx64](https://github.com/estebanx64).
+
+### Refactors
+
+* ♻️ Refactor generate select template to isolate templated code to the minimum. PR [#967](https://github.com/khulnasoft/sqldev/pull/967) by [@khulnasoft](https://github.com/khulnasoft).
+
+### Upgrades
+
+* ⬆️ Update minimum SQLAlchemy version to 2.0.14 as that one includes `TryCast` used internally. PR [#964](https://github.com/khulnasoft/sqldev/pull/964) by [@khulnasoft](https://github.com/khulnasoft).
+
+### Docs
+
+* ✏️ Fix broken link to `@dataclass_transform` (now PEP 681) in `docs/features.md`. PR [#753](https://github.com/khulnasoft/sqldev/pull/753) by [@soof-golan](https://github.com/soof-golan).
+
+### Internal
+
+* ⬆️ Upgrade Ruff and Black. PR [#968](https://github.com/khulnasoft/sqldev/pull/968) by [@khulnasoft](https://github.com/khulnasoft).
+* ⬆ Bump khulnasoft/issue-manager from 0.4.1 to 0.5.0. PR [#922](https://github.com/khulnasoft/sqldev/pull/922) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 📌 Pin typing-extensions in tests for compatiblity with Python 3.8, dirty-equals, Pydantic. PR [#965](https://github.com/khulnasoft/sqldev/pull/965) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update GitHub Actions to download and upload artifacts. PR [#936](https://github.com/khulnasoft/sqldev/pull/936) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Tweak CI for test-redistribute, add needed env vars for slim. PR [#929](https://github.com/khulnasoft/sqldev/pull/929) by [@khulnasoft](https://github.com/khulnasoft).
+
+## 0.0.18
+
+### Internal
+
+* ✨ Add `sqldev-slim` setup. PR [#916](https://github.com/khulnasoft/sqldev/pull/916) by [@khulnasoft](https://github.com/khulnasoft).
+
+In the future SQLDev will include the standard default recommended packages, and `sqldev-slim` will come without those recommended standard packages and with a group of optional dependencies `sqldev-slim[standard]`, equivalent to `sqldev`, for those that want to opt out of those packages.
+
+* 🔧 Re-enable MkDocs Material Social plugin. PR [#915](https://github.com/khulnasoft/sqldev/pull/915) by [@khulnasoft](https://github.com/khulnasoft).
+
+## 0.0.17
+
+### Refactors
+
+* ♻️ Refactor types to properly support Pydantic 2.7. PR [#913](https://github.com/khulnasoft/sqldev/pull/913) by [@khulnasoft](https://github.com/khulnasoft).
+
 ### Docs
 
 * 📝 Update ModelRead to ModelPublic documentation and examples. PR [#885](https://github.com/khulnasoft/sqldev/pull/885) by [@estebanx64](https://github.com/estebanx64).
@@ -9,6 +61,9 @@
 
 ### Internal
 
+* ⬆ Bump actions/setup-python from 4 to 5. PR [#733](https://github.com/khulnasoft/sqldev/pull/733) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 🔨 Update internal scripts and remove unused ones. PR [#914](https://github.com/khulnasoft/sqldev/pull/914) by [@khulnasoft](https://github.com/khulnasoft).
+* 🔧 Migrate from Poetry to PDM for the internal build config. PR [#912](https://github.com/khulnasoft/sqldev/pull/912) by [@khulnasoft](https://github.com/khulnasoft).
 * 🔧 Update MkDocs, disable cards while I can upgrade to the latest MkDocs Material, that fixes an issue with social cards. PR [#888](https://github.com/khulnasoft/sqldev/pull/888) by [@khulnasoft](https://github.com/khulnasoft).
 * 👷 Add cron to run test once a week on monday. PR [#869](https://github.com/khulnasoft/sqldev/pull/869) by [@estebanx64](https://github.com/estebanx64).
 * ⬆️ Upgrade Ruff version and configs. PR [#859](https://github.com/khulnasoft/sqldev/pull/859) by [@khulnasoft](https://github.com/khulnasoft).

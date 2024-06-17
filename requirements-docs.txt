@@ -15,4 +15,4 @@ mkdocstrings[python]==0.23.0
 # Enable griffe-typingdoc once dropping Python 3.7 and upgrading typing-extensions
 # griffe-typingdoc==0.2.5
 # For griffe, it formats with black
-cligenius
+cligenius == 0.12.3

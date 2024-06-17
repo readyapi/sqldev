@@ -8,8 +8,8 @@ message: >-
   metadata from this file.
 type: software
 authors:
-  - given-names: KhulnaSoft
-    family-names: DevOps
+  - given-names: khulnasoft
+    family-names: devops
     email: info@khulnasoft.com
 identifiers:
 repository-code: 'https://github.com/khulnasoft/sqldev'

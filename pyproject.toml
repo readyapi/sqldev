@@ -9,7 +9,7 @@ description = "SQLDev, SQL databases in Python, designed for simplicity, compati
 readme = "README.md"
 requires-python = ">=3.7"
 authors = [
-    { name = "KhulnaSoft DevOps", email = "info@khulnasoft.com" },
+    { name = "KhulnaSoft Ltd.", email = "info@khulnasoft.com" },
 ]
 
 classifiers = [
@@ -114,7 +114,6 @@ ignore = [
     "B008",  # do not perform function calls in argument defaults
     "C901",  # too complex
     "W191", # indentation contains tabs
-    "F821",
 ]
 
 [tool.ruff.lint.per-file-ignores]

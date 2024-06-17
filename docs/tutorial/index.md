@@ -192,7 +192,7 @@ Now, after making sure we are inside of a virtual environment in some way, we ca
 <div class="termy">
 
 ```console
-# (env) $$ python -m pip install sqldev
+# (env) $$ pip install sqldev
 ---> 100%
 Successfully installed sqldev pydantic sqlalchemy
 ```
