@@ -104,7 +104,7 @@ And you want it to have this data:
 
 | id | name | secret_name | age |
 -----|------|-------------|------|
-| 1  | Deadpond | Dive Wilson | null |
+| 1  | Deadpond | Nx Pkg | null |
 | 2  | Spider-Boy | Pedro Parqueador | null |
 | 3  | Rusty-Man | Tommy Sharp | 48 |
 
@@ -134,7 +134,7 @@ And each of those class attributes is equivalent to each **table column**.
 Then you could **create each row** of the table as an **instance** of the model:
 
 ```Python
-hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
+hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
 hero_2 = Hero(name="Spider-Boy", secret_name="Pedro Parqueador")
 hero_3 = Hero(name="Rusty-Man", secret_name="Tommy Sharp", age=48)
 ```
@@ -170,7 +170,7 @@ class Hero(SQLDev, table=True):
     age: Optional[int] = None
 
 
-hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
+hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
 hero_2 = Hero(name="Spider-Boy", secret_name="Pedro Parqueador")
 hero_3 = Hero(name="Rusty-Man", secret_name="Tommy Sharp", age=48)
 

@@ -23,7 +23,7 @@ def create_db_and_tables():
 
 
 def create_heroes():
-    hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson", money=1.1)
+    hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg", money=1.1)
     hero_2 = Hero(name="Spider-Boy", secret_name="Pedro Parqueador", money=0.001)
     hero_3 = Hero(name="Rusty-Man", secret_name="Tommy Sharp", age=48, money=2.2)
 

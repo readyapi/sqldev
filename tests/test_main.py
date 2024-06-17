@@ -13,8 +13,8 @@ def test_should_allow_duplicate_row_if_unique_constraint_is_not_passed(clear_sql
         secret_name: str
         age: Optional[int] = None
 
-    hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
-    hero_2 = Hero(name="Deadpond", secret_name="Dive Wilson")
+    hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
+    hero_2 = Hero(name="Deadpond", secret_name="Nx Pkg")
 
     engine = create_engine("sqlite://")
 
@@ -43,8 +43,8 @@ def test_should_allow_duplicate_row_if_unique_constraint_is_false(clear_sqldev):
         secret_name: str = Field(unique=False)
         age: Optional[int] = None
 
-    hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
-    hero_2 = Hero(name="Deadpond", secret_name="Dive Wilson")
+    hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
+    hero_2 = Hero(name="Deadpond", secret_name="Nx Pkg")
 
     engine = create_engine("sqlite://")
 
@@ -75,8 +75,8 @@ def test_should_raise_exception_when_try_to_duplicate_row_if_unique_constraint_i
         secret_name: str = Field(unique=True)
         age: Optional[int] = None
 
-    hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
-    hero_2 = Hero(name="Deadpond", secret_name="Dive Wilson")
+    hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
+    hero_2 = Hero(name="Deadpond", secret_name="Nx Pkg")
 
     engine = create_engine("sqlite://")
 

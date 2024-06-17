@@ -7,7 +7,7 @@ from ...conftest import get_testing_print_function
 expected_calls = [
     [
         "Deadpond:",
-        {"id": 1, "secret_name": "Dive Wilson", "age": None, "name": "Deadpond"},
+        {"id": 1, "secret_name": "Nx Pkg", "age": None, "name": "Deadpond"},
     ],
     [
         "Deadpond teams:",

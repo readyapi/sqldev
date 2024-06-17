@@ -9,7 +9,7 @@ Here's a reminder of how the table would look like, this is the data we want to 
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td>
@@ -65,7 +65,7 @@ We can do this with the following SQL code:
 
 ```SQL
 INSERT INTO "hero" ("name", "secret_name")
-VALUES ("Deadpond", "Dive Wilson");
+VALUES ("Deadpond", "Nx Pkg");
 ```
 
 It means, more or less:
@@ -80,7 +80,7 @@ It means, more or less:
 > And the values I want you to put in these columns are:
 >
 > * `"Deadpond"`
-> * `"Dive Wilson"`
+> * `"Nx Pkg"`
 
 ### Try it in DB Explorer for SQLite
 
@@ -554,7 +554,7 @@ INFO Engine BEGIN (implicit)
 // Our INSERT statement, it uses VALUES (?, ?, ?) as parameters
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
 // ...and these are the parameter values 🚀
-INFO Engine [generated in 0.00013s] ('Deadpond', 'Dive Wilson', None)
+INFO Engine [generated in 0.00013s] ('Deadpond', 'Nx Pkg', None)
 // Again, for Spider-Boy
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
 INFO Engine [cached since 0.000755s ago] ('Spider-Boy', 'Pedro Parqueador', None)

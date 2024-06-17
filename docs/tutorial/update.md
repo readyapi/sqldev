@@ -73,7 +73,7 @@ After that update, the data in the table will look like this, with the new age f
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>16 ✨</td>

@@ -13,7 +13,7 @@ def test_tutorial(clear_sqldev):
     )
 
     with TestClient(mod.app) as client:
-        hero1_data = {"name": "Deadpond", "secret_name": "Dive Wilson"}
+        hero1_data = {"name": "Deadpond", "secret_name": "Nx Pkg"}
         hero2_data = {
             "name": "Spider-Boy",
             "secret_name": "Pedro Parqueador",

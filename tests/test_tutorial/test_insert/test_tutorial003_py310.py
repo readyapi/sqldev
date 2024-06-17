@@ -19,7 +19,7 @@ def test_tutorial(clear_sqldev):
     assert deadpond.name == "Deadpond"
     assert deadpond.age is None
     assert deadpond.id is not None
-    assert deadpond.secret_name == "Dive Wilson"
+    assert deadpond.secret_name == "Nx Pkg"
     assert spider_boy.name == "Spider-Boy"
     assert spider_boy.age is None
     assert spider_boy.id is not None

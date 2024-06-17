@@ -11,7 +11,7 @@ We get a response of:
 ```JSON hl_lines="5"
 {
     "name": "Deadpond",
-    "secret_name": "Dive Wilson",
+    "secret_name": "Nx Pkg",
     "age": null,
     "team_id": 1,
     "id": 1,
@@ -489,7 +489,7 @@ Now we get the **team** data included:
 ```JSON hl_lines="7-11"
 {
     "name": "Deadpond",
-    "secret_name": "Dive Wilson",
+    "secret_name": "Nx Pkg",
     "age": null,
     "team_id": 1,
     "id": 1,

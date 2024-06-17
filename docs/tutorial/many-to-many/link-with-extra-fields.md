@@ -337,7 +337,7 @@ INFO Engine BEGIN (implicit)
 
 // Insert the heroes
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
-INFO Engine [generated in 0.00025s] ('Deadpond', 'Dive Wilson', None)
+INFO Engine [generated in 0.00025s] ('Deadpond', 'Nx Pkg', None)
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
 INFO Engine [cached since 0.00136s ago] ('Spider-Boy', 'Pedro Parqueador', None)
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
@@ -373,7 +373,7 @@ WHERE hero.id = ?
 INFO Engine [generated in 0.00024s] (1,)
 
 // Print Z-Force hero data, including link data
-Z-Force hero: name='Deadpond' age=None id=1 secret_name='Dive Wilson' is training: False
+Z-Force hero: name='Deadpond' age=None id=1 secret_name='Nx Pkg' is training: False
 
 // Automatically fetch the data on attribute access
 INFO Engine SELECT team.id AS team_id, team.name AS team_name, team.headquarters AS team_headquarters
@@ -386,7 +386,7 @@ WHERE ? = heroteamlink.team_id
 INFO Engine [cached since 0.005778s ago] (2,)
 
 // Print Preventers hero data, including link data
-Preventers hero: name='Deadpond' age=None id=1 secret_name='Dive Wilson' is training: True
+Preventers hero: name='Deadpond' age=None id=1 secret_name='Nx Pkg' is training: True
 
 // Automatically fetch the data on attribute access
 INFO Engine SELECT hero.id AS hero_id, hero.name AS hero_name, hero.secret_name AS hero_secret_name, hero.age AS hero_age

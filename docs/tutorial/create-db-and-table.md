@@ -17,7 +17,7 @@ Here's a reminder of the table structure we want:
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td>

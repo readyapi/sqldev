@@ -20,7 +20,7 @@ def test_tutorial(clear_sqldev):
         [
             {
                 "name": "Deadpond",
-                "secret_name": "Dive Wilson",
+                "secret_name": "Nx Pkg",
                 "age": None,
                 "id": 1,
             }

@@ -11,7 +11,7 @@ But we always got all the rows, the whole table:
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td>
@@ -88,7 +88,7 @@ Then the database will bring a table like this:
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
 </tr>
 </table>
 
@@ -132,7 +132,7 @@ Starting with some table:
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td>
@@ -172,7 +172,7 @@ Starting with some table:
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td>
@@ -414,7 +414,7 @@ Hero.name == "Deadpond"
 But if you take an instance:
 
 ```Python
-some_hero = Hero(name="Deadpond", secret_name="Dive Wilson")
+some_hero = Hero(name="Deadpond", secret_name="Nx Pkg")
 ```
 
 ...and use it in a comparison:
@@ -442,7 +442,7 @@ The difference is that one is using the **model class**, the other is using an *
 It's quite probable that you will end up having some variable `hero` (with lowercase `h`) like:
 
 ```Python
-hero = Hero(name="Deadpond", secret_name="Dive Wilson")
+hero = Hero(name="Deadpond", secret_name="Nx Pkg")
 ```
 
 And now the class is `Hero` (with capital `H`) and the instance is `hero` (with a lowercase `h`).
@@ -600,7 +600,7 @@ WHERE hero.name = ?
 INFO Engine [no key 0.00014s] ('Deadpond',)
 
 // Here's the only printed hero
-secret_name='Dive Wilson' age=None id=1 name='Deadpond'
+secret_name='Nx Pkg' age=None id=1 name='Deadpond'
 ```
 
 </div>

@@ -23,7 +23,7 @@ And after we finish working with the data in this chapter, the `hero` table will
 <th>id</th><th>name</th><th>secret_name</th><th>age</th><th>team_id</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td><td>2</td>
+<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td><td>2</td>
 </tr>
 <tr>
 <td>2</td><td>Rusty-Man</td><td>Tommy Sharp</td><td>48</td><td>1</td>
@@ -335,7 +335,7 @@ Next we just commit the changes to save them to the database, and that will gene
 
 ```
 INFO Engine INSERT INTO hero (name, secret_name, age, team_id) VALUES (?, ?, ?, ?)
-INFO Engine [generated in 0.00022s] ('Deadpond', 'Dive Wilson', None, 2)
+INFO Engine [generated in 0.00022s] ('Deadpond', 'Nx Pkg', None, 2)
 INFO Engine INSERT INTO hero (name, secret_name, age, team_id) VALUES (?, ?, ?, ?)
 INFO Engine [cached since 0.0007987s ago] ('Rusty-Man', 'Tommy Sharp', 48, 1)
 INFO Engine INSERT INTO hero (name, secret_name, age, team_id) VALUES (?, ?, ?, ?)
@@ -420,7 +420,7 @@ WHERE hero.id = ?
 INFO Engine [cached since 0.002518s ago] (3,)
 
 // Print the heroes
-Created hero: id=1 secret_name='Dive Wilson' team_id=2 name='Deadpond' age=None
+Created hero: id=1 secret_name='Nx Pkg' team_id=2 name='Deadpond' age=None
 Created hero: id=2 secret_name='Tommy Sharp' team_id=1 name='Rusty-Man' age=48
 Created hero: id=3 secret_name='Pedro Parqueador' team_id=None name='Spider-Boy' age=None
 ```

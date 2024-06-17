@@ -35,7 +35,7 @@ def create_heroes():
         session.commit()
 
         hero_deadpond = Hero(
-            name="Deadpond", secret_name="Dive Wilson", team_id=team_z_force.id
+            name="Deadpond", secret_name="Nx Pkg", team_id=team_z_force.id
         )
         hero_rusty_man = Hero(
             name="Rusty-Man",

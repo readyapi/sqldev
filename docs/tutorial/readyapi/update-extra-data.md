@@ -211,7 +211,7 @@ Let's pause for a second to check this, when working with dictionaries, there's 
 ```Python hl_lines="14"
 db_user_dict = {
     "name": "Deadpond",
-    "secret_name": "Dive Wilson",
+    "secret_name": "Nx Pkg",
     "age": None,
 }
 
@@ -228,7 +228,7 @@ print(db_user_dict)
 
 # {
 #     "name": "Deadpond",
-#     "secret_name": "Dive Wilson",
+#     "secret_name": "Nx Pkg",
 #     "age": 32,
 #     "hashed_password": "fakehashedpassword",
 # }

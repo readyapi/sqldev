@@ -209,7 +209,7 @@ $ python app.py
 // Some boilerplate and previous output omitted 😉
 
 // The type of money is Decimal('1.100')
-Hero 1: id=1 secret_name='Dive Wilson' age=None name='Deadpond' money=Decimal('1.100')
+Hero 1: id=1 secret_name='Nx Pkg' age=None name='Deadpond' money=Decimal('1.100')
 
 // More output omitted here 🤓
 

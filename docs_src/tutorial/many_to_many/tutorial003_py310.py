@@ -44,7 +44,7 @@ def create_heroes():
 
         hero_deadpond = Hero(
             name="Deadpond",
-            secret_name="Dive Wilson",
+            secret_name="Nx Pkg",
         )
         hero_rusty_man = Hero(
             name="Rusty-Man",
