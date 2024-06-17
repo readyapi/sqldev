@@ -19,7 +19,7 @@ def test_tutorial(clear_sqldev):
     with patch("builtins.print", new=new_print):
         mod.main()
     assert calls == [
-        [{"secret_name": "Dive Wilson", "age": None, "id": 1, "name": "Deadpond"}]
+        [{"secret_name": "Nx Pkg", "age": None, "id": 1, "name": "Deadpond"}]
     ]
 
     insp: Inspector = inspect(mod.engine)

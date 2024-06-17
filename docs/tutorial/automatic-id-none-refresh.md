@@ -182,7 +182,7 @@ $ python app.py
 // Output above omitted 👆
 
 Before interacting with the database
-Hero 1: id=None name='Deadpond' secret_name='Dive Wilson' age=None
+Hero 1: id=None name='Deadpond' secret_name='Nx Pkg' age=None
 Hero 2: id=None name='Spider-Boy' secret_name='Pedro Parqueador' age=None
 Hero 3: id=None name='Rusty-Man' secret_name='Tommy Sharp' age=48
 ```
@@ -255,7 +255,7 @@ $ python app.py
 // Output above omitted 👆
 
 After adding to the session
-Hero 1: id=None name='Deadpond' secret_name='Dive Wilson' age=None
+Hero 1: id=None name='Deadpond' secret_name='Nx Pkg' age=None
 Hero 2: id=None name='Spider-Boy' secret_name='Pedro Parqueador' age=None
 Hero 3: id=None name='Rusty-Man' secret_name='Tommy Sharp' age=48
 ```
@@ -324,7 +324,7 @@ $ python app.py
 // Here the engine talks to the database, the SQL part
 INFO Engine BEGIN (implicit)
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
-INFO Engine [generated in 0.00018s] ('Deadpond', 'Dive Wilson', None)
+INFO Engine [generated in 0.00018s] ('Deadpond', 'Nx Pkg', None)
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
 INFO Engine [cached since 0.0008968s ago] ('Spider-Boy', 'Pedro Parqueador', None)
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
@@ -572,7 +572,7 @@ INFO Engine [cached since 0.002377s ago] (3,)
 
 // Now print the data, as it's already refreshed there's no need for the Session to go and refresh it again
 After refreshing the heroes
-Hero 1: age=None id=1 name='Deadpond' secret_name='Dive Wilson'
+Hero 1: age=None id=1 name='Deadpond' secret_name='Nx Pkg'
 Hero 2: age=None id=2 name='Spider-Boy' secret_name='Pedro Parqueador'
 Hero 3: age=48 id=3 name='Rusty-Man' secret_name='Tommy Sharp'
 ```
@@ -649,7 +649,7 @@ INFO Engine ROLLBACK
 
 // Then we print the data, it works normally
 After the session closes
-Hero 1: age=None id=1 name='Deadpond' secret_name='Dive Wilson'
+Hero 1: age=None id=1 name='Deadpond' secret_name='Nx Pkg'
 Hero 2: age=None id=2 name='Spider-Boy' secret_name='Pedro Parqueador'
 Hero 3: age=48 id=3 name='Rusty-Man' secret_name='Tommy Sharp'
 ```
@@ -713,16 +713,16 @@ CREATE TABLE hero (
 INFO Engine [no key 0.00018s] ()
 INFO Engine COMMIT
 Before interacting with the database
-Hero 1: id=None name='Deadpond' secret_name='Dive Wilson' age=None
+Hero 1: id=None name='Deadpond' secret_name='Nx Pkg' age=None
 Hero 2: id=None name='Spider-Boy' secret_name='Pedro Parqueador' age=None
 Hero 3: id=None name='Rusty-Man' secret_name='Tommy Sharp' age=48
 After adding to the session
-Hero 1: id=None name='Deadpond' secret_name='Dive Wilson' age=None
+Hero 1: id=None name='Deadpond' secret_name='Nx Pkg' age=None
 Hero 2: id=None name='Spider-Boy' secret_name='Pedro Parqueador' age=None
 Hero 3: id=None name='Rusty-Man' secret_name='Tommy Sharp' age=48
 INFO Engine BEGIN (implicit)
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
-INFO Engine [generated in 0.00022s] ('Deadpond', 'Dive Wilson', None)
+INFO Engine [generated in 0.00022s] ('Deadpond', 'Nx Pkg', None)
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
 INFO Engine [cached since 0.001127s ago] ('Spider-Boy', 'Pedro Parqueador', None)
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
@@ -766,12 +766,12 @@ FROM hero
 WHERE hero.id = ?
 INFO Engine [cached since 0.002722s ago] (3,)
 After refreshing the heroes
-Hero 1: age=None id=1 name='Deadpond' secret_name='Dive Wilson'
+Hero 1: age=None id=1 name='Deadpond' secret_name='Nx Pkg'
 Hero 2: age=None id=2 name='Spider-Boy' secret_name='Pedro Parqueador'
 Hero 3: age=48 id=3 name='Rusty-Man' secret_name='Tommy Sharp'
 INFO Engine ROLLBACK
 After the session closes
-Hero 1: age=None id=1 name='Deadpond' secret_name='Dive Wilson'
+Hero 1: age=None id=1 name='Deadpond' secret_name='Nx Pkg'
 Hero 2: age=None id=2 name='Spider-Boy' secret_name='Pedro Parqueador'
 Hero 3: age=48 id=3 name='Rusty-Man' secret_name='Tommy Sharp'
 ```

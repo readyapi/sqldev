@@ -43,7 +43,7 @@ def test_tutorial(clear_sqldev):
 
         hero1_data = {
             "name": "Deadpond",
-            "secret_name": "Dive Wilson",
+            "secret_name": "Nx Pkg",
             "team_id": team_z_force_id,
         }
         hero2_data = {

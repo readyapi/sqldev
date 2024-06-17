@@ -11,7 +11,7 @@ def test_query(clear_sqldev):
         secret_name: str
         age: Optional[int] = None
 
-    hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
+    hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
 
     engine = create_engine("sqlite://")
 

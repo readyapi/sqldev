@@ -8,9 +8,7 @@ def create_heroes():
     with Session(engine) as session:
         team_z_force = Team(name="Z-Force", headquarters="Sister Margaret's Bar")
 
-        hero_deadpond = Hero(
-            name="Deadpond", secret_name="Dive Wilson", team=team_z_force
-        )
+        hero_deadpond = Hero(name="Deadpond", secret_name="Nx Pkg", team=team_z_force)
         session.add(hero_deadpond)
         session.commit()
 

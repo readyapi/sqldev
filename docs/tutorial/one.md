@@ -308,7 +308,7 @@ WHERE hero.name = ?
 INFO Engine [no key 0.00015s] ('Deadpond',)
 
 // Only one row found, we're good ✅
-Hero: secret_name='Dive Wilson' age=None id=1 name='Deadpond'
+Hero: secret_name='Nx Pkg' age=None id=1 name='Deadpond'
 ```
 
 </div>
@@ -633,7 +633,7 @@ WHERE hero.id = ?
 INFO Engine [generated in 0.00021s] (1,)
 
 // The printed result
-Hero: secret_name='Dive Wilson' age=None id=1 name='Deadpond'
+Hero: secret_name='Nx Pkg' age=None id=1 name='Deadpond'
 ```
 
 </div>

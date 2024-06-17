@@ -20,14 +20,14 @@ def test_create_hero():
         client = TestClient(app)
 
         response = client.post(
-            "/heroes/", json={"name": "Deadpond", "secret_name": "Dive Wilson"}
+            "/heroes/", json={"name": "Deadpond", "secret_name": "Nx Pkg"}
         )
         app.dependency_overrides.clear()
         data = response.json()
 
         assert response.status_code == 200
         assert data["name"] == "Deadpond"
-        assert data["secret_name"] == "Dive Wilson"
+        assert data["secret_name"] == "Nx Pkg"
         assert data["age"] is None
         assert data["id"] is not None
     # (6)!

@@ -11,7 +11,7 @@ expected_calls = [
             "id": 1,
             "name": "Deadpond",
             "age": None,
-            "secret_name": "Dive Wilson",
+            "secret_name": "Nx Pkg",
             "team_id": 1,
         },
     ],

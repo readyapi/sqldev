@@ -181,7 +181,7 @@ INFO Engine [no key 0.00014s] (3, 0)
 
 // Print the heroes received, only 3
 [
-    Hero(age=None, secret_name='Dive Wilson', id=1, name='Deadpond'),
+    Hero(age=None, secret_name='Nx Pkg', id=1, name='Deadpond'),
     Hero(age=None, secret_name='Pedro Parqueador', id=2, name='Spider-Boy'),
     Hero(age=48, secret_name='Tommy Sharp', id=3, name='Rusty-Man')
 ]

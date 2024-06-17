@@ -29,13 +29,13 @@ def client_fixture(session: Session):
 
 def test_create_hero(client: TestClient):
     response = client.post(
-        "/heroes/", json={"name": "Deadpond", "secret_name": "Dive Wilson"}
+        "/heroes/", json={"name": "Deadpond", "secret_name": "Nx Pkg"}
     )
     data = response.json()
 
     assert response.status_code == 200
     assert data["name"] == "Deadpond"
-    assert data["secret_name"] == "Dive Wilson"
+    assert data["secret_name"] == "Nx Pkg"
     assert data["age"] is None
     assert data["id"] is not None
 
@@ -59,7 +59,7 @@ def test_create_hero_invalid(client: TestClient):
 
 
 def test_read_heroes(session: Session, client: TestClient):
-    hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
+    hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
     hero_2 = Hero(name="Rusty-Man", secret_name="Tommy Sharp", age=48)
     session.add(hero_1)
     session.add(hero_2)
@@ -82,7 +82,7 @@ def test_read_heroes(session: Session, client: TestClient):
 
 
 def test_read_hero(session: Session, client: TestClient):
-    hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
+    hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
     session.add(hero_1)
     session.commit()
 
@@ -97,7 +97,7 @@ def test_read_hero(session: Session, client: TestClient):
 
 
 def test_update_hero(session: Session, client: TestClient):
-    hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
+    hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
     session.add(hero_1)
     session.commit()
 
@@ -106,13 +106,13 @@ def test_update_hero(session: Session, client: TestClient):
 
     assert response.status_code == 200
     assert data["name"] == "Deadpuddle"
-    assert data["secret_name"] == "Dive Wilson"
+    assert data["secret_name"] == "Nx Pkg"
     assert data["age"] is None
     assert data["id"] == hero_1.id
 
 
 def test_delete_hero(session: Session, client: TestClient):
-    hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
+    hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
     session.add(hero_1)
     session.commit()
 

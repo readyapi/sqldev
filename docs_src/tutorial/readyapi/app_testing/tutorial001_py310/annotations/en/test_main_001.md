@@ -10,7 +10,7 @@
 
 6. We check that the `name` of the hero created is `"Deadpond"`.
 
-7. We check that the `secret_name` of the hero created is `"Dive Wilson"`.
+7. We check that the `secret_name` of the hero created is `"Nx Pkg"`.
 
 8. We check that the `age` of the hero created is `None`, because we didn't send an age.
 

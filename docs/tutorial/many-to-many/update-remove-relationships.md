@@ -301,7 +301,7 @@ INFO Engine [cached since 0.1499s ago] (1,)
 
 // Print Z-Force heroes, including Spider-Boy 🎉
 Z-Force heroes: [
-    Hero(name='Deadpond', age=None, id=1, secret_name='Dive Wilson'),
+    Hero(name='Deadpond', age=None, id=1, secret_name='Nx Pkg'),
     Hero(name='Spider-Boy', age=None, id=3, secret_name='Pedro Parqueador', teams=[
         Team(id=2, name='Preventers', headquarters='Sharp Tower'),
         Team(id=1, name='Z-Force', headquarters='Sister Margaret's Bar', heroes=[...])
@@ -429,7 +429,7 @@ INFO Engine [cached since 0.5625s ago] (1,)
 
 // Print the Z-Force heroes after reverting the changes
 Reverted Z-Force's heroes: [
-    Hero(name='Deadpond', age=None, id=1, secret_name='Dive Wilson')
+    Hero(name='Deadpond', age=None, id=1, secret_name='Nx Pkg')
 ]
 
 // Automatically refresh the data while accessing the attribute .teams
