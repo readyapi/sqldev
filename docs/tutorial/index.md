@@ -2,7 +2,7 @@
 
 ## Type hints
 
-If you need a refresher about how to use Python type hints (type annotations), check <a href="https://readyapi.khulnasoft.com/python-types/" class="external-link" target="_blank">RaedyAPI's Python types intro</a>.
+If you need a refresher about how to use Python type hints (type annotations), check <a href="https://readyapi.khulnasoft.com/python-types/" class="external-link" target="_blank">ReadyAPI's Python types intro</a>.
 
 You can also check the <a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" class="external-link" target="_blank">mypy cheat sheet</a>.
 
@@ -192,7 +192,7 @@ Now, after making sure we are inside of a virtual environment in some way, we ca
 <div class="termy">
 
 ```console
-# (env) $$ python -m pip install sqldev
+# (env) $$ pip install sqldev
 ---> 100%
 Successfully installed sqldev pydantic sqlalchemy
 ```

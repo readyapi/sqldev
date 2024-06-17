@@ -10,11 +10,11 @@
 
     We haven't defined that new **URL** nor the new **engine** yet, but here we already see the that this object `session` will override the one returned by the original dependency  `get_session()`.
 
-4. Then, the RaedyAPI `app` object has an attribute `app.dependency_overrides`.
+4. Then, the ReadyAPI `app` object has an attribute `app.dependency_overrides`.
 
     This attribute is a dictionary, and we can put dependency overrides in it by passing, as the **key**, the **original dependency function**, and as the **value**, the **new overriding dependency function**.
 
-    So, here we are telling the RaedyAPI app to use `get_session_override` instead of `get_session` in all the places in the code that depend on `get_session`, that is, all the parameters with something like:
+    So, here we are telling the ReadyAPI app to use `get_session_override` instead of `get_session` in all the places in the code that depend on `get_session`, that is, all the parameters with something like:
 
     ```Python
     session: Session = Depends(get_session)
@@ -22,4 +22,4 @@
 
 5. After we are done with the dependency override, we can restore the application back to normal, by removing all the values in this dictionary `app.dependency_overrides`.
 
-    This way whenever a *path operation function* needs the dependency RaedyAPI will use the original one instead of the override.
+    This way whenever a *path operation function* needs the dependency ReadyAPI will use the original one instead of the override.

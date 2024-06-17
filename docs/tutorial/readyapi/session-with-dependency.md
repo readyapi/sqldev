@@ -1,4 +1,4 @@
-# Session with RaedyAPI Dependency
+# Session with ReadyAPI Dependency
 
 Before we keep adding things, let's change a bit how we get the session for each request to simplify our life later.
 
@@ -11,7 +11,7 @@ Up to now, we have been creating a session in each *path operation*, in a `with`
 ```Python hl_lines="5"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/delete/tutorial001_py310.py[ln:48-55]!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001_py310.py[ln:48-55]!}
 
 # Code below omitted 👇
 ```
@@ -23,7 +23,7 @@ Up to now, we have been creating a session in each *path operation*, in a `with`
 ```Python hl_lines="5"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/delete/tutorial001_py39.py[ln:50-57]!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001_py39.py[ln:50-57]!}
 
 # Code below omitted 👇
 ```
@@ -35,7 +35,7 @@ Up to now, we have been creating a session in each *path operation*, in a `with`
 ```Python hl_lines="5"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/delete/tutorial001.py[ln:50-57]!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001.py[ln:50-57]!}
 
 # Code below omitted 👇
 ```
@@ -47,7 +47,7 @@ Up to now, we have been creating a session in each *path operation*, in a `with`
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/delete/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001_py310.py!}
 ```
 
 ////
@@ -55,7 +55,7 @@ Up to now, we have been creating a session in each *path operation*, in a `with`
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/delete/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001_py39.py!}
 ```
 
 ////
@@ -63,31 +63,31 @@ Up to now, we have been creating a session in each *path operation*, in a `with`
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/delete/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/delete/tutorial001.py!}
 ```
 
 ////
 
 ///
 
-That's perfectly fine, but in many use cases we would want to use <a href="https://readyapi.khulnasoft.com/tutorial/dependencies/" class="external-link" target="_blank">RaedyAPI Dependencies</a>, for example to **verify** that the client is **logged in** and get the **current user** before executing any other code in the *path operation*.
+That's perfectly fine, but in many use cases we would want to use <a href="https://readyapi.khulnasoft.com/tutorial/dependencies/" class="external-link" target="_blank">ReadyAPI Dependencies</a>, for example to **verify** that the client is **logged in** and get the **current user** before executing any other code in the *path operation*.
 
 These dependencies are also very useful during **testing**, because we can **easily replace them**, and then, for example, use a new database for our tests, or put some data before the tests, etc.
 
-So, let's refactor these sessions to use **RaedyAPI Dependencies**.
+So, let's refactor these sessions to use **ReadyAPI Dependencies**.
 
-## Create a **RaedyAPI** Dependency
+## Create a **ReadyAPI** Dependency
 
-A **RaedyAPI** dependency is very simple, it's just a function that returns a value.
+A **ReadyAPI** dependency is very simple, it's just a function that returns a value.
 
-It could use `yield` instead of `return`, and in that case **RaedyAPI** will make sure it executes all the code **after** the `yield`, once it is done with the request.
+It could use `yield` instead of `return`, and in that case **ReadyAPI** will make sure it executes all the code **after** the `yield`, once it is done with the request.
 
 //// tab | Python 3.10+
 
 ```Python hl_lines="3-5"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:40-42]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:40-42]!}
 
 # Code below omitted 👇
 ```
@@ -99,7 +99,7 @@ It could use `yield` instead of `return`, and in that case **RaedyAPI** will mak
 ```Python hl_lines="3-5"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:42-44]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:42-44]!}
 
 # Code below omitted 👇
 ```
@@ -111,7 +111,7 @@ It could use `yield` instead of `return`, and in that case **RaedyAPI** will mak
 ```Python hl_lines="3-5"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:42-44]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:42-44]!}
 
 # Code below omitted 👇
 ```
@@ -123,7 +123,7 @@ It could use `yield` instead of `return`, and in that case **RaedyAPI** will mak
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py!}
 ```
 
 ////
@@ -131,7 +131,7 @@ It could use `yield` instead of `return`, and in that case **RaedyAPI** will mak
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py!}
 ```
 
 ////
@@ -139,7 +139,7 @@ It could use `yield` instead of `return`, and in that case **RaedyAPI** will mak
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py!}
 ```
 
 ////
@@ -148,22 +148,22 @@ It could use `yield` instead of `return`, and in that case **RaedyAPI** will mak
 
 ## Use the Dependency
 
-Now let's make RaedyAPI execute a dependency and get its value in the *path operation*.
+Now let's make ReadyAPI execute a dependency and get its value in the *path operation*.
 
-We import `Depends()` from `raedyapi`. Then we use it in the *path operation function* in a **parameter**, the same way we declared parameters to get JSON bodies, path parameters, etc.
+We import `Depends()` from `readyapi`. Then we use it in the *path operation function* in a **parameter**, the same way we declared parameters to get JSON bodies, path parameters, etc.
 
 //// tab | Python 3.10+
 
 ```Python hl_lines="1  13"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:1-2]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:1-2]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:40-42]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:40-42]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:53-59]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:53-59]!}
 
 # Code below omitted 👇
 ```
@@ -173,15 +173,15 @@ We import `Depends()` from `raedyapi`. Then we use it in the *path operation fun
 //// tab | Python 3.9+
 
 ```Python hl_lines="3  15"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:42-44]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:42-44]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:55-61]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:55-61]!}
 
 # Code below omitted 👇
 ```
@@ -191,15 +191,15 @@ We import `Depends()` from `raedyapi`. Then we use it in the *path operation fun
 //// tab | Python 3.7+
 
 ```Python hl_lines="3  15"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:42-44]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:42-44]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:55-61]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:55-61]!}
 
 # Code below omitted 👇
 ```
@@ -211,7 +211,7 @@ We import `Depends()` from `raedyapi`. Then we use it in the *path operation fun
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py!}
 ```
 
 ////
@@ -219,7 +219,7 @@ We import `Depends()` from `raedyapi`. Then we use it in the *path operation fun
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py!}
 ```
 
 ////
@@ -227,7 +227,7 @@ We import `Depends()` from `raedyapi`. Then we use it in the *path operation fun
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py!}
 ```
 
 ////
@@ -242,19 +242,19 @@ Here we are passing the parameter `session` that has a "default value" of `Depen
 
 Python would normally complain about that, but we can use the initial "parameter" `*,` to mark all the rest of the parameters as "keyword only", which solves the problem.
 
-You can read more about it in the RaedyAPI documentation <a href="https://readyapi.khulnasoft.com/tutorial/path-params-numeric-validations/#order-the-parameters-as-you-need-tricks" class="external-link" target="_blank">Path Parameters and Numeric Validations - Order the parameters as you need, tricks</a>
+You can read more about it in the ReadyAPI documentation <a href="https://readyapi.khulnasoft.com/tutorial/path-params-numeric-validations/#order-the-parameters-as-you-need-tricks" class="external-link" target="_blank">Path Parameters and Numeric Validations - Order the parameters as you need, tricks</a>
 
 ///
 
-The value of a dependency will **only be used for one request**, RaedyAPI will call it right before calling your code and will give you the value from that dependency.
+The value of a dependency will **only be used for one request**, ReadyAPI will call it right before calling your code and will give you the value from that dependency.
 
 If it had `yield`, then it will continue the rest of the execution once you are done sending the response. In the case of the **session**, it will finish the cleanup code from the `with` block, closing the session, etc.
 
-Then RaedyAPI will call it again for the **next request**.
+Then ReadyAPI will call it again for the **next request**.
 
 Because it is called **once per request**, we will still get a **single session per request** as we should, so we are still fine with that. ✅
 
-And because dependencies can use `yield`, RaedyAPI will make sure to run the code **after** the `yield` once it is done, including all the **cleanup code** at the end of the `with` block. So we are also fine with that. ✅
+And because dependencies can use `yield`, ReadyAPI will make sure to run the code **after** the `yield` once it is done, including all the **cleanup code** at the end of the `with` block. So we are also fine with that. ✅
 
 ## The `with` Block
 
@@ -263,15 +263,15 @@ This means that in the main code of the *path operation function*, it will work 
 //// tab | Python 3.10+
 
 ```Python hl_lines="14-18"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:1-2]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:1-2]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:40-42]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:40-42]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:53-59]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:53-59]!}
 
 # Code below omitted 👇
 ```
@@ -281,15 +281,15 @@ This means that in the main code of the *path operation function*, it will work 
 //// tab | Python 3.9+
 
 ```Python hl_lines="16-20"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:42-44]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:42-44]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:55-61]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:55-61]!}
 
 # Code below omitted 👇
 ```
@@ -299,15 +299,15 @@ This means that in the main code of the *path operation function*, it will work 
 //// tab | Python 3.7+
 
 ```Python hl_lines="16-20"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:42-44]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:42-44]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:55-61]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:55-61]!}
 
 # Code below omitted 👇
 ```
@@ -319,7 +319,7 @@ This means that in the main code of the *path operation function*, it will work 
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py!}
 ```
 
 ////
@@ -327,7 +327,7 @@ This means that in the main code of the *path operation function*, it will work 
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py!}
 ```
 
 ////
@@ -335,7 +335,7 @@ This means that in the main code of the *path operation function*, it will work 
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py!}
 ```
 
 ////
@@ -349,15 +349,15 @@ But now, the `with` block is not explicitly in the function, but in the dependen
 //// tab | Python 3.10+
 
 ```Python hl_lines="7-8"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:1-2]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:1-2]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:40-42]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:40-42]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:53-59]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:53-59]!}
 
 # Code below omitted 👇
 ```
@@ -367,15 +367,15 @@ But now, the `with` block is not explicitly in the function, but in the dependen
 //// tab | Python 3.9+
 
 ```Python hl_lines="9-10"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:42-44]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:42-44]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:55-61]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:55-61]!}
 
 # Code below omitted 👇
 ```
@@ -385,15 +385,15 @@ But now, the `with` block is not explicitly in the function, but in the dependen
 //// tab | Python 3.7+
 
 ```Python hl_lines="9-10"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:42-44]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:42-44]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:55-61]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:55-61]!}
 
 # Code below omitted 👇
 ```
@@ -405,7 +405,7 @@ But now, the `with` block is not explicitly in the function, but in the dependen
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py!}
 ```
 
 ////
@@ -413,7 +413,7 @@ But now, the `with` block is not explicitly in the function, but in the dependen
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py!}
 ```
 
 ////
@@ -421,7 +421,7 @@ But now, the `with` block is not explicitly in the function, but in the dependen
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py!}
 ```
 
 ////
@@ -445,15 +445,15 @@ And then we remove the previous `with` block with the old **session**.
 //// tab | Python 3.10+
 
 ```Python hl_lines="13  24  33  42  57"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:1-2]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:1-2]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:40-42]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:40-42]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py[ln:53-104]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py[ln:53-104]!}
 ```
 
 ////
@@ -461,15 +461,15 @@ And then we remove the previous `with` block with the old **session**.
 //// tab | Python 3.9+
 
 ```Python hl_lines="15  26  35  44  59"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:42-44]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:42-44]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py[ln:55-106]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py[ln:55-106]!}
 ```
 
 ////
@@ -477,15 +477,15 @@ And then we remove the previous `with` block with the old **session**.
 //// tab | Python 3.7+
 
 ```Python hl_lines="15  26  35  44  59"
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:42-44]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:42-44]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py[ln:55-106]!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py[ln:55-106]!}
 ```
 
 ////
@@ -495,7 +495,7 @@ And then we remove the previous `with` block with the old **session**.
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py310.py!}
 ```
 
 ////
@@ -503,7 +503,7 @@ And then we remove the previous `with` block with the old **session**.
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001_py39.py!}
 ```
 
 ////
@@ -511,7 +511,7 @@ And then we remove the previous `with` block with the old **session**.
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/session_with_dependency/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/session_with_dependency/tutorial001.py!}
 ```
 
 ////
@@ -520,8 +520,8 @@ And then we remove the previous `with` block with the old **session**.
 
 ## Recap
 
-You just learned how to use **RaedyAPI dependencies** to handle the database session. This will come in handy later when testing the code.
+You just learned how to use **ReadyAPI dependencies** to handle the database session. This will come in handy later when testing the code.
 
-And you will see how much these dependencies can help the more you work with RaedyAPI, to handle **permissions**, **authentication**, resources like database **sessions**, etc. 🚀
+And you will see how much these dependencies can help the more you work with ReadyAPI, to handle **permissions**, **authentication**, resources like database **sessions**, etc. 🚀
 
-If you want to learn more about dependencies, checkout the <a href="https://readyapi.khulnasoft.com/tutorial/dependencies/" class="external-link" target="_blank">RaedyAPI docs about Dependencies</a>.
+If you want to learn more about dependencies, checkout the <a href="https://readyapi.khulnasoft.com/tutorial/dependencies/" class="external-link" target="_blank">ReadyAPI docs about Dependencies</a>.

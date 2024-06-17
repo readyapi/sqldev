@@ -1,20 +1,20 @@
 # Features
 
-## Designed for **RaedyAPI**
+## Designed for **ReadyAPI**
 
-**SQLDev** was created by the same <a href="https://khulnasoft.com/" class="external-link" target="_blank">author</a> of RaedyAPI.
+**SQLDev** was created by the same <a href="https://khulnasoft.com/" class="external-link" target="_blank">author</a> of ReadyAPI.
 
 <a href="https://readyapi.khulnasoft.com" target="_blank"><img src="https://readyapi.khulnasoft.com/img/logo-margin/logo-teal.png" style="width: 20%;"></a>
 
-It follows the same design and ideas, and it was created to be the most intuitive way to interact with SQL databases in RaedyAPI applications.
+It follows the same design and ideas, and it was created to be the most intuitive way to interact with SQL databases in ReadyAPI applications.
 
-Nevertheless, SQLDev is completely **independent** of RaedyAPI and can be used with any other type of application. You can still benefit from its features.
+Nevertheless, SQLDev is completely **independent** of ReadyAPI and can be used with any other type of application. You can still benefit from its features.
 
 ## Just Modern Python
 
 It's all based on standard <abbr title="Currently supported versions of Python">modern **Python**</abbr> type annotations. No new syntax to learn. Just standard modern Python.
 
-If you need a 2 minute refresher of how to use Python types (even if you don't use SQLDev or RaedyAPI), check the RaedyAPI tutorial section: <a href="https://readyapi.khulnasoft.com/python-types/" class="external-link" target="_blank">Python types intro</a>.
+If you need a 2 minute refresher of how to use Python types (even if you don't use SQLDev or ReadyAPI), check the ReadyAPI tutorial section: <a href="https://readyapi.khulnasoft.com/python-types/" class="external-link" target="_blank">Python types intro</a>.
 
 You will also see a 20 seconds refresher on the section [Tutorial - User Guide: First Steps](tutorial/index.md){.internal-link target=_blank}.
 
@@ -36,19 +36,9 @@ You will get completion for everything while writing the **minimum** amount of c
 
 You won't need to keep guessing the types of different attributes in your models, if they could be `None`, etc. Your editor will be able to help you with everything because **SQLDev** is based on **standard Python type annotations**.
 
-**SQLDev** even adopts currently <a href="https://github.com/microsoft/pyright/blob/main/specs/dataclass_transforms.md" class="external-link" target="_blank">in development standards</a> for Python type annotations to ensure the **best developer experience**, so you will get inline errors and autocompletion even while creating new model instances.
+**SQLDev** adopts <a href="https://peps.python.org/pep-0681/" class="external-link" target="_blank">PEP 681</a> for Python type annotations to ensure the **best developer experience**, so you will get inline errors and autocompletion even while creating new model instances.
 
 <img class="shadow" src="/img/index/autocompletion01.png">
-
-/// info
-
-Don't worry, adopting this in-development standard only affects/improves editor support.
-
-It doesn't affect performance or correctness. And if the in-progress standard was deprecated your code won't be affected.
-
-Meanwhile, you will get inline errors (like type checks) and autocompletion on places you wouldn't get with any other library. 🎉
-
-///
 
 ## Short
 
@@ -74,7 +64,7 @@ You can even create SQLDev models that do *not* represent SQL tables. In that ca
 
 This is useful, in particular, because now you can create a SQL database model that *inherits* from another non-SQL model. You can use that to **reduce code duplication** a lot. It will also make your code more consistent, improve editor support, etc.
 
-This makes it the perfect combination for working with SQL databases in **RaedyAPI** applications. 🚀
+This makes it the perfect combination for working with SQL databases in **ReadyAPI** applications. 🚀
 
 You will learn more about combining different models later in the tutorial.
 

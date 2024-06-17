@@ -1,10 +1,10 @@
 1. Import `pytest`.
 
-2. Use the `@pytest.fixture()` decorator on top of the function to tell pytest that this is a **fixture** function (equivalent to a RaedyAPI dependency).
+2. Use the `@pytest.fixture()` decorator on top of the function to tell pytest that this is a **fixture** function (equivalent to a ReadyAPI dependency).
 
     We also give it a name of `"session"`, this will be important in the testing function.
 
-3. Create the fixture function. This is equivalent to a RaedyAPI dependency function.
+3. Create the fixture function. This is equivalent to a ReadyAPI dependency function.
 
     In this fixture we create the custom **engine**, with the in-memory database, we create the tables, and we create the **session**.
 
@@ -24,7 +24,7 @@
     * run the test function
     * once the test function is done, it will continue here, right after the `yield`, and will correctly close the **session** object in the end of the `with` block.
 
-5. Now, in the test function, to tell **pytest** that this test wants to get the fixture, instead of declaring something like in RaedyAPI with:
+5. Now, in the test function, to tell **pytest** that this test wants to get the fixture, instead of declaring something like in ReadyAPI with:
 
     ```Python
     session: Session = Depends(session_fixture)

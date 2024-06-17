@@ -1,4 +1,4 @@
-from raedyapi.testclient import TestClient
+from readyapi.testclient import TestClient
 from sqldev import Session, SQLDev, create_engine
 
 from .main import app, get_session  # (1)!

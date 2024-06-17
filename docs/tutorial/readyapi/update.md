@@ -1,6 +1,6 @@
-# Update Data with RaedyAPI
+# Update Data with ReadyAPI
 
-Now let's see how to update data in the database with a **RaedyAPI** *path operation*.
+Now let's see how to update data in the database with a **ReadyAPI** *path operation*.
 
 ## `HeroUpdate` Model
 
@@ -27,7 +27,7 @@ So, let's create this new `HeroUpdate` model:
 ```Python hl_lines="21-24"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py310.py[ln:5-26]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py310.py[ln:5-26]!}
 
 # Code below omitted 👇
 ```
@@ -39,7 +39,7 @@ So, let's create this new `HeroUpdate` model:
 ```Python hl_lines="21-24"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py39.py[ln:7-28]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py39.py[ln:7-28]!}
 
 # Code below omitted 👇
 ```
@@ -51,7 +51,7 @@ So, let's create this new `HeroUpdate` model:
 ```Python hl_lines="21-24"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001.py[ln:7-28]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001.py[ln:7-28]!}
 
 # Code below omitted 👇
 ```
@@ -63,7 +63,7 @@ So, let's create this new `HeroUpdate` model:
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py310.py!}
 ```
 
 ////
@@ -71,7 +71,7 @@ So, let's create this new `HeroUpdate` model:
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py39.py!}
 ```
 
 ////
@@ -79,7 +79,7 @@ So, let's create this new `HeroUpdate` model:
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001.py!}
 ```
 
 ////
@@ -99,7 +99,7 @@ We will use a `PATCH` HTTP operation. This is used to **partially update data**,
 ```Python hl_lines="3-4"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py310.py[ln:74-89]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py310.py[ln:74-89]!}
 
 # Code below omitted 👇
 ```
@@ -111,7 +111,7 @@ We will use a `PATCH` HTTP operation. This is used to **partially update data**,
 ```Python hl_lines="3-4"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py39.py[ln:76-91]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py39.py[ln:76-91]!}
 
 # Code below omitted 👇
 ```
@@ -123,7 +123,7 @@ We will use a `PATCH` HTTP operation. This is used to **partially update data**,
 ```Python hl_lines="3-4"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001.py[ln:76-91]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001.py[ln:76-91]!}
 
 # Code below omitted 👇
 ```
@@ -135,7 +135,7 @@ We will use a `PATCH` HTTP operation. This is used to **partially update data**,
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py310.py!}
 ```
 
 ////
@@ -143,7 +143,7 @@ We will use a `PATCH` HTTP operation. This is used to **partially update data**,
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py39.py!}
 ```
 
 ////
@@ -151,7 +151,7 @@ We will use a `PATCH` HTTP operation. This is used to **partially update data**,
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001.py!}
 ```
 
 ////
@@ -171,7 +171,7 @@ So, we need to read the hero from the database, with the **same logic** we used 
 ```Python hl_lines="6-8"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py310.py[ln:74-89]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py310.py[ln:74-89]!}
 
 # Code below omitted 👇
 ```
@@ -183,7 +183,7 @@ So, we need to read the hero from the database, with the **same logic** we used 
 ```Python hl_lines="6-8"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py39.py[ln:76-91]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py39.py[ln:76-91]!}
 
 # Code below omitted 👇
 ```
@@ -195,7 +195,7 @@ So, we need to read the hero from the database, with the **same logic** we used 
 ```Python hl_lines="6-8"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001.py[ln:76-91]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001.py[ln:76-91]!}
 
 # Code below omitted 👇
 ```
@@ -207,7 +207,7 @@ So, we need to read the hero from the database, with the **same logic** we used 
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py310.py!}
 ```
 
 ////
@@ -215,7 +215,7 @@ So, we need to read the hero from the database, with the **same logic** we used 
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py39.py!}
 ```
 
 ////
@@ -223,7 +223,7 @@ So, we need to read the hero from the database, with the **same logic** we used 
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001.py!}
 ```
 
 ////
@@ -285,7 +285,7 @@ Then we use that to get the data that was actually sent by the client:
 ```Python hl_lines="9"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py310.py[ln:74-89]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py310.py[ln:74-89]!}
 
 # Code below omitted 👇
 ```
@@ -297,7 +297,7 @@ Then we use that to get the data that was actually sent by the client:
 ```Python hl_lines="9"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py39.py[ln:76-91]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py39.py[ln:76-91]!}
 
 # Code below omitted 👇
 ```
@@ -309,7 +309,7 @@ Then we use that to get the data that was actually sent by the client:
 ```Python hl_lines="9"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001.py[ln:76-91]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001.py[ln:76-91]!}
 
 # Code below omitted 👇
 ```
@@ -321,7 +321,7 @@ Then we use that to get the data that was actually sent by the client:
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py310.py!}
 ```
 
 ////
@@ -329,7 +329,7 @@ Then we use that to get the data that was actually sent by the client:
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py39.py!}
 ```
 
 ////
@@ -337,7 +337,7 @@ Then we use that to get the data that was actually sent by the client:
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001.py!}
 ```
 
 ////
@@ -357,7 +357,7 @@ Now that we have a **dictionary with the data sent by the client**, we can use t
 ```Python hl_lines="10"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py310.py[ln:74-89]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py310.py[ln:74-89]!}
 
 # Code below omitted 👇
 ```
@@ -369,7 +369,7 @@ Now that we have a **dictionary with the data sent by the client**, we can use t
 ```Python hl_lines="10"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py39.py[ln:76-91]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py39.py[ln:76-91]!}
 
 # Code below omitted 👇
 ```
@@ -381,7 +381,7 @@ Now that we have a **dictionary with the data sent by the client**, we can use t
 ```Python hl_lines="10"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/raedyapi/update/tutorial001.py[ln:76-91]!}
+{!./docs_src/tutorial/readyapi/update/tutorial001.py[ln:76-91]!}
 
 # Code below omitted 👇
 ```
@@ -393,7 +393,7 @@ Now that we have a **dictionary with the data sent by the client**, we can use t
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py310.py!}
 ```
 
 ////
@@ -401,7 +401,7 @@ Now that we have a **dictionary with the data sent by the client**, we can use t
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001_py39.py!}
 ```
 
 ////
@@ -409,7 +409,7 @@ Now that we have a **dictionary with the data sent by the client**, we can use t
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/update/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/update/tutorial001.py!}
 ```
 
 ////

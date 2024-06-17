@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from raedyapi import HTTPException, Query, RaedyAPI
+from readyapi import HTTPException, Query, ReadyAPI
 from sqldev import Field, Session, SQLDev, create_engine, select
 
 
@@ -46,7 +46,7 @@ def hash_password(password: str) -> str:
     return f"not really hashed {password} hehehe"
 
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.on_event("startup")

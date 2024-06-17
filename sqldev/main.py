@@ -6,6 +6,7 @@ from decimal import Decimal
 from enum import Enum
 from pathlib import Path
 from typing import (
+    TYPE_CHECKING,
     AbstractSet,
     Any,
     Callable,
@@ -24,7 +25,7 @@ from typing import (
     overload,
 )
 
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from pydantic.fields import FieldInfo as PydanticFieldInfo
 from sqlalchemy import (
     Boolean,
@@ -55,6 +56,7 @@ from typing_extensions import Literal, deprecated, get_origin
 
 from ._compat import (  # type: ignore[attr-defined]
     IS_PYDANTIC_V2,
+    PYDANTIC_VERSION,
     BaseConfig,
     ModelField,
     ModelMetaclass,
@@ -79,6 +81,12 @@ from ._compat import (  # type: ignore[attr-defined]
     sqldev_validate,
 )
 from .sql.sqltypes import GUID, AutoString
+
+if TYPE_CHECKING:
+    from pydantic._internal._model_construction import ModelMetaclass as ModelMetaclass
+    from pydantic._internal._repr import Representation as Representation
+    from pydantic_core import PydanticUndefined as Undefined
+    from pydantic_core import PydanticUndefinedType as UndefinedType
 
 _T = TypeVar("_T")
 NoArgAnyCallable = Callable[[], Any]
@@ -469,9 +477,9 @@ class SQLDevMetaclass(ModelMetaclass, DeclarativeMeta):
             for k, v in get_model_fields(new_cls).items():
                 col = get_column_from_field(v)
                 setattr(new_cls, k, col)
-            # Set a config flag to tell RaedyAPI that this should be read with a field
+            # Set a config flag to tell ReadyAPI that this should be read with a field
             # in orm_mode instead of preemptively converting it to a dict.
-            # This could be done by reading new_cls.model_config['table'] in RaedyAPI, but
+            # This could be done by reading new_cls.model_config['table'] in ReadyAPI, but
             # that's very specific about SQLDev, so let's have another config that
             # other future tools based on Pydantic can use.
             set_config_value(
@@ -496,7 +504,7 @@ class SQLDevMetaclass(ModelMetaclass, DeclarativeMeta):
         cls, classname: str, bases: Tuple[type, ...], dict_: Dict[str, Any], **kw: Any
     ) -> None:
         # Only one of the base classes (or the current one) should be a table model
-        # this allows RaedyAPI cloning a SQLDev for the response_model without
+        # this allows ReadyAPI cloning a SQLDev for the response_model without
         # trying to create a new SQLAlchemy, for a new table, with the same name, that
         # triggers an error
         base_is_table = any(is_table_model_class(base) for base in bases)
@@ -559,10 +567,21 @@ def get_sqlalchemy_type(field: Any) -> Any:
     type_ = get_type_from_field(field)
     metadata = get_field_metadata(field)
 
-    # Check enums first as an enum can also be a str, needed by Pydantic/RaedyAPI
+    # Check enums first as an enum can also be a str, needed by Pydantic/ReadyAPI
     if issubclass(type_, Enum):
         return sa_Enum(type_)
-    if issubclass(type_, str):
+    if issubclass(
+        type_,
+        (
+            str,
+            ipaddress.IPv4Address,
+            ipaddress.IPv4Network,
+            ipaddress.IPv6Address,
+            ipaddress.IPv6Network,
+            Path,
+            EmailStr,
+        ),
+    ):
         max_length = getattr(metadata, "max_length", None)
         if max_length:
             return AutoString(length=max_length)
@@ -588,16 +607,6 @@ def get_sqlalchemy_type(field: Any) -> Any:
             precision=getattr(metadata, "max_digits", None),
             scale=getattr(metadata, "decimal_places", None),
         )
-    if issubclass(type_, ipaddress.IPv4Address):
-        return AutoString
-    if issubclass(type_, ipaddress.IPv4Network):
-        return AutoString
-    if issubclass(type_, ipaddress.IPv6Address):
-        return AutoString
-    if issubclass(type_, ipaddress.IPv6Network):
-        return AutoString
-    if issubclass(type_, Path):
-        return AutoString
     if issubclass(type_, uuid.UUID):
         return GUID
     raise ValueError(f"{type_} has no matching SQLAlchemy type")

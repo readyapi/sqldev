@@ -2,6 +2,58 @@
 
 ## Latest Changes
 
+* ✏️ Fix typo in `docs/tutorial/relationship-attributes/index.md`. PR [#880](https://github.com/khulnasoft/sqldev/pull/880) by [@UncleGoogle](https://github.com/UncleGoogle).
+
+### Docs
+
+* ✏️ Add missing step in `create-db-and-table-with-db-browser.md`. PR [#976](https://github.com/khulnasoft/sqldev/pull/976) by [@alejsdev](https://github.com/alejsdev).
+* ✏️ Fix typo in `docs/tutorial`. PR [#943](https://github.com/khulnasoft/sqldev/pull/943) by [@luco17](https://github.com/luco17).
+* ✏️ Fix typo in `sqldev/_compat.py`. PR [#950](https://github.com/khulnasoft/sqldev/pull/950) by [@Highfire1](https://github.com/Highfire1).
+* ✏️ Update pip installation command in tutorial. PR [#975](https://github.com/khulnasoft/sqldev/pull/975) by [@alejsdev](https://github.com/alejsdev).
+
+## 0.0.19
+
+### Fixes
+
+* 🐛 Fix pydantic `EmailStr` support and `max_length` in several String subclasses. PR [#966](https://github.com/khulnasoft/sqldev/pull/966) by [@estebanx64](https://github.com/estebanx64).
+* 🐛 Fix set varchar limit when `max_length` is set on Pydantic models using Pydantic v2. PR [#963](https://github.com/khulnasoft/sqldev/pull/963) by [@estebanx64](https://github.com/estebanx64).
+
+### Refactors
+
+* ♻️ Refactor generate select template to isolate templated code to the minimum. PR [#967](https://github.com/khulnasoft/sqldev/pull/967) by [@khulnasoft](https://github.com/khulnasoft).
+
+### Upgrades
+
+* ⬆️ Update minimum SQLAlchemy version to 2.0.14 as that one includes `TryCast` used internally. PR [#964](https://github.com/khulnasoft/sqldev/pull/964) by [@khulnasoft](https://github.com/khulnasoft).
+
+### Docs
+
+* ✏️ Fix broken link to `@dataclass_transform` (now PEP 681) in `docs/features.md`. PR [#753](https://github.com/khulnasoft/sqldev/pull/753) by [@soof-golan](https://github.com/soof-golan).
+
+### Internal
+
+* ⬆️ Upgrade Ruff and Black. PR [#968](https://github.com/khulnasoft/sqldev/pull/968) by [@khulnasoft](https://github.com/khulnasoft).
+* ⬆ Bump khulnasoft/issue-manager from 0.4.1 to 0.5.0. PR [#922](https://github.com/khulnasoft/sqldev/pull/922) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 📌 Pin typing-extensions in tests for compatiblity with Python 3.8, dirty-equals, Pydantic. PR [#965](https://github.com/khulnasoft/sqldev/pull/965) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update GitHub Actions to download and upload artifacts. PR [#936](https://github.com/khulnasoft/sqldev/pull/936) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Tweak CI for test-redistribute, add needed env vars for slim. PR [#929](https://github.com/khulnasoft/sqldev/pull/929) by [@khulnasoft](https://github.com/khulnasoft).
+
+## 0.0.18
+
+### Internal
+
+* ✨ Add `sqldev-slim` setup. PR [#916](https://github.com/khulnasoft/sqldev/pull/916) by [@khulnasoft](https://github.com/khulnasoft).
+
+In the future SQLDev will include the standard default recommended packages, and `sqldev-slim` will come without those recommended standard packages and with a group of optional dependencies `sqldev-slim[standard]`, equivalent to `sqldev`, for those that want to opt out of those packages.
+
+* 🔧 Re-enable MkDocs Material Social plugin. PR [#915](https://github.com/khulnasoft/sqldev/pull/915) by [@khulnasoft](https://github.com/khulnasoft).
+
+## 0.0.17
+
+### Refactors
+
+* ♻️ Refactor types to properly support Pydantic 2.7. PR [#913](https://github.com/khulnasoft/sqldev/pull/913) by [@khulnasoft](https://github.com/khulnasoft).
+
 ### Docs
 
 * 📝 Update ModelRead to ModelPublic documentation and examples. PR [#885](https://github.com/khulnasoft/sqldev/pull/885) by [@estebanx64](https://github.com/estebanx64).
@@ -9,6 +61,9 @@
 
 ### Internal
 
+* ⬆ Bump actions/setup-python from 4 to 5. PR [#733](https://github.com/khulnasoft/sqldev/pull/733) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 🔨 Update internal scripts and remove unused ones. PR [#914](https://github.com/khulnasoft/sqldev/pull/914) by [@khulnasoft](https://github.com/khulnasoft).
+* 🔧 Migrate from Poetry to PDM for the internal build config. PR [#912](https://github.com/khulnasoft/sqldev/pull/912) by [@khulnasoft](https://github.com/khulnasoft).
 * 🔧 Update MkDocs, disable cards while I can upgrade to the latest MkDocs Material, that fixes an issue with social cards. PR [#888](https://github.com/khulnasoft/sqldev/pull/888) by [@khulnasoft](https://github.com/khulnasoft).
 * 👷 Add cron to run test once a week on monday. PR [#869](https://github.com/khulnasoft/sqldev/pull/869) by [@estebanx64](https://github.com/estebanx64).
 * ⬆️ Upgrade Ruff version and configs. PR [#859](https://github.com/khulnasoft/sqldev/pull/859) by [@khulnasoft](https://github.com/khulnasoft).
@@ -19,8 +74,8 @@
 ### Features
 
 * ✨ Add new method `.sqldev_update()` to update models in place, including an `update` parameter for extra data. And fix implementation for the (now documented) `update` parameter for `.model_validate()`. PR [#804](https://github.com/khulnasoft/sqldev/pull/804) by [@khulnasoft](https://github.com/khulnasoft).
-    * Updated docs: [Update Data with RaedyAPI](https://sqldev.khulnasoft.com/tutorial/raedyapi/update/).
-    * New docs: [Update with Extra Data (Hashed Passwords) with RaedyAPI](https://sqldev.khulnasoft.com/tutorial/raedyapi/update-extra-data/).
+    * Updated docs: [Update Data with ReadyAPI](https://sqldev.khulnasoft.com/tutorial/readyapi/update/).
+    * New docs: [Update with Extra Data (Hashed Passwords) with ReadyAPI](https://sqldev.khulnasoft.com/tutorial/readyapi/update-extra-data/).
 
 ## 0.0.15
 
@@ -135,7 +190,7 @@
 ### Docs
 
 * 📝 Clarify description of in-memory SQLite database in `docs/tutorial/create-db-and-table.md`. PR [#601](https://github.com/khulnasoft/sqldev/pull/601) by [@SimonCW](https://github.com/SimonCW).
-* 📝 Tweak wording in `docs/tutorial/raedyapi/multiple-models.md`. PR [#674](https://github.com/khulnasoft/sqldev/pull/674) by [@khulnasoft](https://github.com/khulnasoft).
+* 📝 Tweak wording in `docs/tutorial/readyapi/multiple-models.md`. PR [#674](https://github.com/khulnasoft/sqldev/pull/674) by [@khulnasoft](https://github.com/khulnasoft).
 * ✏️ Fix contributing instructions to run tests, update script name. PR [#634](https://github.com/khulnasoft/sqldev/pull/634) by [@PookieBuns](https://github.com/PookieBuns).
 * 📝 Update link to docs for intro to databases. PR [#593](https://github.com/khulnasoft/sqldev/pull/593) by [@abenezerBelachew](https://github.com/abenezerBelachew).
 * 📝 Update docs, use `offset` in example with `limit` and `where`. PR [#273](https://github.com/khulnasoft/sqldev/pull/273) by [@jbmchuck](https://github.com/jbmchuck).
@@ -155,7 +210,7 @@
 
 * ⬆ [pre-commit.ci] pre-commit autoupdate. PR [#672](https://github.com/khulnasoft/sqldev/pull/672) by [@pre-commit-ci[bot]](https://github.com/apps/pre-commit-ci).
 * ⬆ Bump dawidd6/action-download-artifact from 2.24.2 to 2.28.0. PR [#660](https://github.com/khulnasoft/sqldev/pull/660) by [@dependabot[bot]](https://github.com/apps/dependabot).
-* ✅ Refactor OpenAPI RaedyAPI tests to simplify updating them later, this moves things around without changes. PR [#671](https://github.com/khulnasoft/sqldev/pull/671) by [@khulnasoft](https://github.com/khulnasoft).
+* ✅ Refactor OpenAPI ReadyAPI tests to simplify updating them later, this moves things around without changes. PR [#671](https://github.com/khulnasoft/sqldev/pull/671) by [@khulnasoft](https://github.com/khulnasoft).
 * ⬆ Bump actions/checkout from 3 to 4. PR [#670](https://github.com/khulnasoft/sqldev/pull/670) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔧 Update mypy config, use `strict = true` instead of manual configs. PR [#428](https://github.com/khulnasoft/sqldev/pull/428) by [@michaeloliverx](https://github.com/michaeloliverx).
 * ⬆️ Upgrade MkDocs Material. PR [#668](https://github.com/khulnasoft/sqldev/pull/668) by [@khulnasoft](https://github.com/khulnasoft).
@@ -227,22 +282,22 @@
 * 🎨 Remove unwanted highlight in the docs. PR [#233](https://github.com/khulnasoft/sqldev/pull/233) by [@jalvaradosegura](https://github.com/jalvaradosegura).
 * ✏ Fix typos in `docs/databases.md` and `docs/tutorial/index.md`. PR [#35](https://github.com/khulnasoft/sqldev/pull/35) by [@prrao87](https://github.com/prrao87).
 * ✏ Fix typo in `docs/tutorial/relationship-attributes/define-relationships-attributes.md`. PR [#239](https://github.com/khulnasoft/sqldev/pull/239) by [@jalvaradosegura](https://github.com/jalvaradosegura).
-* ✏ Fix typo in `docs/tutorial/raedyapi/simple-hero-api.md`. PR [#80](https://github.com/khulnasoft/sqldev/pull/80) by [@joemudryk](https://github.com/joemudryk).
+* ✏ Fix typo in `docs/tutorial/readyapi/simple-hero-api.md`. PR [#80](https://github.com/khulnasoft/sqldev/pull/80) by [@joemudryk](https://github.com/joemudryk).
 * ✏ Fix typos in multiple files in the docs. PR [#400](https://github.com/khulnasoft/sqldev/pull/400) by [@VictorGambarini](https://github.com/VictorGambarini).
 * ✏ Fix typo in `docs/tutorial/code-structure.md`. PR [#344](https://github.com/khulnasoft/sqldev/pull/344) by [@marciomazza](https://github.com/marciomazza).
 * ✏ Fix typo in `docs/db-to-code.md`. PR [#155](https://github.com/khulnasoft/sqldev/pull/155) by [@gr8jam](https://github.com/gr8jam).
 * ✏ Fix typo in `docs/contributing.md`. PR [#323](https://github.com/khulnasoft/sqldev/pull/323) by [@Fardad13](https://github.com/Fardad13).
-* ✏ Fix typo in `docs/tutorial/raedyapi/tests.md`. PR [#265](https://github.com/khulnasoft/sqldev/pull/265) by [@johnhoman](https://github.com/johnhoman).
+* ✏ Fix typo in `docs/tutorial/readyapi/tests.md`. PR [#265](https://github.com/khulnasoft/sqldev/pull/265) by [@johnhoman](https://github.com/johnhoman).
 * ✏ Fix typo in `docs/tutorial/where.md`. PR [#286](https://github.com/khulnasoft/sqldev/pull/286) by [@jalvaradosegura](https://github.com/jalvaradosegura).
-* ✏ Fix typos in `docs/tutorial/raedyapi/update.md`. PR [#268](https://github.com/khulnasoft/sqldev/pull/268) by [@cirrusj](https://github.com/cirrusj).
-* ✏ Fix typo in `docs/tutorial/raedyapi/simple-hero-api.md`. PR [#247](https://github.com/khulnasoft/sqldev/pull/247) by [@hao-wang](https://github.com/hao-wang).
-* ✏ Fix typos in `docs/tutorial/automatic-id-none-refresh.md`, `docs/tutorial/raedyapi/update.md`, `docs/tutorial/select.md`. PR [#185](https://github.com/khulnasoft/sqldev/pull/185) by [@rootux](https://github.com/rootux).
+* ✏ Fix typos in `docs/tutorial/readyapi/update.md`. PR [#268](https://github.com/khulnasoft/sqldev/pull/268) by [@cirrusj](https://github.com/cirrusj).
+* ✏ Fix typo in `docs/tutorial/readyapi/simple-hero-api.md`. PR [#247](https://github.com/khulnasoft/sqldev/pull/247) by [@hao-wang](https://github.com/hao-wang).
+* ✏ Fix typos in `docs/tutorial/automatic-id-none-refresh.md`, `docs/tutorial/readyapi/update.md`, `docs/tutorial/select.md`. PR [#185](https://github.com/khulnasoft/sqldev/pull/185) by [@rootux](https://github.com/rootux).
 * ✏ Fix typo in `docs/databases.md`. PR [#177](https://github.com/khulnasoft/sqldev/pull/177) by [@seandlg](https://github.com/seandlg).
-* ✏ Fix typos in `docs/tutorial/raedyapi/update.md`. PR [#162](https://github.com/khulnasoft/sqldev/pull/162) by [@wmcgee3](https://github.com/wmcgee3).
-* ✏ Fix typos in `docs/tutorial/code-structure.md`, `docs/tutorial/raedyapi/multiple-models.md`, `docs/tutorial/raedyapi/simple-hero-api.md`, `docs/tutorial/many-to-many/index.md`. PR [#116](https://github.com/khulnasoft/sqldev/pull/116) by [@moonso](https://github.com/moonso).
-* ✏ Fix typo in `docs/tutorial/raedyapi/teams.md`. PR [#154](https://github.com/khulnasoft/sqldev/pull/154) by [@chrisgoddard](https://github.com/chrisgoddard).
+* ✏ Fix typos in `docs/tutorial/readyapi/update.md`. PR [#162](https://github.com/khulnasoft/sqldev/pull/162) by [@wmcgee3](https://github.com/wmcgee3).
+* ✏ Fix typos in `docs/tutorial/code-structure.md`, `docs/tutorial/readyapi/multiple-models.md`, `docs/tutorial/readyapi/simple-hero-api.md`, `docs/tutorial/many-to-many/index.md`. PR [#116](https://github.com/khulnasoft/sqldev/pull/116) by [@moonso](https://github.com/moonso).
+* ✏ Fix typo in `docs/tutorial/readyapi/teams.md`. PR [#154](https://github.com/khulnasoft/sqldev/pull/154) by [@chrisgoddard](https://github.com/chrisgoddard).
 * ✏ Fix typo variable in example about relationships and `back_populates`, always use `hero` instead of `owner`. PR [#120](https://github.com/khulnasoft/sqldev/pull/120) by [@onionj](https://github.com/onionj).
-* ✏ Fix typo in `docs/tutorial/raedyapi/tests.md`. PR [#113](https://github.com/khulnasoft/sqldev/pull/113) by [@feanil](https://github.com/feanil).
+* ✏ Fix typo in `docs/tutorial/readyapi/tests.md`. PR [#113](https://github.com/khulnasoft/sqldev/pull/113) by [@feanil](https://github.com/feanil).
 * ✏ Fix typo in `docs/tutorial/where.md`. PR [#72](https://github.com/khulnasoft/sqldev/pull/72) by [@ZettZet](https://github.com/ZettZet).
 * ✏ Fix typo in `docs/tutorial/code-structure.md`. PR [#91](https://github.com/khulnasoft/sqldev/pull/91) by [@dhiraj](https://github.com/dhiraj).
 * ✏ Fix broken link to newsletter sign-up in `docs/help.md`. PR [#84](https://github.com/khulnasoft/sqldev/pull/84) by [@mborus](https://github.com/mborus).
@@ -253,7 +308,7 @@
 
 * ♻ Refactor internal statements to simplify code. PR [#53](https://github.com/khulnasoft/sqldev/pull/53) by [@yezz123](https://github.com/yezz123).
 * ♻ Refactor internal imports to reduce redundancy. PR [#272](https://github.com/khulnasoft/sqldev/pull/272) by [@aminalaee](https://github.com/aminalaee).
-* ⬆ Update development requirement for RaedyAPI from `^0.68.0` to `^0.68.1`. PR [#48](https://github.com/khulnasoft/sqldev/pull/48) by [@alucarddelta](https://github.com/alucarddelta).
+* ⬆ Update development requirement for ReadyAPI from `^0.68.0` to `^0.68.1`. PR [#48](https://github.com/khulnasoft/sqldev/pull/48) by [@alucarddelta](https://github.com/alucarddelta).
 * ⏪ Revert upgrade Poetry, to make a release that supports Python 3.6 first. PR [#417](https://github.com/khulnasoft/sqldev/pull/417) by [@khulnasoft](https://github.com/khulnasoft).
 * 👷 Add dependabot for GitHub Actions. PR [#410](https://github.com/khulnasoft/sqldev/pull/410) by [@khulnasoft](https://github.com/khulnasoft).
 * ⬆️ Upgrade Poetry to version `==1.2.0b1`. PR [#303](https://github.com/khulnasoft/sqldev/pull/303) by [@khulnasoft](https://github.com/khulnasoft).
@@ -328,7 +383,7 @@ Here's the new, extensive documentation explaining indexes and how to use them: 
 ### Docs
 
 * ✨ Document indexes and make them opt-in. Here's the new documentation: [Indexes - Optimize Queries](https://sqldev.khulnasoft.com/tutorial/indexes/). This is the same change described above in **Breaking Changes**. PR [#205](https://github.com/khulnasoft/sqldev/pull/205) by [@khulnasoft](https://github.com/khulnasoft).
-* ✏ Fix typo in RaedyAPI tutorial. PR [#192](https://github.com/khulnasoft/sqldev/pull/192) by [@yaquelinehoyos](https://github.com/yaquelinehoyos).
+* ✏ Fix typo in ReadyAPI tutorial. PR [#192](https://github.com/khulnasoft/sqldev/pull/192) by [@yaquelinehoyos](https://github.com/yaquelinehoyos).
 * 📝 Add links to the license file. PR [#29](https://github.com/khulnasoft/sqldev/pull/29) by [@sobolevn](https://github.com/sobolevn).
 * ✏ Fix typos in docs titles. PR [#28](https://github.com/khulnasoft/sqldev/pull/28) by [@Batalex](https://github.com/Batalex).
 * ✏ Fix multiple typos and some rewording. PR [#22](https://github.com/khulnasoft/sqldev/pull/22) by [@egrim](https://github.com/egrim).

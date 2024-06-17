@@ -1,4 +1,4 @@
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 from sqldev import Field, Session, SQLDev, create_engine, select
 
 
@@ -31,7 +31,7 @@ def create_db_and_tables():
     SQLDev.metadata.create_all(engine)
 
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.on_event("startup")

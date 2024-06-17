@@ -3,9 +3,9 @@ import importlib
 import pytest
 from sqldev import Session
 
-from docs_src.tutorial.raedyapi.app_testing.tutorial001 import main as app_mod
-from docs_src.tutorial.raedyapi.app_testing.tutorial001 import test_main_005 as test_mod
-from docs_src.tutorial.raedyapi.app_testing.tutorial001.test_main_005 import (
+from docs_src.tutorial.readyapi.app_testing.tutorial001 import main as app_mod
+from docs_src.tutorial.readyapi.app_testing.tutorial001 import test_main_005 as test_mod
+from docs_src.tutorial.readyapi.app_testing.tutorial001.test_main_005 import (
     session_fixture,
 )
 

@@ -1,4 +1,4 @@
-from raedyapi.testclient import TestClient
+from readyapi.testclient import TestClient
 from sqlalchemy import Inspector, inspect
 from sqldev import Session, create_engine
 

@@ -8,8 +8,8 @@ message: >-
   metadata from this file.
 type: software
 authors:
-  - given-names: KhulnaSoft
-    family-names: DevOps
+  - given-names: khulnasoft
+    family-names: devops
     email: info@khulnasoft.com
 identifiers:
 repository-code: 'https://github.com/khulnasoft/sqldev'
@@ -18,7 +18,7 @@ abstract: >-
   SQLDev, SQL databases in Python, designed for
   simplicity, compatibility, and robustness.
 keywords:
-  - raedyapi
+  - readyapi
   - pydantic
   - sqlalchemy
 license: MIT

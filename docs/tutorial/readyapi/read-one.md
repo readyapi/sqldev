@@ -1,6 +1,6 @@
-# Read One Model with RaedyAPI
+# Read One Model with ReadyAPI
 
-Let's now add a *path operation* to read a single model to our **RaedyAPI** application.
+Let's now add a *path operation* to read a single model to our **ReadyAPI** application.
 
 ## Path Operation for One Hero
 
@@ -10,18 +10,18 @@ We want to get the hero based on the `id`, so we will use a **path parameter** `
 
 /// info
 
-If you need to refresh how *path parameters* work, including their data validation, check the <a href="https://readyapi.khulnasoft.com/tutorial/path-params/" class="external-link" target="_blank">RaedyAPI docs about Path Parameters</a>.
+If you need to refresh how *path parameters* work, including their data validation, check the <a href="https://readyapi.khulnasoft.com/tutorial/path-params/" class="external-link" target="_blank">ReadyAPI docs about Path Parameters</a>.
 
 ///
 
 //// tab | Python 3.10+
 
 ```Python hl_lines="6"
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py310.py[ln:1-2]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py310.py[ln:1-2]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py310.py[ln:59-65]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py310.py[ln:59-65]!}
 ```
 
 ////
@@ -29,11 +29,11 @@ If you need to refresh how *path parameters* work, including their data validati
 //// tab | Python 3.9+
 
 ```Python hl_lines="8"
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py39.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py39.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py39.py[ln:61-67]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py39.py[ln:61-67]!}
 ```
 
 ////
@@ -41,11 +41,11 @@ If you need to refresh how *path parameters* work, including their data validati
 //// tab | Python 3.7+
 
 ```Python hl_lines="8"
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001.py[ln:61-67]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001.py[ln:61-67]!}
 ```
 
 ////
@@ -55,7 +55,7 @@ If you need to refresh how *path parameters* work, including their data validati
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py310.py!}
 ```
 
 ////
@@ -63,7 +63,7 @@ If you need to refresh how *path parameters* work, including their data validati
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py39.py!}
 ```
 
 ////
@@ -71,7 +71,7 @@ If you need to refresh how *path parameters* work, including their data validati
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001.py!}
 ```
 
 ////
@@ -86,24 +86,24 @@ For example, to get the hero with ID `2` we would send a `GET` request to:
 
 ## Handling Errors
 
-Then, because RaedyAPI already takes care of making sure that the `hero_id` is an actual integer, we can use it directly with `Hero.get()` to try and get one hero by that ID.
+Then, because ReadyAPI already takes care of making sure that the `hero_id` is an actual integer, we can use it directly with `Hero.get()` to try and get one hero by that ID.
 
 But if the integer is not the ID of any hero in the database, it will not find anything, and the variable `hero` will be `None`.
 
 So, we check it in an `if` block, if it's `None`, we raise an `HTTPException` with a `404` status code.
 
-And to use it, we first import `HTTPException` from `raedyapi`.
+And to use it, we first import `HTTPException` from `readyapi`.
 
 This will let the client know that they probably made a mistake on their side and requested a hero that doesn't exist in the database.
 
 //// tab | Python 3.10+
 
 ```Python hl_lines="1  9-11"
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py310.py[ln:1-2]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py310.py[ln:1-2]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py310.py[ln:59-65]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py310.py[ln:59-65]!}
 ```
 
 ////
@@ -111,11 +111,11 @@ This will let the client know that they probably made a mistake on their side an
 //// tab | Python 3.9+
 
 ```Python hl_lines="3  11-13"
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py39.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py39.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py39.py[ln:61-67]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py39.py[ln:61-67]!}
 ```
 
 ////
@@ -123,11 +123,11 @@ This will let the client know that they probably made a mistake on their side an
 //// tab | Python 3.7+
 
 ```Python hl_lines="3  11-13"
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001.py[ln:61-67]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001.py[ln:61-67]!}
 ```
 
 ////
@@ -137,7 +137,7 @@ This will let the client know that they probably made a mistake on their side an
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py310.py!}
 ```
 
 ////
@@ -145,7 +145,7 @@ This will let the client know that they probably made a mistake on their side an
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py39.py!}
 ```
 
 ////
@@ -153,7 +153,7 @@ This will let the client know that they probably made a mistake on their side an
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001.py!}
 ```
 
 ////
@@ -169,11 +169,11 @@ And because we are using the `response_model` with `HeroPublic`, it will be vali
 //// tab | Python 3.10+
 
 ```Python hl_lines="6  12"
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py310.py[ln:1-2]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py310.py[ln:1-2]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py310.py[ln:59-65]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py310.py[ln:59-65]!}
 ```
 
 ////
@@ -181,11 +181,11 @@ And because we are using the `response_model` with `HeroPublic`, it will be vali
 //// tab | Python 3.9+
 
 ```Python hl_lines="8  14"
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py39.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py39.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py39.py[ln:61-67]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py39.py[ln:61-67]!}
 ```
 
 ////
@@ -193,11 +193,11 @@ And because we are using the `response_model` with `HeroPublic`, it will be vali
 //// tab | Python 3.7+
 
 ```Python hl_lines="8  14"
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001.py[ln:61-67]!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001.py[ln:61-67]!}
 ```
 
 ////
@@ -207,7 +207,7 @@ And because we are using the `response_model` with `HeroPublic`, it will be vali
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py310.py!}
 ```
 
 ////
@@ -215,7 +215,7 @@ And because we are using the `response_model` with `HeroPublic`, it will be vali
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001_py39.py!}
 ```
 
 ////
@@ -223,7 +223,7 @@ And because we are using the `response_model` with `HeroPublic`, it will be vali
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/raedyapi/read_one/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/read_one/tutorial001.py!}
 ```
 
 ////
@@ -234,8 +234,8 @@ And because we are using the `response_model` with `HeroPublic`, it will be vali
 
 We can then go to the docs UI and see the new *path operation*.
 
-<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/raedyapi/read-one/image01.png">
+<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/readyapi/read-one/image01.png">
 
 ## Recap
 
-You can combine **RaedyAPI** features like automatic path parameter validation to get models by ID.
+You can combine **ReadyAPI** features like automatic path parameter validation to get models by ID.
