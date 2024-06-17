@@ -223,8 +223,7 @@ def Field(
     sa_column_args: Union[Sequence[Any], UndefinedType] = Undefined,
     sa_column_kwargs: Union[Mapping[str, Any], UndefinedType] = Undefined,
     schema_extra: Optional[Dict[str, Any]] = None,
-) -> Any:
-    ...
+) -> Any: ...
 
 
 @overload
@@ -260,8 +259,7 @@ def Field(
     repr: bool = True,
     sa_column: Union[Column, UndefinedType] = Undefined,  # type: ignore
     schema_extra: Optional[Dict[str, Any]] = None,
-) -> Any:
-    ...
+) -> Any: ...
 
 
 def Field(
@@ -353,8 +351,7 @@ def Relationship(
     link_model: Optional[Any] = None,
     sa_relationship_args: Optional[Sequence[Any]] = None,
     sa_relationship_kwargs: Optional[Mapping[str, Any]] = None,
-) -> Any:
-    ...
+) -> Any: ...
 
 
 @overload
@@ -363,8 +360,7 @@ def Relationship(
     back_populates: Optional[str] = None,
     link_model: Optional[Any] = None,
     sa_relationship: Optional[RelationshipProperty[Any]] = None,
-) -> Any:
-    ...
+) -> Any: ...
 
 
 def Relationship(
@@ -764,13 +760,22 @@ class SQLDev(BaseModel, metaclass=SQLDevMetaclass, registry=default_registry):
         mode: Union[Literal["json", "python"], str] = "python",
         include: IncEx = None,
         exclude: IncEx = None,
+        context: Union[Dict[str, Any], None] = None,
         by_alias: bool = False,
         exclude_unset: bool = False,
         exclude_defaults: bool = False,
         exclude_none: bool = False,
         round_trip: bool = False,
-        warnings: bool = True,
+        warnings: Union[bool, Literal["none", "warn", "error"]] = True,
+        serialize_as_any: bool = False,
     ) -> Dict[str, Any]:
+        if PYDANTIC_VERSION >= "2.7.0":
+            extra_kwargs: Dict[str, Any] = {
+                "context": context,
+                "serialize_as_any": serialize_as_any,
+            }
+        else:
+            extra_kwargs = {}
         if IS_PYDANTIC_V2:
             return super().model_dump(
                 mode=mode,
@@ -782,6 +787,7 @@ class SQLDev(BaseModel, metaclass=SQLDevMetaclass, registry=default_registry):
                 exclude_none=exclude_none,
                 round_trip=round_trip,
                 warnings=warnings,
+                **extra_kwargs,
             )
         else:
             return super().dict(
