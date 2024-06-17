@@ -566,18 +566,16 @@ def get_sqlalchemy_type(field: Any) -> Any:
     # Check enums first as an enum can also be a str, needed by Pydantic/ReadyAPI
     if issubclass(type_, Enum):
         return sa_Enum(type_)
-    if issubclass(
-        type_,
-        (
-            str,
-            ipaddress.IPv4Address,
-            ipaddress.IPv4Network,
-            ipaddress.IPv6Address,
-            ipaddress.IPv6Network,
-            Path,
-            EmailStr,
-        ),
-    ):
+    string_types = (
+        str,
+        ipaddress.IPv4Address,
+        ipaddress.IPv4Network,
+        ipaddress.IPv6Address,
+        ipaddress.IPv6Network,
+        Path,
+        EmailStr,
+    )
+    if issubclass(type_, string_types):
         max_length = getattr(metadata, "max_length", None)
         if max_length:
             return AutoString(length=max_length)
