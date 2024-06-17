@@ -64,7 +64,7 @@ def test_tutorial(clear_sqldev):
         assert response.status_code == 200, response.text
         assert response.json() == {
             "openapi": "3.1.0",
-            "info": {"title": "ReadyAPI", "version": "0.1.0"},
+            "info": {"title": "ReadyAPI", "version": config.API_VERSION}
             "paths": {
                 "/heroes/": {
                     "get": {
