@@ -4,8 +4,8 @@ pytest >=7.0.1,<8.0.0
 coverage[toml] >=6.2,<8.0
 mypy ==1.4.1
 ruff ==0.4.7
-# For FastAPI tests
-fastapi >=0.103.2
+# For ReadyAPI tests
+readyapi >=0.103.2
 httpx ==0.24.1
 # TODO: upgrade when deprecating Python 3.7
 dirty-equals ==0.6.0

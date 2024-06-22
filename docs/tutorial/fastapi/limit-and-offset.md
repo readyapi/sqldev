@@ -1,4 +1,4 @@
-# Read Heroes with Limit and Offset with FastAPI
+# Read Heroes with Limit and Offset with ReadyAPI
 
 When a client sends a request to get all the heroes, we have been returning them all.
 
@@ -25,11 +25,11 @@ And by default, we will return a maximum of `100` heroes, so `limit` will have a
 //// tab | Python 3.10+
 
 ```Python hl_lines="1  7  9"
-{!./docs_src/tutorial/fastapi/limit_and_offset/tutorial001_py310.py[ln:1-2]!}
+{!./docs_src/tutorial/readyapi/limit_and_offset/tutorial001_py310.py[ln:1-2]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/fastapi/limit_and_offset/tutorial001_py310.py[ln:52-56]!}
+{!./docs_src/tutorial/readyapi/limit_and_offset/tutorial001_py310.py[ln:52-56]!}
 
 # Code below omitted 👇
 ```
@@ -39,11 +39,11 @@ And by default, we will return a maximum of `100` heroes, so `limit` will have a
 //// tab | Python 3.9+
 
 ```Python hl_lines="3  9  11"
-{!./docs_src/tutorial/fastapi/limit_and_offset/tutorial001_py39.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/limit_and_offset/tutorial001_py39.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/fastapi/limit_and_offset/tutorial001_py39.py[ln:54-58]!}
+{!./docs_src/tutorial/readyapi/limit_and_offset/tutorial001_py39.py[ln:54-58]!}
 
 # Code below omitted 👇
 ```
@@ -53,11 +53,11 @@ And by default, we will return a maximum of `100` heroes, so `limit` will have a
 //// tab | Python 3.7+
 
 ```Python hl_lines="3  9  11"
-{!./docs_src/tutorial/fastapi/limit_and_offset/tutorial001.py[ln:1-4]!}
+{!./docs_src/tutorial/readyapi/limit_and_offset/tutorial001.py[ln:1-4]!}
 
 # Code here omitted 👈
 
-{!./docs_src/tutorial/fastapi/limit_and_offset/tutorial001.py[ln:54-58]!}
+{!./docs_src/tutorial/readyapi/limit_and_offset/tutorial001.py[ln:54-58]!}
 
 # Code below omitted 👇
 ```
@@ -69,7 +69,7 @@ And by default, we will return a maximum of `100` heroes, so `limit` will have a
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/fastapi/limit_and_offset/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/limit_and_offset/tutorial001_py310.py!}
 ```
 
 ////
@@ -77,7 +77,7 @@ And by default, we will return a maximum of `100` heroes, so `limit` will have a
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/fastapi/limit_and_offset/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/limit_and_offset/tutorial001_py39.py!}
 ```
 
 ////
@@ -85,7 +85,7 @@ And by default, we will return a maximum of `100` heroes, so `limit` will have a
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/fastapi/limit_and_offset/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/limit_and_offset/tutorial001.py!}
 ```
 
 ////
@@ -102,11 +102,11 @@ This way, a client can decide to take fewer heroes if they want, but not more.
 
 /// info
 
-If you need to refresh how query parameters and their validation work, check out the docs in FastAPI:
+If you need to refresh how query parameters and their validation work, check out the docs in ReadyAPI:
 
-* <a href="https://fastapi.khulnasoft.com/tutorial/query-params/" class="external-link" target="_blank">Query Parameters</a>
-* <a href="https://fastapi.khulnasoft.com/tutorial/query-params-str-validations/" class="external-link" target="_blank">Query Parameters and String Validations</a>
-* <a href="https://fastapi.khulnasoft.com/tutorial/path-params-numeric-validations/" class="external-link" target="_blank">Path Parameters and Numeric Validations</a>
+* <a href="https://readyapi.khulnasoft.com/tutorial/query-params/" class="external-link" target="_blank">Query Parameters</a>
+* <a href="https://readyapi.khulnasoft.com/tutorial/query-params-str-validations/" class="external-link" target="_blank">Query Parameters and String Validations</a>
+* <a href="https://readyapi.khulnasoft.com/tutorial/path-params-numeric-validations/" class="external-link" target="_blank">Path Parameters and Numeric Validations</a>
 
 ///
 
@@ -114,8 +114,8 @@ If you need to refresh how query parameters and their validation work, check out
 
 Now we can see that the docs UI shows the new parameters to control **limit** and **offset** of our data.
 
-<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/fastapi/limit-and-offset/image01.png">
+<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/readyapi/limit-and-offset/image01.png">
 
 ## Recap
 
-You can use **FastAPI**'s automatic data validation to get the parameters for `limit` and `offset`, and then use them with the **session** to control ranges of data to be sent in responses.
+You can use **ReadyAPI**'s automatic data validation to get the parameters for `limit` and `offset`, and then use them with the **session** to control ranges of data to be sent in responses.

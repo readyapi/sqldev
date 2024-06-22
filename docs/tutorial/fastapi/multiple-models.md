@@ -1,4 +1,4 @@
-# Multiple Models with FastAPI
+# Multiple Models with ReadyAPI
 
 We have been using the same `Hero` model to declare the schema of the data we receive in the API, the table model in the database, and the schema of the data we send back in responses.
 
@@ -12,7 +12,7 @@ Let's start by reviewing the automatically generated schemas from the docs UI.
 
 For input, we have:
 
-<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/fastapi/simple-hero-api/image01.png">
+<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/readyapi/simple-hero-api/image01.png">
 
 If we pay attention, it shows that the client *could* send an `id` in the JSON body of the request.
 
@@ -36,7 +36,7 @@ Now let's review the schema of the response we send back to the client in the do
 
 If you click the small tab <kbd>Schema</kbd> instead of the <kbd>Example Value</kbd>, you will see something like this:
 
-<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/fastapi/multiple-models/image01.png">
+<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/readyapi/multiple-models/image01.png">
 
 Let's see the details.
 
@@ -116,7 +116,7 @@ The simplest way to solve it could be to create **multiple models**, each one wi
 
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py310.py[ln:5-22]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py310.py[ln:5-22]!}
 
 # Code below omitted 👇
 ```
@@ -130,7 +130,7 @@ The simplest way to solve it could be to create **multiple models**, each one wi
 
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py39.py[ln:7-24]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py39.py[ln:7-24]!}
 
 # Code below omitted 👇
 ```
@@ -144,7 +144,7 @@ The simplest way to solve it could be to create **multiple models**, each one wi
 
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001.py[ln:7-24]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001.py[ln:7-24]!}
 
 # Code below omitted 👇
 ```
@@ -156,7 +156,7 @@ The simplest way to solve it could be to create **multiple models**, each one wi
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py310.py!}
 ```
 
 ////
@@ -164,7 +164,7 @@ The simplest way to solve it could be to create **multiple models**, each one wi
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py39.py!}
 ```
 
 ////
@@ -172,7 +172,7 @@ The simplest way to solve it could be to create **multiple models**, each one wi
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001.py!}
 ```
 
 ////
@@ -195,7 +195,7 @@ We will improve this code to avoid duplicating the fields, but for now we can co
 
 ## Use Multiple Models to Create a Hero
 
-Let's now see how to use these new models in the FastAPI application.
+Let's now see how to use these new models in the ReadyAPI application.
 
 Let's first check how is the process to create a hero now:
 
@@ -204,7 +204,7 @@ Let's first check how is the process to create a hero now:
 ```Python hl_lines="3-4  6"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py310.py[ln:44-51]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py310.py[ln:44-51]!}
 
 # Code below omitted 👇
 ```
@@ -216,7 +216,7 @@ Let's first check how is the process to create a hero now:
 ```Python hl_lines="3-4  6"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py39.py[ln:46-53]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py39.py[ln:46-53]!}
 
 # Code below omitted 👇
 ```
@@ -228,7 +228,7 @@ Let's first check how is the process to create a hero now:
 ```Python hl_lines="3-4  6"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001.py[ln:46-53]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001.py[ln:46-53]!}
 
 # Code below omitted 👇
 ```
@@ -240,7 +240,7 @@ Let's first check how is the process to create a hero now:
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py310.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py310.py!}
 ```
 
 ////
@@ -248,7 +248,7 @@ Let's first check how is the process to create a hero now:
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py39.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py39.py!}
 ```
 
 ////
@@ -256,7 +256,7 @@ Let's first check how is the process to create a hero now:
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001.py!}
 ```
 
 ////
@@ -272,7 +272,7 @@ Now we use the type annotation `HeroCreate` for the request JSON data in the `he
 ```Python hl_lines="3"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py310.py[ln:45]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py310.py[ln:45]!}
 
 # Code below omitted 👇
 ```
@@ -284,7 +284,7 @@ Now we use the type annotation `HeroCreate` for the request JSON data in the `he
 ```Python hl_lines="3"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py39.py[ln:47]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py39.py[ln:47]!}
 
 # Code below omitted 👇
 ```
@@ -296,7 +296,7 @@ Now we use the type annotation `HeroCreate` for the request JSON data in the `he
 ```Python hl_lines="3"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001.py[ln:47]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001.py[ln:47]!}
 
 # Code below omitted 👇
 ```
@@ -320,7 +320,7 @@ We can now create a new `Hero` instance (the one for the database) and put it in
 ```Python hl_lines="3"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py310.py[ln:47]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py310.py[ln:47]!}
 
 # Code below omitted 👇
 ```
@@ -332,7 +332,7 @@ We can now create a new `Hero` instance (the one for the database) and put it in
 ```Python hl_lines="3"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py39.py[ln:49]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py39.py[ln:49]!}
 
 # Code below omitted 👇
 ```
@@ -344,7 +344,7 @@ We can now create a new `Hero` instance (the one for the database) and put it in
 ```Python hl_lines="3"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001.py[ln:49]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001.py[ln:49]!}
 
 # Code below omitted 👇
 ```
@@ -355,14 +355,14 @@ Then we just `add` it to the **session**, `commit`, and `refresh` it, and finall
 
 Because it is just refreshed, it has the `id` field set with a new ID taken from the database.
 
-And now that we return it, FastAPI will validate the data with the `response_model`, which is a `HeroPublic`:
+And now that we return it, ReadyAPI will validate the data with the `response_model`, which is a `HeroPublic`:
 
 //// tab | Python 3.10+
 
 ```Python hl_lines="3"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py310.py[ln:44]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py310.py[ln:44]!}
 
 # Code below omitted 👇
 ```
@@ -374,7 +374,7 @@ And now that we return it, FastAPI will validate the data with the `response_mod
 ```Python hl_lines="3"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001_py39.py[ln:46]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001_py39.py[ln:46]!}
 
 # Code below omitted 👇
 ```
@@ -386,7 +386,7 @@ And now that we return it, FastAPI will validate the data with the `response_mod
 ```Python hl_lines="3"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial001.py[ln:46]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial001.py[ln:46]!}
 
 # Code below omitted 👇
 ```
@@ -399,7 +399,7 @@ This will validate that all the data that we promised is there and will remove a
 
 This filtering could be very important and could be a very good security feature, for example, to make sure you filter private data, hashed passwords, etc.
 
-You can read more about it in the <a href="https://fastapi.khulnasoft.com/tutorial/response-model/" class="external-link" target="_blank">FastAPI docs about Response Model</a>.
+You can read more about it in the <a href="https://readyapi.khulnasoft.com/tutorial/response-model/" class="external-link" target="_blank">ReadyAPI docs about Response Model</a>.
 
 ///
 
@@ -448,7 +448,7 @@ So let's create a **base** model `HeroBase` that the others can inherit from:
 ```Python hl_lines="3-6"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py310.py[ln:5-8]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py310.py[ln:5-8]!}
 
 # Code below omitted 👇
 ```
@@ -460,7 +460,7 @@ So let's create a **base** model `HeroBase` that the others can inherit from:
 ```Python hl_lines="3-6"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py39.py[ln:7-10]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py39.py[ln:7-10]!}
 
 # Code below omitted 👇
 ```
@@ -472,7 +472,7 @@ So let's create a **base** model `HeroBase` that the others can inherit from:
 ```Python hl_lines="3-6"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002.py[ln:7-10]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002.py[ln:7-10]!}
 
 # Code below omitted 👇
 ```
@@ -484,7 +484,7 @@ So let's create a **base** model `HeroBase` that the others can inherit from:
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py310.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py310.py!}
 ```
 
 ////
@@ -492,7 +492,7 @@ So let's create a **base** model `HeroBase` that the others can inherit from:
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py39.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py39.py!}
 ```
 
 ////
@@ -500,7 +500,7 @@ So let's create a **base** model `HeroBase` that the others can inherit from:
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002.py!}
 ```
 
 ////
@@ -520,7 +520,7 @@ Let's start with the only **table model**, the `Hero`:
 ```Python hl_lines="9-10"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py310.py[ln:5-12]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py310.py[ln:5-12]!}
 
 # Code below omitted 👇
 ```
@@ -532,7 +532,7 @@ Let's start with the only **table model**, the `Hero`:
 ```Python hl_lines="9-10"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py39.py[ln:7-14]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py39.py[ln:7-14]!}
 
 # Code below omitted 👇
 ```
@@ -544,7 +544,7 @@ Let's start with the only **table model**, the `Hero`:
 ```Python hl_lines="9-10"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002.py[ln:7-14]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002.py[ln:7-14]!}
 
 # Code below omitted 👇
 ```
@@ -556,7 +556,7 @@ Let's start with the only **table model**, the `Hero`:
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py310.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py310.py!}
 ```
 
 ////
@@ -564,7 +564,7 @@ Let's start with the only **table model**, the `Hero`:
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py39.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py39.py!}
 ```
 
 ////
@@ -572,7 +572,7 @@ Let's start with the only **table model**, the `Hero`:
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002.py!}
 ```
 
 ////
@@ -598,7 +598,7 @@ Notice that the parent model `HeroBase`  is not a **table model**, but still, we
 ```Python hl_lines="4  6  9"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py310.py[ln:5-12]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py310.py[ln:5-12]!}
 
 # Code below omitted 👇
 ```
@@ -610,7 +610,7 @@ Notice that the parent model `HeroBase`  is not a **table model**, but still, we
 ```Python hl_lines="4  6  9"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py39.py[ln:7-14]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py39.py[ln:7-14]!}
 
 # Code below omitted 👇
 ```
@@ -622,7 +622,7 @@ Notice that the parent model `HeroBase`  is not a **table model**, but still, we
 ```Python hl_lines="4  6  9"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002.py[ln:7-14]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002.py[ln:7-14]!}
 
 # Code below omitted 👇
 ```
@@ -634,7 +634,7 @@ Notice that the parent model `HeroBase`  is not a **table model**, but still, we
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py310.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py310.py!}
 ```
 
 ////
@@ -642,7 +642,7 @@ Notice that the parent model `HeroBase`  is not a **table model**, but still, we
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py39.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py39.py!}
 ```
 
 ////
@@ -650,7 +650,7 @@ Notice that the parent model `HeroBase`  is not a **table model**, but still, we
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002.py!}
 ```
 
 ////
@@ -672,7 +672,7 @@ This is a fun one:
 ```Python hl_lines="13-14"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py310.py[ln:5-16]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py310.py[ln:5-16]!}
 
 # Code below omitted 👇
 ```
@@ -684,7 +684,7 @@ This is a fun one:
 ```Python hl_lines="13-14"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py39.py[ln:7-18]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py39.py[ln:7-18]!}
 
 # Code below omitted 👇
 ```
@@ -696,7 +696,7 @@ This is a fun one:
 ```Python hl_lines="13-14"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002.py[ln:7-18]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002.py[ln:7-18]!}
 
 # Code below omitted 👇
 ```
@@ -708,7 +708,7 @@ This is a fun one:
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py310.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py310.py!}
 ```
 
 ////
@@ -716,7 +716,7 @@ This is a fun one:
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py39.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py39.py!}
 ```
 
 ////
@@ -724,7 +724,7 @@ This is a fun one:
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002.py!}
 ```
 
 ////
@@ -754,7 +754,7 @@ This one just declares that the `id` field is required when reading a hero from 
 ```Python hl_lines="17-18"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py310.py[ln:5-20]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py310.py[ln:5-20]!}
 
 # Code below omitted 👇
 ```
@@ -766,7 +766,7 @@ This one just declares that the `id` field is required when reading a hero from 
 ```Python hl_lines="17-18"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py39.py[ln:7-22]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py39.py[ln:7-22]!}
 
 # Code below omitted 👇
 ```
@@ -778,7 +778,7 @@ This one just declares that the `id` field is required when reading a hero from 
 ```Python hl_lines="17-18"
 # Code above omitted 👆
 
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002.py[ln:7-22]!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002.py[ln:7-22]!}
 
 # Code below omitted 👇
 ```
@@ -790,7 +790,7 @@ This one just declares that the `id` field is required when reading a hero from 
 //// tab | Python 3.10+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py310.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py310.py!}
 ```
 
 ////
@@ -798,7 +798,7 @@ This one just declares that the `id` field is required when reading a hero from 
 //// tab | Python 3.9+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002_py39.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002_py39.py!}
 ```
 
 ////
@@ -806,7 +806,7 @@ This one just declares that the `id` field is required when reading a hero from 
 //// tab | Python 3.7+
 
 ```Python
-{!./docs_src/tutorial/fastapi/multiple_models/tutorial002.py!}
+{!./docs_src/tutorial/readyapi/multiple_models/tutorial002.py!}
 ```
 
 ////
@@ -815,7 +815,7 @@ This one just declares that the `id` field is required when reading a hero from 
 
 ## Review the Updated Docs UI
 
-The FastAPI code is still the same as above, we still use `Hero`, `HeroCreate`, and `HeroPublic`. But now, we define them in a smarter way with inheritance.
+The ReadyAPI code is still the same as above, we still use `Hero`, `HeroCreate`, and `HeroPublic`. But now, we define them in a smarter way with inheritance.
 
 So, we can jump to the docs UI right away and see how they look with the updated data.
 
@@ -823,7 +823,7 @@ So, we can jump to the docs UI right away and see how they look with the updated
 
 Let's see the new UI for creating a hero:
 
-<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/fastapi/multiple-models/image02.png">
+<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/readyapi/multiple-models/image02.png">
 
 Nice! It now shows that to create a hero, we just pass the `name`, `secret_name`, and optionally `age`.
 
@@ -833,7 +833,7 @@ We no longer pass an `id`.
 
 Now we can scroll down a bit to see the response schema:
 
-<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/fastapi/multiple-models/image03.png">
+<img class="shadow" alt="Interactive API docs UI" src="/img/tutorial/readyapi/multiple-models/image03.png">
 
 We can now see that `id` is a required field, it has a red asterisk (<span style="color: #f00;">*</span>).
 
@@ -890,4 +890,4 @@ So, you can use all the other **data models** to validate, convert, filter, and 
 
 You can use inheritance to **avoid information and code duplication**. 😎
 
-And you can use all these models directly with **FastAPI**. 🚀
+And you can use all these models directly with **ReadyAPI**. 🚀
