@@ -34,7 +34,7 @@ The key features are:
 
 * **Intuitive to write**: Great editor support. <abbr title="also known as auto-complete, autocompletion, IntelliSense">Completion</abbr> everywhere. Less time debugging. Designed to be easy to use and learn. Less time reading docs.
 * **Easy to use**: It has sensible defaults and does a lot of work underneath to simplify the code you write.
-* **Compatible**: It is designed to be compatible with **FastAPI**, Pydantic, and SQLAlchemy.
+* **Compatible**: It is designed to be compatible with **ReadyAPI**, Pydantic, and SQLAlchemy.
 * **Extensible**: You have all the power of SQLAlchemy and Pydantic underneath.
 * **Short**: Minimize code duplication. A single type annotation does a lot of work. No need to duplicate models in SQLAlchemy and Pydantic.
 
@@ -46,11 +46,11 @@ The key features are:
 
 <!-- /sponsors -->
 
-## SQL Databases in FastAPI
+## SQL Databases in ReadyAPI
 
-<a href="https://fastapi.khulnasoft.com" target="_blank"><img src="https://fastapi.khulnasoft.com/img/logo-margin/logo-teal.png" style="width: 20%;"></a>
+<a href="https://readyapi.khulnasoft.com" target="_blank"><img src="https://readyapi.khulnasoft.com/img/logo-margin/logo-teal.png" style="width: 20%;"></a>
 
-**SQLDev** is designed to simplify interacting with SQL databases in <a href="https://fastapi.khulnasoft.com" class="external-link" target="_blank">FastAPI</a> applications, it was created by the same <a href="https://khulnasoft.com/" class="external-link" target="_blank">author</a>. 😁
+**SQLDev** is designed to simplify interacting with SQL databases in <a href="https://readyapi.khulnasoft.com" class="external-link" target="_blank">ReadyAPI</a> applications, it was created by the same <a href="https://khulnasoft.com/" class="external-link" target="_blank">author</a>. 😁
 
 It combines SQLAlchemy and Pydantic and tries to simplify the code you write as much as possible, allowing you to reduce the **code duplication to a minimum**, but while getting the **best developer experience** possible.
 
@@ -215,7 +215,7 @@ That class `Hero` is a **SQLDev** model.
 
 But at the same time, ✨ it is a **SQLAlchemy** model ✨. So, you can combine it and use it with other SQLAlchemy models, or you could easily migrate applications with SQLAlchemy to **SQLDev**.
 
-And at the same time, ✨ it is also a **Pydantic** model ✨. You can use inheritance with it to define all your **data models** while avoiding code duplication. That makes it very easy to use with **FastAPI**.
+And at the same time, ✨ it is also a **Pydantic** model ✨. You can use inheritance with it to define all your **data models** while avoiding code duplication. That makes it very easy to use with **ReadyAPI**.
 
 ## License
 

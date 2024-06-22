@@ -2,8 +2,8 @@ import importlib
 
 import pytest
 
-from docs_src.tutorial.fastapi.app_testing.tutorial001 import main as app_mod
-from docs_src.tutorial.fastapi.app_testing.tutorial001 import test_main_003 as test_mod
+from docs_src.tutorial.readyapi.app_testing.tutorial001 import main as app_mod
+from docs_src.tutorial.readyapi.app_testing.tutorial001 import test_main_003 as test_mod
 
 
 @pytest.fixture(name="prepare", autouse=True)

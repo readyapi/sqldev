@@ -1,5 +1,5 @@
 from dirty_equals import IsDict
-from fastapi.testclient import TestClient
+from readyapi.testclient import TestClient
 from sqldev import create_engine
 from sqldev.pool import StaticPool
 
@@ -8,7 +8,7 @@ from ....conftest import needs_py39
 
 @needs_py39
 def test_tutorial(clear_sqldev):
-    from docs_src.tutorial.fastapi.session_with_dependency import (
+    from docs_src.tutorial.readyapi.session_with_dependency import (
         tutorial001_py39 as mod,
     )
 
@@ -66,7 +66,7 @@ def test_tutorial(clear_sqldev):
         assert response.status_code == 200, response.text
         assert response.json() == {
             "openapi": "3.1.0",
-            "info": {"title": "FastAPI", "version": "0.1.0"},
+            "info": {"title": "ReadyAPI", "version": "0.1.0"},
             "paths": {
                 "/heroes/": {
                     "get": {
