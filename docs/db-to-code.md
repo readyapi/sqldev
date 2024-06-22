@@ -18,7 +18,7 @@ And that SQL query would return the table:
 <th>id</th><th>name</th><th>secret_name</th><th>age</th><th>team_id</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td><td>2</td>
+<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td><td>2</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td><td>1</td>
@@ -221,7 +221,7 @@ Maybe you don't remember how you named the column. Maybe it was:
 If you type that in SQL strings in your code, your editor **won't be able to help you**:
 
 ```SQL
-statement = "SELECT * FROM hero WHERE secret_identity = 'Nx Pkg';"
+statement = "SELECT * FROM hero WHERE secret_identity = 'Dive Wilson';"
 
 results = database.execute(statement)
 ```
@@ -232,7 +232,7 @@ But if you use common Python classes and objects, your editor will be able to he
 
 ```Python
 database.execute(
-    select(Hero).where(Hero.secret_name == "Nx Pkg")
+    select(Hero).where(Hero.secret_name == "Dive Wilson")
 ).all()
 ```
 
@@ -268,7 +268,7 @@ For example this **Relation** or table:
 <th>id</th><th>name</th><th>secret_name</th><th>age</th><th>team_id</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td><td>2</td>
+<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td><td>2</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td><td>1</td>

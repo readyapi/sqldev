@@ -137,7 +137,7 @@ Let's see a more clear example. Let's say you have this table in a database:
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td>
@@ -453,7 +453,7 @@ WHERE hero.name = ?
 INFO Engine [no key 0.00014s] ('Deadpond',)
 
 // The resulting hero
-secret_name='Nx Pkg' age=None id=1 name='Deadpond'
+secret_name='Dive Wilson' age=None id=1 name='Deadpond'
 ```
 
 </div>

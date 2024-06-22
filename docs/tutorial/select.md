@@ -7,7 +7,7 @@ We already have a database and a table with some data in it that looks more or l
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td>
@@ -76,7 +76,7 @@ Then the database will go and get the data and return it to you in a table like 
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td>
@@ -411,7 +411,7 @@ The database returns the table with all the data, just like above when we wrote 
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td>
@@ -474,7 +474,7 @@ Now we can put it in a `for` loop and print each one of the heroes:
 This will print the output:
 
 ```
-id=1 name='Deadpond' age=None secret_name='Nx Pkg'
+id=1 name='Deadpond' age=None secret_name='Dive Wilson'
 id=2 name='Spider-Boy' age=None secret_name='Pedro Parqueador'
 id=3 name='Rusty-Man' age=48 secret_name='Tommy Sharp'
 ```
@@ -635,7 +635,7 @@ After printing it, we would see something like:
 
 ```
 [
-    Hero(id=1, name='Deadpond', age=None, secret_name='Nx Pkg'),
+    Hero(id=1, name='Deadpond', age=None, secret_name='Dive Wilson'),
     Hero(id=2, name='Spider-Boy', age=None, secret_name='Pedro Parqueador'),
     Hero(id=3, name='Rusty-Man', age=48, secret_name='Tommy Sharp')
 ]

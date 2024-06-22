@@ -263,7 +263,7 @@ $ python app.py
 INFO Engine BEGIN (implicit)
 // Insert the hero data first
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
-INFO Engine [generated in 0.00041s] ('Deadpond', 'Nx Pkg', None)
+INFO Engine [generated in 0.00041s] ('Deadpond', 'Dive Wilson', None)
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
 INFO Engine [cached since 0.001942s ago] ('Rusty-Man', 'Tommy Sharp', 48)
 INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
@@ -296,7 +296,7 @@ WHERE hero.id = ?
 INFO Engine [cached since 0.003215s ago] (3,)
 
 // Print Deadpond
-Deadpond: name='Deadpond' age=None id=1 secret_name='Nx Pkg'
+Deadpond: name='Deadpond' age=None id=1 secret_name='Dive Wilson'
 
 // Accessing the .team attribute triggers a refresh
 INFO Engine SELECT team.id AS team_id, team.name AS team_name, team.headquarters AS team_headquarters

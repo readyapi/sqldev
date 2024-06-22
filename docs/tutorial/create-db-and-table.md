@@ -17,7 +17,7 @@ Here's a reminder of the table structure we want:
 <th>id</th><th>name</th><th>secret_name</th><th>age</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td>
+<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td>
 </tr>
 <tr>
 <td>2</td><td>Spider-Boy</td><td>Pedro Parqueador</td><td>null</td>
@@ -688,7 +688,7 @@ In the example in the previous chapter we created the table using `TEXT` for som
 
 But in this output SQLAlchemy is using `VARCHAR` instead. Let's see what's going on.
 
-Remember that [each SQL Database has some different variations in what they support?](../databases/#sql-the-language){.internal-link target=_blank}
+Remember that [each SQL Database has some different variations in what they support?](../databases.md#sql-the-language){.internal-link target=_blank}
 
 This is one of the differences. Each database supports some particular **data types**, like `INTEGER` and `TEXT`.
 

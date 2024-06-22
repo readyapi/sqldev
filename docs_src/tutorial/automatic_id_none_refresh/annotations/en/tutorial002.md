@@ -23,7 +23,7 @@
     Generates the output:
 
     ```
-    Hero 1: id=None name='Deadpond' secret_name='Nx Pkg' age=None
+    Hero 1: id=None name='Deadpond' secret_name='Dive Wilson' age=None
     ```
 
 6. Print the `hero_2` before interacting with the database.
@@ -79,7 +79,7 @@
     Generates the output:
 
     ```
-    Hero 1: id=None name='Deadpond' secret_name='Nx Pkg' age=None
+    Hero 1: id=None name='Deadpond' secret_name='Dive Wilson' age=None
     ```
 
 14. Print the `hero_2` after adding it to the session.
@@ -111,7 +111,7 @@
     ```
     INFO Engine BEGIN (implicit)
     INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
-    INFO Engine [generated in 0.00018s] ('Deadpond', 'Nx Pkg', None)
+    INFO Engine [generated in 0.00018s] ('Deadpond', 'Dive Wilson', None)
     INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
     INFO Engine [cached since 0.0008968s ago] ('Spider-Boy', 'Pedro Parqueador', None)
     INFO Engine INSERT INTO hero (name, secret_name, age) VALUES (?, ?, ?)
@@ -315,7 +315,7 @@
     Generates the output:
 
     ```
-    Hero 1: age=None id=1 name='Deadpond' secret_name='Nx Pkg'
+    Hero 1: age=None id=1 name='Deadpond' secret_name='Dive Wilson'
     ```
 
 34. Print the `hero_2`.
@@ -367,7 +367,7 @@
     Generates the output:
 
     ```
-    Hero 1: age=None id=1 name='Deadpond' secret_name='Nx Pkg'
+    Hero 1: age=None id=1 name='Deadpond' secret_name='Dive Wilson'
     ```
 
 39. Print the `hero_2` after closing the session.

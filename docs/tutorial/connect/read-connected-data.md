@@ -23,7 +23,7 @@ And the `hero` table has this data:
 <th>id</th><th>name</th><th>secret_name</th><th>age</th><th>team_id</th>
 </tr>
 <tr>
-<td>1</td><td>Deadpond</td><td>Nx Pkg</td><td>null</td><td>2</td>
+<td>1</td><td>Deadpond</td><td>Dive Wilson</td><td>null</td><td>2</td>
 </tr>
 <tr>
 <td>2</td><td>Rusty-Man</td><td>Tommy Sharp</td><td>48</td><td>1</td>
@@ -310,7 +310,7 @@ WHERE hero.team_id = team.id
 2021-08-09 08:55:50,682 INFO sqlalchemy.engine.Engine [no key 0.00015s] ()
 
 // Print the first hero and team
-Hero: id=1 secret_name='Nx Pkg' team_id=2 name='Deadpond' age=None Team: headquarters='Sister Margaret's Bar' id=2 name='Z-Force'
+Hero: id=1 secret_name='Dive Wilson' team_id=2 name='Deadpond' age=None Team: headquarters='Sister Margaret's Bar' id=2 name='Z-Force'
 
 // Print the second hero and team
 Hero: id=2 secret_name='Tommy Sharp' team_id=1 name='Rusty-Man' age=48 Team: headquarters='Sharp Tower' id=1 name='Preventers'
@@ -459,7 +459,7 @@ FROM hero JOIN team ON team.id = hero.team_id
 INFO Engine [no key 0.00032s] ()
 
 // Print the first hero and team
-Hero: id=1 secret_name='Nx Pkg' team_id=2 name='Deadpond' age=None Team: headquarters='Sister Margaret's Bar' id=2 name='Z-Force'
+Hero: id=1 secret_name='Dive Wilson' team_id=2 name='Deadpond' age=None Team: headquarters='Sister Margaret's Bar' id=2 name='Z-Force'
 
 // Print the second hero and team
 Hero: id=2 secret_name='Tommy Sharp' team_id=1 name='Rusty-Man' age=48 Team: headquarters='Sharp Tower' id=1 name='Preventers'
@@ -625,7 +625,7 @@ FROM hero LEFT OUTER JOIN team ON team.id = hero.team_id
 INFO Engine [no key 0.00051s] ()
 
 // Print the first hero and team
-Hero: id=1 secret_name='Nx Pkg' team_id=2 name='Deadpond' age=None Team: headquarters='Sister Margaret's Bar' id=2 name='Z-Force'
+Hero: id=1 secret_name='Dive Wilson' team_id=2 name='Deadpond' age=None Team: headquarters='Sister Margaret's Bar' id=2 name='Z-Force'
 // Print the second hero and team
 Hero: id=2 secret_name='Tommy Sharp' team_id=1 name='Rusty-Man' age=48 Team: headquarters='Sharp Tower' id=1 name='Preventers'
 // Print the third hero and team, we included Spider-Boy 🎉

@@ -13,7 +13,7 @@ def check_calls(calls: List[List[Union[str, Dict[str, Any]]]]):
         {
             "id": None,
             "name": "Deadpond",
-            "secret_name": "Nx Pkg",
+            "secret_name": "Dive Wilson",
             "age": None,
         },
     ]
@@ -41,7 +41,7 @@ def check_calls(calls: List[List[Union[str, Dict[str, Any]]]]):
         {
             "id": None,
             "name": "Deadpond",
-            "secret_name": "Nx Pkg",
+            "secret_name": "Dive Wilson",
             "age": None,
         },
     ]
@@ -81,7 +81,7 @@ def check_calls(calls: List[List[Union[str, Dict[str, Any]]]]):
         {
             "id": 1,
             "name": "Deadpond",
-            "secret_name": "Nx Pkg",
+            "secret_name": "Dive Wilson",
             "age": None,
         },
     ]
@@ -109,7 +109,7 @@ def check_calls(calls: List[List[Union[str, Dict[str, Any]]]]):
         {
             "id": 1,
             "name": "Deadpond",
-            "secret_name": "Nx Pkg",
+            "secret_name": "Dive Wilson",
             "age": None,
         },
     ]

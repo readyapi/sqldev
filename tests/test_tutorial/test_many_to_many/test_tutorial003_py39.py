@@ -7,13 +7,13 @@ from ...conftest import get_testing_print_function, needs_py39
 expected_calls = [
     [
         "Z-Force hero:",
-        {"name": "Deadpond", "secret_name": "Nx Pkg", "id": 1, "age": None},
+        {"name": "Deadpond", "secret_name": "Dive Wilson", "id": 1, "age": None},
         "is training:",
         False,
     ],
     [
         "Preventers hero:",
-        {"name": "Deadpond", "secret_name": "Nx Pkg", "id": 1, "age": None},
+        {"name": "Deadpond", "secret_name": "Dive Wilson", "id": 1, "age": None},
         "is training:",
         True,
     ],

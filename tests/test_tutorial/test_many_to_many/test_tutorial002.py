@@ -7,7 +7,7 @@ from ...conftest import get_testing_print_function
 expected_calls = [
     [
         "Deadpond:",
-        {"id": 1, "secret_name": "Nx Pkg", "age": None, "name": "Deadpond"},
+        {"id": 1, "secret_name": "Dive Wilson", "age": None, "name": "Deadpond"},
     ],
     [
         "Deadpond teams:",
@@ -42,7 +42,7 @@ expected_calls = [
     [
         "Z-Force heroes:",
         [
-            {"id": 1, "secret_name": "Nx Pkg", "age": None, "name": "Deadpond"},
+            {"id": 1, "secret_name": "Dive Wilson", "age": None, "name": "Deadpond"},
             {
                 "id": 3,
                 "secret_name": "Pedro Parqueador",
@@ -53,7 +53,7 @@ expected_calls = [
     ],
     [
         "Reverted Z-Force's heroes:",
-        [{"id": 1, "secret_name": "Nx Pkg", "age": None, "name": "Deadpond"}],
+        [{"id": 1, "secret_name": "Dive Wilson", "age": None, "name": "Deadpond"}],
     ],
     [
         "Reverted Spider-Boy's teams:",

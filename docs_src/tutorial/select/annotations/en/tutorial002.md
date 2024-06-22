@@ -47,7 +47,7 @@
     The 3 iterations in the `for` loop will generate this output:
 
     ```
-    id=1 name='Deadpond' age=None secret_name='Nx Pkg'
+    id=1 name='Deadpond' age=None secret_name='Dive Wilson'
     id=2 name='Spider-Boy' age=None secret_name='Pedro Parqueador'
     id=3 name='Rusty-Man' age=48 secret_name='Tommy Sharp'
     ```

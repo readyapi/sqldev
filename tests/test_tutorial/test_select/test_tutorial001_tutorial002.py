@@ -9,7 +9,7 @@ from ...conftest import get_testing_print_function
 def check_calls(calls: List[List[Union[str, Dict[str, Any]]]]):
     assert calls[0][0] == {
         "name": "Deadpond",
-        "secret_name": "Nx Pkg",
+        "secret_name": "Dive Wilson",
         "age": None,
         "id": 1,
     }

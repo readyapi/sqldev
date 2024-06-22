@@ -10,7 +10,7 @@ expected_calls = [
         {
             "age": None,
             "id": 1,
-            "secret_name": "Nx Pkg",
+            "secret_name": "Dive Wilson",
             "team_id": 2,
             "name": "Deadpond",
         },
@@ -40,7 +40,7 @@ expected_calls = [
         {
             "age": None,
             "id": 1,
-            "secret_name": "Nx Pkg",
+            "secret_name": "Dive Wilson",
             "team_id": 2,
             "name": "Deadpond",
         },

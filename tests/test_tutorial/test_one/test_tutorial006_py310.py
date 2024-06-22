@@ -20,6 +20,6 @@ def test_tutorial(clear_sqldev):
     assert calls == [
         [
             "Hero:",
-            {"name": "Deadpond", "secret_name": "Nx Pkg", "age": None, "id": 1},
+            {"name": "Deadpond", "secret_name": "Dive Wilson", "age": None, "id": 1},
         ]
     ]

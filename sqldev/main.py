@@ -477,7 +477,11 @@ class SQLDevMetaclass(ModelMetaclass, DeclarativeMeta):
             for k, v in get_model_fields(new_cls).items():
                 col = get_column_from_field(v)
                 setattr(new_cls, k, col)
-            set_orm_mode_config(new_cls)
+            # Set a config flag to tell FastAPI that this should be read with a field
+            # in orm_mode instead of preemptively converting it to a dict.
+            # This could be done by reading new_cls.model_config['table'] in FastAPI, but
+            # that's very specific about SQLDev, so let's have another config that
+            # other future tools based on Pydantic can use.
             set_config_value(
                 model=new_cls, parameter="read_from_attributes", value=True
             )
@@ -500,7 +504,7 @@ class SQLDevMetaclass(ModelMetaclass, DeclarativeMeta):
         cls, classname: str, bases: Tuple[type, ...], dict_: Dict[str, Any], **kw: Any
     ) -> None:
         # Only one of the base classes (or the current one) should be a table model
-        # this allows ReadyAPI cloning a SQLDev for the response_model without
+        # this allows FastAPI cloning a SQLDev for the response_model without
         # trying to create a new SQLAlchemy, for a new table, with the same name, that
         # triggers an error
         base_is_table = any(is_table_model_class(base) for base in bases)
@@ -563,19 +567,21 @@ def get_sqlalchemy_type(field: Any) -> Any:
     type_ = get_type_from_field(field)
     metadata = get_field_metadata(field)
 
-    # Check enums first as an enum can also be a str, needed by Pydantic/ReadyAPI
+    # Check enums first as an enum can also be a str, needed by Pydantic/FastAPI
     if issubclass(type_, Enum):
         return sa_Enum(type_)
-    string_types = (
-        str,
-        ipaddress.IPv4Address,
-        ipaddress.IPv4Network,
-        ipaddress.IPv6Address,
-        ipaddress.IPv6Network,
-        Path,
-        EmailStr,
-    )
-    if issubclass(type_, string_types):
+    if issubclass(
+        type_,
+        (
+            str,
+            ipaddress.IPv4Address,
+            ipaddress.IPv4Network,
+            ipaddress.IPv6Address,
+            ipaddress.IPv6Network,
+            Path,
+            EmailStr,
+        ),
+    ):
         max_length = getattr(metadata, "max_length", None)
         if max_length:
             return AutoString(length=max_length)

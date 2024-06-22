@@ -8,7 +8,7 @@ Learn more about it below. 👇
 
 The latest versions of SQLDev are supported.
 
-You are encouraged to [write tests](https://sqldev.khulnasoft.com/tutorial/readyapi/tests/) for your application and update your SQLDev version frequently after ensuring that your tests are passing. This way you will benefit from the latest features, bug fixes, and **security fixes**.
+You are encouraged to [write tests](https://sqldev.khulnasoft.com/tutorial/fastapi/tests/) for your application and update your SQLDev version frequently after ensuring that your tests are passing. This way you will benefit from the latest features, bug fixes, and **security fixes**.
 
 ## Reporting a Vulnerability
 

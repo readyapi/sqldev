@@ -19,7 +19,7 @@ def create_db_and_tables():
 
 
 def create_heroes():
-    hero_1 = Hero(name="Deadpond", secret_name="Nx Pkg")
+    hero_1 = Hero(name="Deadpond", secret_name="Dive Wilson")
     hero_2 = Hero(name="Spider-Boy", secret_name="Pedro Parqueador")
     hero_3 = Hero(name="Rusty-Man", secret_name="Tommy Sharp", age=48)
     hero_4 = Hero(name="Tarantula", secret_name="Natalia Roman-on", age=32)

@@ -36,7 +36,9 @@ def create_heroes():
         team_preventers = Team(name="Preventers", headquarters="Sharp Tower")
         team_z_force = Team(name="Z-Force", headquarters="Sister Margaret's Bar")
 
-        hero_deadpond = Hero(name="Deadpond", secret_name="Nx Pkg", team=team_z_force)
+        hero_deadpond = Hero(
+            name="Deadpond", secret_name="Dive Wilson", team=team_z_force
+        )
         hero_rusty_man = Hero(
             name="Rusty-Man", secret_name="Tommy Sharp", age=48, team=team_preventers
         )
