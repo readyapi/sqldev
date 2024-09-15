@@ -10,14 +10,14 @@ ReadyAPI is the framework to create the **web API**.
 
 But we also need another type of program to run it, it is called a "**server**". We will use **Uvicorn** for that. And we will install Uvicorn with its *standard* dependencies.
 
-Make sure you [have a virtual environment activated](../index.md#create-a-python-virtual-environment){.internal-link target=_blank}.
+Then install ReadyAPI.
 
-Then install ReadyAPI and Uvicorn:
+Make sure you create a [virtual environment](../../virtual-environments.md){.internal-link target=_blank}, activate it, and then install them, for example with:
 
 <div class="termy">
 
 ```console
-$ python -m pip install readyapi "uvicorn[standard]"
+$ pip install readyapi "uvicorn[standard]"
 
 ---> 100%
 ```

@@ -9,7 +9,7 @@ description = "SQLDev, SQL databases in Python, designed for simplicity, compati
 readme = "README.md"
 requires-python = ">=3.7"
 authors = [
-    { name = "KhulnaSoft DevOps", email = "info@khulnasoft.com" },
+    { name = "KhulnaSoft DevOps", email = "khulnasoft@gmail.com" },
 ]
 
 classifiers = [
@@ -40,9 +40,11 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/khulnasoft/sqldev"
+Homepage = "https://github.com/readyapi/sqldev"
 Documentation = "https://sqldev.khulnasoft.com"
-Repository = "https://github.com/khulnasoft/sqldev"
+Repository = "https://github.com/readyapi/sqldev"
+Issues = "https://github.com/readyapi/sqldev/issues"
+Changelog = "https://sqldev.khulnasoft.com/release-notes/"
 
 [tool.pdm]
 version = { source = "file", path = "sqldev/__init__.py" }
@@ -71,20 +73,27 @@ optional-dependencies = {}
 
 [tool.coverage.run]
 parallel = true
+data_file = "coverage/.coverage"
 source = [
     "docs_src",
     "tests",
     "sqldev"
 ]
 context = '${CONTEXT}'
+dynamic_context = "test_function"
 
 [tool.coverage.report]
+show_missing = true
+sort = "-Cover"
 exclude_lines = [
     "pragma: no cover",
     "@overload",
     'if __name__ == "__main__":',
     "if TYPE_CHECKING:",
 ]
+
+[tool.coverage.html]
+show_contexts = true
 
 [tool.mypy]
 strict = true

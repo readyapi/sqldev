@@ -1,18 +1,19 @@
 <p align="center">
-  <a href="https://sqldev.khulnasoft.com"><img src="https://sqldev.khulnasoft.com/img/logo-margin/logo-margin-vector.svg" alt="SQLDev"></a>
+  <a href="https://sqldev.khulnasoft.com"><img src="https://sqldev.khulnasoft.com/img/logo-margin/logo-margin-vector.svg#only-light" alt="SQLDev"></a>
+
 </p>
 <p align="center">
     <em>SQLDev, SQL databases in Python, designed for simplicity, compatibility, and robustness.</em>
 </p>
 <p align="center">
-<a href="https://github.com/khulnasoft/sqldev/actions?query=workflow%3ATest" target="_blank">
-    <img src="https://github.com/khulnasoft/sqldev/workflows/Test/badge.svg" alt="Test">
+<a href="https://github.com/readyapi/sqldev/actions?query=workflow%3ATest" target="_blank">
+    <img src="https://github.com/readyapi/sqldev/workflows/Test/badge.svg" alt="Test">
 </a>
-<a href="https://github.com/khulnasoft/sqldev/actions?query=workflow%3APublish" target="_blank">
-    <img src="https://github.com/khulnasoft/sqldev/workflows/Publish/badge.svg" alt="Publish">
+<a href="https://github.com/readyapi/sqldev/actions?query=workflow%3APublish" target="_blank">
+    <img src="https://github.com/readyapi/sqldev/workflows/Publish/badge.svg" alt="Publish">
 </a>
-<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/khulnasoft/sqldev" target="_blank">
-    <img src="https://coverage-badge.samuelcolvin.workers.dev/khulnasoft/sqldev.svg" alt="Coverage">
+<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/readyapi/sqldev" target="_blank">
+    <img src="https://coverage-badge.samuelcolvin.workers.dev/readyapi/sqldev.svg" alt="Coverage">
 <a href="https://pypi.org/project/sqldev" target="_blank">
     <img src="https://img.shields.io/pypi/v/sqldev?color=%2334D058&label=pypi%20package" alt="Package version">
 </a>
@@ -22,7 +23,7 @@
 
 **Documentation**: <a href="https://sqldev.khulnasoft.com" target="_blank">https://sqldev.khulnasoft.com</a>
 
-**Source Code**: <a href="https://github.com/khulnasoft/sqldev" target="_blank">https://github.com/khulnasoft/sqldev</a>
+**Source Code**: <a href="https://github.com/readyapi/sqldev" target="_blank">https://github.com/readyapi/sqldev</a>
 
 ---
 
@@ -63,6 +64,8 @@ A recent and currently supported <a href="https://www.python.org/downloads/" cla
 As **SQLDev** is based on **Pydantic** and **SQLAlchemy**, it requires them. They will be automatically installed when you install SQLDev.
 
 ## Installation
+
+Make sure you create a <a href="https://sqldev.khulnasoft.com/virtual-environments/" class="external-link" target="_blank">virtual environment</a>, activate it, and then install SQLDev, for example with:
 
 <div class="termy">
 
@@ -219,4 +222,4 @@ And at the same time, ✨ it is also a **Pydantic** model ✨. You can use inher
 
 ## License
 
-This project is licensed under the terms of the [MIT license](https://github.com/khulnasoft/sqldev/blob/main/LICENSE).
+This project is licensed under the terms of the [MIT license](https://github.com/readyapi/sqldev/blob/main/LICENSE).

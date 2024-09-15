@@ -2,7 +2,89 @@
 
 ## Latest Changes
 
-* ✏️ Fix typo in `docs/tutorial/relationship-attributes/index.md`. PR [#880](https://github.com/khulnasoft/sqldev/pull/880) by [@UncleGoogle](https://github.com/UncleGoogle).
+### Docs
+
+* 📝 Remove highlights in `indexes.md` . PR [#1100](https://github.com/readyapi/sqldev/pull/1100) by [@alejsdev](https://github.com/alejsdev).
+
+### Internal
+
+* 👷 Update `issue-manager.yml`. PR [#1103](https://github.com/readyapi/sqldev/pull/1103) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Fix coverage processing in CI, one name per matrix run. PR [#1104](https://github.com/readyapi/sqldev/pull/1104) by [@khulnasoft](https://github.com/khulnasoft).
+* 💚 Set `include-hidden-files` to `True` when using the `upload-artifact` GH action. PR [#1098](https://github.com/readyapi/sqldev/pull/1098) by [@svlandeg](https://github.com/svlandeg).
+* ⬆ [pre-commit.ci] pre-commit autoupdate. PR [#1088](https://github.com/readyapi/sqldev/pull/1088) by [@pre-commit-ci[bot]](https://github.com/apps/pre-commit-ci).
+
+## 0.0.22
+
+### Fixes
+
+* 🐛 Fix support for types with `Optional[Annoated[x, f()]]`, e.g. `id: Optional[pydantic.UUID4]`. PR [#1093](https://github.com/readyapi/sqldev/pull/1093) by [@khulnasoft](https://github.com/khulnasoft).
+
+### Docs
+
+* ✏️ Fix a typo in `docs/virtual-environments.md`. PR [#1085](https://github.com/readyapi/sqldev/pull/1085) by [@khulnasoft](https://github.com/khulnasoft).
+* 📝 Add docs for virtual environments and environment variables, update contributing. PR [#1082](https://github.com/readyapi/sqldev/pull/1082) by [@khulnasoft](https://github.com/khulnasoft).
+* 📝 Add docs about repo management and team. PR [#1059](https://github.com/khulnasoft/sqldev/pull/1059) by [@khulnasoft](https://github.com/khulnasoft).
+* ✏️ Fix typo in `cascade_delete` docs. PR [#1030](https://github.com/khulnasoft/sqldev/pull/1030) by [@khulnasoft](https://github.com/khulnasoft).
+
+### Internal
+
+* ✅ Refactor test_enums to make them independent of previous imports. PR [#1095](https://github.com/readyapi/sqldev/pull/1095) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update `latest-changes` GitHub Action. PR [#1087](https://github.com/readyapi/sqldev/pull/1087) by [@khulnasoft](https://github.com/khulnasoft).
+* ⬆ [pre-commit.ci] pre-commit autoupdate. PR [#1028](https://github.com/readyapi/sqldev/pull/1028) by [@pre-commit-ci[bot]](https://github.com/apps/pre-commit-ci).
+* ⬆ Bump ruff from 0.4.7 to 0.6.2. PR [#1081](https://github.com/readyapi/sqldev/pull/1081) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 🔧 Update lint script. PR [#1084](https://github.com/readyapi/sqldev/pull/1084) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update Python version for coverage. PR [#1083](https://github.com/readyapi/sqldev/pull/1083) by [@khulnasoft](https://github.com/khulnasoft).
+* 🔧 Update coverage config files. PR [#1077](https://github.com/readyapi/sqldev/pull/1077) by [@khulnasoft](https://github.com/khulnasoft).
+* 🔧 Add URLs to `pyproject.toml`, show up in PyPI. PR [#1074](https://github.com/readyapi/sqldev/pull/1074) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Do not sync labels as it overrides manually added labels. PR [#1073](https://github.com/readyapi/sqldev/pull/1073) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update configs for GitHub Action labeler, to add only one label. PR [#1072](https://github.com/readyapi/sqldev/pull/1072) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update labeler GitHub Actions permissions and dependencies. PR [#1071](https://github.com/readyapi/sqldev/pull/1071) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Add GitHub Action label-checker. PR [#1069](https://github.com/readyapi/sqldev/pull/1069) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Add GitHub Action labeler. PR [#1068](https://github.com/readyapi/sqldev/pull/1068) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update GitHub Action add-to-project. PR [#1067](https://github.com/readyapi/sqldev/pull/1067) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Add GitHub Action add-to-project. PR [#1066](https://github.com/readyapi/sqldev/pull/1066) by [@khulnasoft](https://github.com/khulnasoft).
+* 📝 Update admonitions in annotations. PR [#1065](https://github.com/readyapi/sqldev/pull/1065) by [@khulnasoft](https://github.com/khulnasoft).
+* 📝 Update links from github.com/khulnasoft/sqldev to github.com/readyapi/sqldev. PR [#1064](https://github.com/readyapi/sqldev/pull/1064) by [@khulnasoft](https://github.com/khulnasoft).
+* 🔧 Update members. PR [#1063](https://github.com/khulnasoft/sqldev/pull/1063) by [@khulnasoft](https://github.com/khulnasoft).
+* 💄 Add dark-mode logo. PR [#1061](https://github.com/khulnasoft/sqldev/pull/1061) by [@khulnasoft](https://github.com/khulnasoft).
+* 🔨 Update docs.py script to enable dirty reload conditionally. PR [#1060](https://github.com/khulnasoft/sqldev/pull/1060) by [@khulnasoft](https://github.com/khulnasoft).
+* 🔧 Update MkDocs previews. PR [#1058](https://github.com/khulnasoft/sqldev/pull/1058) by [@khulnasoft](https://github.com/khulnasoft).
+* 💄 Update Termynal line-height. PR [#1057](https://github.com/khulnasoft/sqldev/pull/1057) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Upgrade build docs configs. PR [#1047](https://github.com/khulnasoft/sqldev/pull/1047) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Add alls-green for test-redistribute. PR [#1055](https://github.com/khulnasoft/sqldev/pull/1055) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update docs-previews to handle no docs changes. PR [#1056](https://github.com/khulnasoft/sqldev/pull/1056) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷🏻 Show docs deployment status and preview URLs in comment. PR [#1054](https://github.com/khulnasoft/sqldev/pull/1054) by [@khulnasoft](https://github.com/khulnasoft).
+* 🔧 Enable auto dark mode. PR [#1046](https://github.com/khulnasoft/sqldev/pull/1046) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update issue-manager. PR [#1045](https://github.com/khulnasoft/sqldev/pull/1045) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update issue-manager.yml GitHub Action permissions. PR [#1040](https://github.com/khulnasoft/sqldev/pull/1040) by [@khulnasoft](https://github.com/khulnasoft).
+* ♻️ Refactor Deploy Docs GitHub Action to be a script and update token preparing for org. PR [#1039](https://github.com/khulnasoft/sqldev/pull/1039) by [@khulnasoft](https://github.com/khulnasoft).
+
+## 0.0.21
+
+### Features
+
+* ✨ Add support for cascade delete relationships: `cascade_delete`, `ondelete`, and `passive_deletes`. Initial PR [#983](https://github.com/khulnasoft/sqldev/pull/983) by [@estebanx64](https://github.com/estebanx64).
+  * New docs at: [Cascade Delete Relationships](https://sqldev.khulnasoft.com/tutorial/relationship-attributes/cascade-delete-relationships/).
+
+### Docs
+
+* 📝 Update docs . PR [#1003](https://github.com/khulnasoft/sqldev/pull/1003) by [@alejsdev](https://github.com/alejsdev).
+
+### Internal
+
+* ⬆ Bump actions/cache from 3 to 4. PR [#783](https://github.com/khulnasoft/sqldev/pull/783) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆ Bump cairosvg from 2.7.0 to 2.7.1. PR [#919](https://github.com/khulnasoft/sqldev/pull/919) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆ Bump jinja2 from 3.1.3 to 3.1.4. PR [#974](https://github.com/khulnasoft/sqldev/pull/974) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆ Bump pypa/gh-action-pypi-publish from 1.8.11 to 1.9.0. PR [#987](https://github.com/khulnasoft/sqldev/pull/987) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆ Bump mkdocstrings[python] from 0.23.0 to 0.25.1. PR [#927](https://github.com/khulnasoft/sqldev/pull/927) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆ Bump dorny/paths-filter from 2 to 3. PR [#972](https://github.com/khulnasoft/sqldev/pull/972) by [@dependabot[bot]](https://github.com/apps/dependabot).
+
+## 0.0.20
+
+### Features
+
+* ✨ Add official UUID support, docs and tests, internally using new SQLAlchemy 2.0 types. Initial PR [#992](https://github.com/khulnasoft/sqldev/pull/992) by [@estebanx64](https://github.com/estebanx64).
+  * New docs in the [Advanced User Guide: UUID (Universally Unique Identifiers)](https://sqldev.khulnasoft.com/advanced/uuid/).
 
 ### Docs
 
@@ -11,6 +93,12 @@
 * ✏️ Fix typo in `docs/tutorial`. PR [#943](https://github.com/khulnasoft/sqldev/pull/943) by [@luco17](https://github.com/luco17).
 * ✏️ Fix typo in `sqldev/_compat.py`. PR [#950](https://github.com/khulnasoft/sqldev/pull/950) by [@Highfire1](https://github.com/Highfire1).
 * ✏️ Update pip installation command in tutorial. PR [#975](https://github.com/khulnasoft/sqldev/pull/975) by [@alejsdev](https://github.com/alejsdev).
+* ✏️ Fix typo in `docs/tutorial/relationship-attributes/index.md`. PR [#880](https://github.com/khulnasoft/sqldev/pull/880) by [@UncleGoogle](https://github.com/UncleGoogle).
+
+### Internal
+
+* ⬆ [pre-commit.ci] pre-commit autoupdate. PR [#979](https://github.com/khulnasoft/sqldev/pull/979) by [@pre-commit-ci[bot]](https://github.com/apps/pre-commit-ci).
+* 🔨 Update docs Termynal scripts to not include line nums for local dev. PR [#1018](https://github.com/khulnasoft/sqldev/pull/1018) by [@khulnasoft](https://github.com/khulnasoft).
 
 ## 0.0.19
 

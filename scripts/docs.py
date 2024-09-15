@@ -7,11 +7,8 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 from importlib import metadata
 from pathlib import Path
 
-import mkdocs.commands.build
-import mkdocs.commands.serve
-import mkdocs.config
+import cligenius
 import mkdocs.utils
-import typer
 from jinja2 import Template
 
 logging.basicConfig(level=logging.INFO)
@@ -19,7 +16,7 @@ logging.basicConfig(level=logging.INFO)
 mkdocs_name = "mkdocs.yml"
 en_docs_path = Path("")
 
-app = typer.Typer()
+app = cligenius.Cligenius()
 
 
 @lru_cache
@@ -68,6 +65,13 @@ def generate_readme_content() -> str:
     pre_content = content[frontmatter_end:pre_end]
     post_content = content[post_start:]
     new_content = pre_content + message + post_content
+    # Remove content between <!-- only-mkdocs --> and <!-- /only-mkdocs -->
+    new_content = re.sub(
+        r"<!-- only-mkdocs -->.*?<!-- /only-mkdocs -->",
+        "",
+        new_content,
+        flags=re.DOTALL,
+    )
     return new_content
 
 
@@ -76,7 +80,7 @@ def generate_readme() -> None:
     """
     Generate README.md content from main index.md
     """
-    typer.echo("Generating README")
+    cligenius.echo("Generating README")
     readme_path = Path("README.md")
     new_content = generate_readme_content()
     readme_path.write_text(new_content, encoding="utf-8")
@@ -87,20 +91,20 @@ def verify_readme() -> None:
     """
     Verify README.md content from main index.md
     """
-    typer.echo("Verifying README")
+    cligenius.echo("Verifying README")
     readme_path = Path("README.md")
     generated_content = generate_readme_content()
     readme_content = readme_path.read_text("utf-8")
     if generated_content != readme_content:
-        typer.secho(
-            "README.md outdated from the latest index.md", color=typer.colors.RED
+        cligenius.secho(
+            "README.md outdated from the latest index.md", color=cligenius.colors.RED
         )
-        raise typer.Abort()
-    typer.echo("Valid README ✅")
+        raise cligenius.Abort()
+    cligenius.echo("Valid README ✅")
 
 
 @app.command()
-def live() -> None:
+def live(dirty: bool = False) -> None:
     """
     Serve with livereload a docs site for a specific language.
 
@@ -111,8 +115,10 @@ def live() -> None:
     en.
     """
     # Enable line numbers during local development to make it easier to highlight
-    os.environ["LINENUMS"] = "true"
-    mkdocs.commands.serve.serve(dev_addr="127.0.0.1:8008")
+    args = ["mkdocs", "serve", "--dev-addr", "127.0.0.1:8008"]
+    if dirty:
+        args.append("--dirty")
+    subprocess.run(args, env={**os.environ, "LINENUMS": "true"}, check=True)
 
 
 @app.command()
@@ -126,7 +132,7 @@ def build() -> None:
         print("Using insiders")
     print("Building docs")
     subprocess.run(["mkdocs", "build"], check=True)
-    typer.secho("Successfully built docs", color=typer.colors.GREEN)
+    cligenius.secho("Successfully built docs", color=cligenius.colors.GREEN)
 
 
 @app.command()
@@ -140,14 +146,14 @@ def serve() -> None:
 
     Make sure you run the build command first.
     """
-    typer.echo("Warning: this is a very simple server.")
-    typer.echo("For development, use the command live instead.")
-    typer.echo("This is here only to preview the documentation site.")
-    typer.echo("Make sure you run the build command first.")
+    cligenius.echo("Warning: this is a very simple server.")
+    cligenius.echo("For development, use the command live instead.")
+    cligenius.echo("This is here only to preview the documentation site.")
+    cligenius.echo("Make sure you run the build command first.")
     os.chdir("site")
     server_address = ("", 8008)
     server = HTTPServer(server_address, SimpleHTTPRequestHandler)
-    typer.echo("Serving at: http://127.0.0.1:8008")
+    cligenius.echo("Serving at: http://127.0.0.1:8008")
     server.serve_forever()
 
 

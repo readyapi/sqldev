@@ -31,7 +31,7 @@ jobs:
         run: pip install build
       - name: Build distribution
         env:
-          KHULNASOFT_BUILD_PACKAGE: ${{ matrix.package }}
+          TIANGOLO_BUILD_PACKAGE: ${{ matrix.package }}
         run: python -m build
       - name: Publish
-        uses: pypa/gh-action-pypi-publish@v1.8.11
+        uses: pypa/gh-action-pypi-publish@v1.9.0

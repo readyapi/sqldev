@@ -5,4 +5,4 @@ set -x
 
 mypy sqldev
 ruff check sqldev tests docs_src scripts
-ruff format sqldev tests docs_src --check
+ruff format sqldev tests docs_src scripts --check

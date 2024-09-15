@@ -8,11 +8,11 @@ message: >-
   metadata from this file.
 type: software
 authors:
-  - given-names: KhulnaSoft
-    family-names: DevOps
-    email: info@khulnasoft.com
+  - given-names: Sebastián
+    family-names: Ramírez
+    email: khulnasoft@gmail.com
 identifiers:
-repository-code: 'https://github.com/khulnasoft/sqldev'
+repository-code: 'https://github.com/readyapi/sqldev'
 url: 'https://sqldev.khulnasoft.com'
 abstract: >-
   SQLDev, SQL databases in Python, designed for
