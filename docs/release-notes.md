@@ -2,12 +2,32 @@
 
 ## Latest Changes
 
+### Refactors
+
+* 🚨 Fix types for new Pydantic. PR [#1131](https://github.com/readyapi/sqldev/pull/1131) by [@khulnasoft](https://github.com/khulnasoft).
+
 ### Docs
 
+* ✏️ Fix typo in the release notes of v0.0.22. PR [#1195](https://github.com/readyapi/sqldev/pull/1195) by [@PipeKnight](https://github.com/PipeKnight).
+* 📝 Update includes for `docs/advanced/uuid.md`. PR [#1151](https://github.com/readyapi/sqldev/pull/1151) by [@khulnasoft](https://github.com/khulnasoft).
+* 📝 Update includes for `docs/tutorial/create-db-and-table.md`. PR [#1149](https://github.com/readyapi/sqldev/pull/1149) by [@khulnasoft](https://github.com/khulnasoft).
+* 📝 Fix internal links in docs. PR [#1148](https://github.com/readyapi/sqldev/pull/1148) by [@khulnasoft](https://github.com/khulnasoft).
+* ✏️ Fix typo in documentation. PR [#1106](https://github.com/readyapi/sqldev/pull/1106) by [@Solipsistmonkey](https://github.com/Solipsistmonkey).
 * 📝 Remove highlights in `indexes.md` . PR [#1100](https://github.com/readyapi/sqldev/pull/1100) by [@alejsdev](https://github.com/alejsdev).
 
 ### Internal
 
+* ⬆️ Upgrade markdown-include-variants to version 0.0.3. PR [#1152](https://github.com/readyapi/sqldev/pull/1152) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update issue manager workflow. PR [#1137](https://github.com/readyapi/sqldev/pull/1137) by [@alejsdev](https://github.com/alejsdev).
+* 👷 Fix smokeshow, checkout files on CI. PR [#1136](https://github.com/readyapi/sqldev/pull/1136) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Use uv in CI. PR [#1135](https://github.com/readyapi/sqldev/pull/1135) by [@khulnasoft](https://github.com/khulnasoft).
+* ➕ Add docs dependency markdown-include-variants. PR [#1129](https://github.com/readyapi/sqldev/pull/1129) by [@khulnasoft](https://github.com/khulnasoft).
+* 🔨 Update script to standardize format. PR [#1130](https://github.com/readyapi/sqldev/pull/1130) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update `labeler.yml`. PR [#1128](https://github.com/readyapi/sqldev/pull/1128) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Update worfkow deploy-docs-notify URL. PR [#1126](https://github.com/readyapi/sqldev/pull/1126) by [@khulnasoft](https://github.com/khulnasoft).
+* 👷 Upgrade Cloudflare GitHub Action. PR [#1124](https://github.com/readyapi/sqldev/pull/1124) by [@khulnasoft](https://github.com/khulnasoft).
+* ⬆ [pre-commit.ci] pre-commit autoupdate. PR [#1097](https://github.com/readyapi/sqldev/pull/1097) by [@pre-commit-ci[bot]](https://github.com/apps/pre-commit-ci).
+* ⬆ Bump khulnasoft/issue-manager from 0.5.0 to 0.5.1. PR [#1107](https://github.com/readyapi/sqldev/pull/1107) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update `issue-manager.yml`. PR [#1103](https://github.com/readyapi/sqldev/pull/1103) by [@khulnasoft](https://github.com/khulnasoft).
 * 👷 Fix coverage processing in CI, one name per matrix run. PR [#1104](https://github.com/readyapi/sqldev/pull/1104) by [@khulnasoft](https://github.com/khulnasoft).
 * 💚 Set `include-hidden-files` to `True` when using the `upload-artifact` GH action. PR [#1098](https://github.com/readyapi/sqldev/pull/1098) by [@svlandeg](https://github.com/svlandeg).

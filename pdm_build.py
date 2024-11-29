@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 
 from pdm.backend.hooks import Context
 
-TIANGOLO_BUILD_PACKAGE = os.getenv("TIANGOLO_BUILD_PACKAGE", "sqldev")
+KHULNASOFT_BUILD_PACKAGE = os.getenv("KHULNASOFT_BUILD_PACKAGE", "sqldev")
 
 
 def pdm_build_initialize(context: Context) -> None:
@@ -11,7 +11,7 @@ def pdm_build_initialize(context: Context) -> None:
     # Get custom config for the current package, from the env var
     config: Dict[str, Any] = context.config.data["tool"]["khulnasoft"][
         "_internal-slim-build"
-    ]["packages"][TIANGOLO_BUILD_PACKAGE]
+    ]["packages"][KHULNASOFT_BUILD_PACKAGE]
     project_config: Dict[str, Any] = config["project"]
     # Get main optional dependencies, extras
     optional_dependencies: Dict[str, List[str]] = metadata.get(
