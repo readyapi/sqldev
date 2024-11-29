@@ -17,7 +17,7 @@
 
 ### Fixes
 
-* 🐛 Fix support for types with `Optional[Annoated[x, f()]]`, e.g. `id: Optional[pydantic.UUID4]`. PR [#1093](https://github.com/readyapi/sqldev/pull/1093) by [@khulnasoft](https://github.com/khulnasoft).
+* 🐛 Fix support for types with `Optional[Annotated[x, f()]]`, e.g. `id: Optional[pydantic.UUID4]`. PR [#1093](https://github.com/readyapi/sqldev/pull/1093) by [@khulnasoft](https://github.com/khulnasoft).
 
 ### Docs
 
