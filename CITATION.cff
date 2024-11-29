@@ -10,7 +10,7 @@ type: software
 authors:
   - given-names: Sebastián
     family-names: Ramírez
-    email: khulnasoft@gmail.com
+    email: info@khulnasoft.com
 identifiers:
 repository-code: 'https://github.com/readyapi/sqldev'
 url: 'https://sqldev.khulnasoft.com'
